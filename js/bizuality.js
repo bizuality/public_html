@@ -32,11 +32,31 @@ $(window).scroll(function() {
     }, 250));
 });
 
-/************ Contact Modal Thank You ************/
+/************ Contact Modal Submission ************/
 $(document).ready(function(){
   $("#submitButton").click(function(){
-     $('.show-on-submit').slideDown("slow");
-     $('.hide-on-submit').slideUp("slow");
+    var first_name=$('#first_name').val();
+    var last_name=$('#last_name').val();
+    var email=$('#email').val();
+    var phone=$('#phone').val();
+    var goal=$('#goal').val();
+    var formData = "first_name="+first_name+"&last_name="+last_name+"&email="+email+"&phone="+phone+"&goal="+goal;
+        $.ajax({
+        url : "php/send_contact_form.php",
+        type: "POST",
+        data : formData,
+        success: function(data, textStatus, jqXHR)
+        {
+            //data - response from server
+            alert(data);
+        },
+
+    });
+    alert(formData);
+	$('.show-on-submit').slideDown("slow");
+    $('.hide-on-submit').slideUp("slow");
+
+
   });
 });
 

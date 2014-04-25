@@ -4,6 +4,9 @@
     <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/js/bootstrap-hover-dropdown.js"</script>
     <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/js/bootstrap-popover.js"</script>
     <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/js/bizuality.js"</script>
+    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/js/jquery.form.js"</script>
+    
+    
     
     <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
     <script>
