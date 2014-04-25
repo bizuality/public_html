@@ -382,6 +382,16 @@ i.scroll:hover {
   border-color: #00efa0;
 }
 
+.show-on-submit {
+  display: none;
+}
+
+.thankyou {
+  color: #00efa0;
+  vertical-align: middle;
+  text-align: center;
+}
+
 /**************** Images ****************/
 
 .rotate-img-90 {

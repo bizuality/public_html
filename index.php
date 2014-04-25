@@ -32,22 +32,10 @@ include($root . '/public_html/variables/variables.php');
 				<i class="popover-icon hoverable spin-on-scroll fa fa-eye fa-2x" data-trigger="hover" data-placement="bottom" data-content="Get people looking at your site!"></i>
 				<i class="popover-icon hoverable spin-on-scroll fa fa-briefcase fa-2x" data-trigger="hover" data-placement="bottom" data-content="We do business stuff too, harness the power of data!"></i>
 				<i class="popover-icon hoverable spin-on-scroll fa fa-folder-open fa-2x" data-trigger="hover" data-placement="bottom" data-content="We can host your files, don't rely on shoddy service."></i>
-			<h3>
+			</h3>
             <h3>Helping <em>you </em>maximize <em>your </em>web, mobile, and social media possibilities.</h3>
             <a href="#about" class="btn btn-default btn-lg">Find Out More</a>
-                
-    <!--  Carousel -->  
-			<div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
-  				<div class="carousel-inner">
-    				<div class="item active"><!-- class of active since it's the first item -->
-      					<img src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/phone_slide.png" alt="" />
-    				</div>
-    				<div class="item">
-      					<img src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/phone_slide.png" alt="" />
-    				</div>
-  				</div><!-- /.carousel-inner -->
-			</div>
-	<!-- /Carousel -->
+
         </div>
     </div>
     <!-- /Full Page Image Header Area -->

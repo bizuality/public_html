@@ -31,3 +31,16 @@ $(window).scroll(function() {
         console.log("Haven't scrolled in 250ms!");
     }, 250));
 });
+
+/************ Contact Modal Thank You ************/
+$(document).ready(function(){
+  $("#submitButton").click(function(){
+     $('.show-on-submit').slideDown("slow");
+     $('.hide-on-submit').slideUp("slow");
+  });
+});
+
+/************ Carousel ************/
+$(document).ready(function(){
+	$('.carousel').carousel({interval: 500});
+});
