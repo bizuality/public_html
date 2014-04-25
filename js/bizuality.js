@@ -46,15 +46,14 @@ $(document).ready(function(){
         type: "POST",
         data : formData,
         success: function(data, textStatus, jqXHR)
-        {
-            //data - response from server
-            alert(data);
+        {	//data - response from server
+        	$('.show-on-submit').slideDown("slow");
+            $('.hide-on-submit').slideUp("slow");
+            
         },
 
     });
-    alert(formData);
-	$('.show-on-submit').slideDown("slow");
-    $('.hide-on-submit').slideUp("slow");
+
 
 
   });
