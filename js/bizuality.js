@@ -1,30 +1,32 @@
 /************ Contact Modal ************/
-$('#contactModal').modal('hide')
+$('#contactModal').modal('hide') // Hides the modal until called.
     
 
 /************ Spin on Hover ************/
 $(".hoverable").mouseover(function(){
-    $(this).addClass('fa-spin');
+    $(this).addClass('fa-spin'); // Spins icons on hover.
 });
-	
 $(".hoverable").mouseout(function(){
-	$(this).removeClass('fa-spin');
+	$(this).removeClass('fa-spin'); // Stops icons on mouse out.
 });
 
 /************ Dropdown on Hover ************/
 $(".hover-dropdown-menu").mouseover(function(){
-	$(this).addClass('dropdown-toggle');});
+	$(this).addClass('dropdown-toggle');}); // Hover over links for dropdown menu to appear.
 
 /************ Popover Description on Hover ************/
-$(function(){$(".popover-icon").popover();});
+$(function(){
+	$(".popover-icon").popover(); // Shows text on hover.
+}); // 
 
+/************ Spin on Scroll ************/
 $(document).ready(function() {
     $(window).scroll(function() {
-      $(".spin-on-scroll").addClass('fa-spin');
+      $(".spin-on-scroll").addClass('fa-spin'); // Spins icons when scrolling on page.
     });
 });
 
-$(window).scroll(function() {
+$(window).scroll(function() { // Stops spinning when scrolling stops.
     clearTimeout($.data(this, 'scrollTimer'));
     $.data(this, 'scrollTimer', setTimeout(function() {
         $(".spin-on-scroll").removeClass('fa-spin');
@@ -35,25 +37,28 @@ $(window).scroll(function() {
 /************ Contact Modal Submission ************/
 $(document).ready(function(){
 	$("#submitButton").click(function(){
-		if($('#first_name').hasClass('valid') && $('#last_name').hasClass('valid') && $('#email').hasClass('valid') && $('#phone').hasClass('valid') && $('#goal').hasClass('valid')){
+		// Check valid class from the live form validation 
+		if($('#first_name').hasClass('valid') && $('#last_name').hasClass('valid') && $('#email').hasClass('valid') && $('#phone').hasClass('valid') && $('#goal').hasClass('valid')) {
+			// If so start with the form submission
 			var first_name=$('#first_name').val();
 			var last_name=$('#last_name').val();
 			var email=$('#email').val();
 			var phone=$('#phone').val();
 			var goal=$('#goal').val();
 			var formData = "first_name="+first_name+"&last_name="+last_name+"&email="+email+"&phone="+phone+"&goal="+goal;
-        	$.ajax({
+        	$.ajax({ // Start the PHP submission
         		url : "php/send_contact_form.php",
         		type: "POST",
         		data : formData,
         		success: function(data, textStatus, jqXHR) {	//data - response from server
         			$('.show-on-submit').slideDown("slow");
             		$('.hide-on-submit').slideUp("slow");
-            		$('.show-on-error').slideUp("fast");
+            		$('.show-on-error').slideUp("fast"); // Hide error message quickly.
         		}
     		});
     	}
     	else {
+    		// Show error message
     		$('.show-on-error').slideDown("slow");
     	}
 	});
