@@ -35,7 +35,7 @@ include($root . '/public_html/variables/variables.php');
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/index.php#about">About</a>
+                        <a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/index.php">About</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Services</a>

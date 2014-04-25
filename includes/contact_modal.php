@@ -24,6 +24,13 @@
 						<h1>We'll be in touch.</h1>
 					</div>
         		</div><!-- End of Modal body -->
+        		<div class="modal-body show-on-error">
+        			<div class="error">
+        				<h1>
+        					<i class="popover-icon hoverable fa fa-ban fa-2x" data-trigger="hover" data-placement="top" data-content="Silly goose!"></i>
+						</h1>
+					</div>
+        		</div><!-- End of Modal body -->
         	</div><!-- End of Modal content -->
         </div><!-- End of Modal dialog -->
     </div><!-- End of Modal -->

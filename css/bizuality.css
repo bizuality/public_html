@@ -382,7 +382,7 @@ i.scroll:hover {
   border-color: #00efa0;
 }
 
-.show-on-submit {
+.show-on-submit, .show-on-error {
   display: none;
 }
 
@@ -392,6 +392,22 @@ i.scroll:hover {
   text-align: center;
 }
 
+.error {
+  color: #cd5f5c;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.invalid {
+  color: #fff;
+  background-color: #cd5f5c;
+}
+ 
+.valid {
+  color: #fff;
+  background-color: #00efa0;
+  border: 5px solid #fff;
+}
 /**************** Images ****************/
 
 .rotate-img-90 {
