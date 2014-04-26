@@ -9,6 +9,10 @@ body {
   
 }
 
+p {
+  font-size: 1.15em;
+}
+
 @media (max-width: 480px) {
   h1, .h1 {
     font-size: 30px;
@@ -164,7 +168,7 @@ body {
 /* Services */
 
 .services {
-  background: #7fbbda;
+  background: #0a5175;
   padding: 50px 0;
   color: #ffffff;
 }
@@ -405,7 +409,7 @@ i.scroll:hover {
   border-color: #00efa0;
 }
 
-.show-on-submit, .show-on-error, .slide-down-onload, .slide-up-onload {
+.show-on-submit, .show-on-error {
   display: none;
 }
 
@@ -446,7 +450,7 @@ i.scroll:hover {
 /**************** Portfolio Text ****************/
 
 .lead {
-  font-size: 1em;
+  font-size: 1.25em;
 }
 /**************** Carousel ****************/
 .carousel-inner > .item > img, 
@@ -458,4 +462,18 @@ i.scroll:hover {
     -webkit-transition: 5s linear left;
     -moz-transition: 5s linear left;
     -o-transition: 5s linear left;
+}
+
+/**************** Page Animation ****************/
+
+.slide-down-onload {
+  display: none;
+}
+
+.color-on-hover {
+  color: #fff;
+  background-color: #00efa0;
+  padding: 3px;
+  border: 2px solid #fff;
+  border-radius: 5px;
 }

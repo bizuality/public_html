@@ -128,3 +128,10 @@ $(document).ready(function(){
 	
 });
 
+$(".hoverable-color").mouseover(function(){
+    $(this).addClass('color-on-hover'); // Colors the div on hover.
+});
+$(".hoverable-color").mouseout(function(){
+	$(this).removeClass('color-on-hover'); // Restores original color.
+});
+

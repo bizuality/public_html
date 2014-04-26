@@ -19,47 +19,72 @@ include($root . '/public_html/variables/variables.php');
 	
 	<?php include($root . '/public_html/includes/header.php'); ?>
 	
-    <!-- Call to Action -->
-    <div id="about" class="call-to-action">
-         <div class="container">
+	<!-- Services -->
+    <div id="services" class="services">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-sm-6 slide-down-onload">
-                	<h1>Website Design</h1>
+                <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
+                	<hr />
+                    <h2>Website Design</h2>
+                    <hr />
                 </div>
             </div>
             <div class="row">
-            	<div class="col-lg-12 slide-down-onload">
-					<h4 class="lead">We will work with you to design a custom website that meets your needs and vision for your company.<br>
-						We specialize in coding brand new designs and redesigns from scratch to make sure your specific customer base and site visitors have a user friendly experience.
-					</h4>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 slide-down-onload">
-					<img class="img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/trevor_website_display.png">
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 slide-down-onload focus-area">
-					<h4 class="center">Website Design and Redesign</h4>
-					<p>Whether you want professional, minimal, flashy, or modern; we can design, or redesign, your site to best suit you and your customers.</p>
-					<hr />
-					<h4 class="center">Content Management System</h4>
-					<p>Using PHP scripts and database design, we have developed a CMS that allows you to update your website with fresh content without technical assistance or additional cost.</p>
-				</div>
+                <div class="col-md-3 text-center hoverable-color">
+                    <div class="service-item">
+                        <i class="service-icon hoverable fa fa-group"></i>
+                        <h4>Group Stage</h4>
+                        <p>We will work with you to design a custom website that meets your needs and vision for your company.<br>We specialize in coding brand new designs and redesigns from scratch to make sure your specific customer base and site visitors have a user friendly experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center hoverable-color">
+                    <div class="service-item">
+                        <i class="service-icon hoverable fa fa-pencil"></i>
+                        <h4>Creative Stage</h4>
+                        <p>At this stage, our technical staff will start to plan <em>your</em> site's backbone with simplicity in mind. The days of over-complicated layouts, and static code are over. <em>Your</em> site will have a fluid and mobile appearance all while maintaing a great desktop image.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center hoverable-color">
+                    <div class="service-item">
+                        <i class="service-icon hoverable fa fa-code"></i>
+                        <h4>Development Stage</h4>
+                        <p>This is <em>your</em> chance to sit back and relax. Our technical staff will do all the hard work for <em>you</em> to make this process as seamless as possible. Our developers will take care in order to ensure the code complies with all the standards, and that documentation is provided with each file.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center hoverable-color">
+                    <div class="service-item">
+                        <i class="service-icon hoverable fa fa-eye"></i>
+                        <h4>Review Stage</h4>
+                        <p>About halfway through the process, we will have a review stage. This is <em>your</em> chance to point out any details you want changed or accept the design. Once the design is to <em>your</em> satisfaction, we will move on to one of the most important steps, testing!</p>
+                    </div>
+                </div>
             </div>
             <div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-6 slide-down-onload focus-area">
-					<h4 class="center">Web Development</h4>
-					<p>Our technical staff has experience in HTML5, CSS3, PHP, JavaScript, jQuery, MySQL, and other areas that will allow us to develop a backend that works flawlessly with the web design to ensure your customers have a great user experience when visiting your website.</p>
-					<hr />
-					<h4 class="center">Cross Browser Compatibility</h4>
-					<p>We will test your website on multiple platforms to make sure that it is stable and useable with the most popular web browsers.</p>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 slide-down-onload">
-					<img class="img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/crowder_stewart_website_display.png">
-				</div>
-
+                <div class="col-md-4 text-center hoverable-color">
+                    <div class="service-item">
+                        <i class="service-icon hoverable fa fa-signal"></i>
+                        <h4>Testing Stage</h4>
+                        <p>This is one of the most important parts to any type of development. Testing is essential to ensure that <em>your</em> product functions the way it is intended. Cross browser capability is a big testing point here, our developers will do their best to make your website look identical on any platform.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center hoverable-color">
+                    <div class="service-item">
+                        <i class="service-icon hoverable fa fa-laptop"></i>
+                        <h4>Launch Stage</h4>
+                        <p>Finally, the moment <em>you</em> have been waiting for, it is time for your website to reach the masses. Once a website goes live, it is out there for the world to see. This is when customers will start to see <em>your</em> efforts, and <em>you</em> will see your business start to thrive.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center hoverable-color">
+                    <div class="service-item">
+                        <i class="service-icon hoverable fa fa-cogs"></i>
+                        <h4>Maintenance</h4>
+                        <p>Any web guru knows that keeping the content fresh is great for repeat visitors. Search engine optimization is another key ingredient here, and something <em>bizuality</em> can provide for <em>you</em> or <em>your</em> company.</p>
+                    </div>
+                </div>
             </div>
-        </div><!-- /.container -->
+        </div>
     </div>
-    <!-- /Call to Action -->
+    <!-- /Services -->
     
 	<?php include($root . '/public_html/includes/footer.php'); ?>
 	
