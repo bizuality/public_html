@@ -280,6 +280,10 @@ i.scroll:hover {
   color: #fff;
 }
 
+.center {
+  text-align: center;
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {
