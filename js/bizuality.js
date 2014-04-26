@@ -125,14 +125,13 @@ $(document).ready(function(){
 /************ Page Animation *************/
 $(document).ready(function(){
 	$('.slide-down-onload').slideDown(2250);
-	
 });
 
 $(".hoverable-color").mouseover(function(){
-    $(this).addClass('color-on-hover'); // Colors the div on hover.
+	$(this).addClass('color-on-hover');
 });
 $(".hoverable-color").mouseout(function(){
-	$(this).removeClass('color-on-hover'); // Restores original color.
+	$(this).removeClass('color-on-hover');
 });
 
 $('.text').hide().removeClass('text').addClass('text-js');
