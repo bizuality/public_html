@@ -344,6 +344,24 @@ i.scroll:hover {
   background-color: #00efa0;
 }
 
+.location {
+  color: #fff;
+  background: #00efa0;
+  padding: 50px 0;
+  
+}
+
+.focus-area {
+  display: block;
+  border: 5px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #00efa0;
+  vertical-align: middle;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 /**************** Navigation Bar - Mobile ****************/
 @media (max-width: 768px) {
   .dropdown-menu > li > a {
@@ -374,6 +392,7 @@ i.scroll:hover {
 .btn-custom-form {
   color: #fff;
   background-color: #00efa0;
+  
 }
 
 .btn-custom-form:hover {
@@ -382,7 +401,7 @@ i.scroll:hover {
   border-color: #00efa0;
 }
 
-.show-on-submit, .show-on-error {
+.show-on-submit, .show-on-error, .slide-down-onload, .slide-up-onload {
   display: none;
 }
 

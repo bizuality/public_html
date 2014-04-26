@@ -2,6 +2,7 @@
     <footer>
         <div class="container">
             <div class="row">
+            	<div id="map"></div>
             	<div class="col-lg-12 text-center">
             		<h3>
             			<a class="icon-link" href="http://twitter.com/bizualITy"><i class="hoverable fa fa-twitter fa-2x" data-trigger="hover"></i></a>

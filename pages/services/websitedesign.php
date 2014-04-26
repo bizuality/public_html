@@ -18,39 +18,45 @@ include($root . '/public_html/variables/variables.php');
     <title>bizualITy - Your Visual Business</title>
 	
 	<?php include($root . '/public_html/includes/header.php'); ?>
-    
+	
     <!-- Call to Action -->
     <div id="about" class="call-to-action">
          <div class="container">
-        	<hr />
             <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Crowder Stewart LLP</h2>
-                    <p class="lead">Crowder Stewart LLP is a law firm based in Augusta, GA. Their website was built with a professional style, featuring a large slider on the home page. The box style you see can help separate the content for a cleaner, and more sleek look. Be sure to check out their contact page, as it features an interactive map, a necessity for any small business. Check out their website <a target="_blank" href="http://www.crowderstewart.com">here</a>.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <br />
-                    <img class="img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/phones.png" alt="">
+                <div class="col-lg-5 col-sm-6 slide-down-onload">
+                	<h1>Website Design</h1>
                 </div>
             </div>
-            <hr />
-        	<div class="row">
-        		<div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <br />
-                    <img class="img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/phones.png" alt="">
-                </div>
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Trevor Hutto</h2>
-                    <p class="lead">One of the founders of bizualITy and a student at South Carolina, Trevor's personal website is a one page scroller. His page features large background images, and a sliding layout. The buttons are accented with garnet to show his school spirt, and contacting him is a breeze. Take a <a href="http://www.cse.sc.edu/~huttotw" target="_blank"> look</a>.</p>
-                </div>
+            <div class="row">
+            	<div class="col-lg-12 slide-down-onload">
+					<h4 class="lead">We will work with you to design a custom website that meets your needs and vision for your company.<br>
+						We specialize in coding brand new designs and redesigns from scratch to make sure your specific customer base and site visitors have a user friendly experience.
+					</h4>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 slide-down-onload">
+					<img class="img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/trevor_website_display.png">
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 slide-down-onload focus-area">
+					<h4>Website Design and Redesign</h4>
+					<p>Whether you want professional, minimal, flashy, or modern; we can design, or redesign, your site to best suit you and your customers.</p>
+					<hr />
+					<h4>Content Management System</h4>
+					<p>Using PHP scripts and database design, we have developed a CMS that allows you to update your website with fresh content without technical assistance or additional cost.</p>
+
+				</div>
+            </div>
+            <div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 slide-down-onload focus-area">
+					<h4 class="lead">We will work with you to design a custom website that meets your needs and vision for your company.<br>
+						We specialize in coding brand new designs and redesigns from scratch to make sure your specific customer base and site visitors have a user friendly experience.
+					</h4>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 slide-down-onload">
+					<img class="img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/crowder_stewart_website_display.png">
+				</div>
 
             </div>
-        </div>
-        <!-- /.container -->
+        </div><!-- /.container -->
     </div>
     <!-- /Call to Action -->
     

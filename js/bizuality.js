@@ -121,3 +121,10 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$('.carousel').carousel({interval: 500});
 });
+
+/************ Page Animation *************/
+$(document).ready(function(){
+	$('.slide-down-onload').slideDown(2250);
+	
+});
+
