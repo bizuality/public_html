@@ -20,7 +20,7 @@ include($root . '/public_html/variables/variables.php');
 	<?php include($root . '/public_html/includes/header.php'); ?>
 	
 	<!-- Services -->
-    <div id="services" class="services">
+    <div id="website_design" class="main-content">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
@@ -48,7 +48,7 @@ include($root . '/public_html/variables/variables.php');
                     <div class="service-item">
                         <i class="service-icon hoverable fa fa-code"></i>
                         <h4>Development Stage</h4>
-                        <p>This is <em>your</em> chance to sit back and relax. Our technical staff will do all the hard work for <em>you</em> to make this process as seamless as possible. Our developers will take care in order to ensure the code complies with all the standards, and that documentation is provided with each file.</p>
+                        <p>This is <em>your</em> chance to sit back and relax. Our technical staff will do all the hard work for <em>you</em> to make this process as seamless as possible. Our developers will take care in order to ensure the code complies with all the known conventions, and that documentation will be provided with each file.</p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center hoverable-color">
