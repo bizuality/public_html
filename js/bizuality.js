@@ -135,3 +135,10 @@ $(".hoverable-color").mouseout(function(){
 	$(this).removeClass('color-on-hover'); // Restores original color.
 });
 
+$('.text').hide().removeClass('text').addClass('text-js');
+
+$('.thumb').hover(function(){
+    $(this).find('.text-js').fadeToggle();
+});
+
+

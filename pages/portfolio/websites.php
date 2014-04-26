@@ -32,17 +32,31 @@ include($root . '/public_html/variables/variables.php');
             <div class="row">
                 <div class="col-md-4 col-md-offset-2 text-center">
                     <div class="portfolio-item">
-                        <a href="http://www.cse.sc.edu/~huttotw" target="_blank">
-                            <img class="img-portfolio img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/trevor_website_display.png">
-                        </a>
+                    	<div class="thumb">
+                    		<div class="text">
+                    			<h3>Trevor Hutto</h3>
+                    			<hr />
+                    			<p>Trevor is the co-founder, and developer for <em>bizuality</em>. He designed his school website as a one page scroller. This website features a black and white feel with garnet accent buttons. <a href="http://www.cse.sc.edu/~huttotw">Check it out</a>.
+                    		</div>
+                        	<a href="http://www.cse.sc.edu/~huttotw" target="_blank">
+                            	<img class="img-portfolio img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/trevor_website_display.png">
+                        	</a>
+                        </div>
                         <h4>Trevor Hutto</h4>
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="portfolio-item">
-                        <a href="http://www.crowderstewart.com" target="_blank">
-                            <img class="img-portfolio img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/crowder_stewart_website_display.png">
-                        </a>
+                    	<div class="thumb">
+                    		<div class="text">
+                    			<h3>Crowder Stewart LLP</h3>
+                    			<hr />
+                    			<p>Crowder Stewart LLP is a law firm based in Augusta, GA. Their website features a homepage carousel, and a box structure for their content. Go have a <a href="http://www.crowderstewart.com">look</a>.
+                    		</div>
+                        	<a href="http://www.crowderstewart.com" target="_blank">
+                            	<img class="img-portfolio img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/crowder_stewart_website_display.png">
+                        	</a>
+                        </div>
                         <h4>Crowder Stewart LLP</h4>
                     </div>
                 </div>
