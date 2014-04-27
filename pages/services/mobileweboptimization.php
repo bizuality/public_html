@@ -30,16 +30,19 @@ include($root . '/public_html/variables/variables.php');
                 </div>
             </div>
             <div class="row">
-            	<div class="col-md-6 text-center">
-            		<div class="hoverable spin-on-scroll">
-                    	<img class="img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/mobile_desktop_pie_chart.png" alt="">
+            	<div class="col-md-6 col-sm-6 text-center">
+            		<div class="thumb">
+            			<div class="text">
+            				<p>Source: <a href="http://money.cnn.com/2014/02/28/technology/mobile/mobile-apps-internet/" target="_blank">CNN</a></p>
+            			</div>
+                    		<img class="img-responsive spin-on-scroll" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/mobile_desktop_pie_chart.png" alt="">
                 	</div>
                 </div>
-                <div class="col-md-6 text-center hoverable-color">
+                <div class="col-md-6 col-sm-6 text-center hoverable-color">
                     <div class="service-item">
                         <i class="service-icon hoverable fa fa-clock-o"></i>
                         <h4>It's that time...</h4>
-                        <p>We will work with you to design a custom website that meets your needs and vision for your company.<br>We specialize in coding brand new designs and redesigns from scratch to make sure your specific customer base and site visitors have a user friendly experience.</p>
+                        <p>It is time to move <em>your</em> company's website to the mobile side. Did you know </p>
                     </div>
                 </div>
             </div>

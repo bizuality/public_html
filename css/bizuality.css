@@ -415,6 +415,9 @@ i.scroll:hover {
   border-color: #00efa0;
 }
 
+.input-border {
+  border: 1px solid #fff;
+}
 .show-on-submit, .show-on-error {
   display: none;
 }
@@ -502,5 +505,5 @@ i.scroll:hover {
     border-radius: 5px;
 }
 .thumb:hover .text {
-    display: block
+    display: block;
 }
