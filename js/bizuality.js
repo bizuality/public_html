@@ -140,4 +140,10 @@ $('.thumb').hover(function(){
     $(this).find('.text-js').fadeToggle();
 });
 
-
+/************ Search Bar ************/
+$('#searchButton').click(function(){
+	var query = "http://www.google.com/search?q=";
+	query += $('#query').val();
+	query = query.replace(" ", "+");
+	window.open(query, "_blank");
+});

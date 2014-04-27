@@ -408,6 +408,9 @@ i.scroll:hover {
   background-color: #00efa0;
   
 }
+.text-color {
+  color: #00efa0;
+}
 
 .btn-custom-form:hover {
   color: #00efa0;
