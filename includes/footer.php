@@ -1,6 +1,7 @@
 <!-- Footer -->
     <footer>
         <div class="container">
+        	<hr />
             <div class="row">
             	<div id="map"></div>
             	<div class="col-lg-12 text-center">

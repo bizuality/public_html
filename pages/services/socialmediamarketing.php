@@ -51,6 +51,7 @@ include($root . '/public_html/variables/variables.php');
 					</h1>
                 </div>
             </div>
+            <hr />
             <div class="row">
                 <div class="col-md-3 text-center hoverable-color">
                     <div class="service-item">

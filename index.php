@@ -46,7 +46,7 @@ include($root . '/public_html/variables/variables.php');
             <div class="row">
                 <div class="col-lg-4 col-md-4 text-center hoverable-color">
                     <h3>
-                    	<i class="fa fa-eye fa-2x"></i>
+                    	<i class="service-icon hoverable fa fa-eye fa-2x"></i>
                     	<br />
                     	Your Business, Your Vision
                     </h3>
@@ -54,7 +54,7 @@ include($root . '/public_html/variables/variables.php');
                 </div>
                 <div class="col-lg-4 col-md-4 text-center hoverable-color">
                     <h3>
-                    	<i class="fa fa-laptop fa-2x"></i>
+                    	<i class="service-icon hoverable fa fa-laptop fa-2x"></i>
                     	<br />
                     	Web Design &amp; Redesign
                     </h3>
@@ -62,7 +62,7 @@ include($root . '/public_html/variables/variables.php');
                 </div>
                 <div class="col-lg-4 col-md-4 text-center hoverable-color">
                     <h3>
-                    	<i class="fa fa-mobile fa-2x"></i>
+                    	<i class="service-icon hoverable fa fa-mobile fa-2x"></i>
                     	<br />
                     	Your Company, On The Go</h3>
                     <p>Today, more than half of all users view websites on mobile devices, however fewer than 5% of websites are optimally formatted for mobile use.  We will work with you to extend your current website to the most effective mobile interface, or help you refresh your current mobile design.</p>

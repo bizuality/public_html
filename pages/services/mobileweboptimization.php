@@ -42,16 +42,17 @@ include($root . '/public_html/variables/variables.php');
                     <div class="service-item">
                         <i class="service-icon hoverable fa fa-clock-o"></i>
                         <h4>It's that time...</h4>
-                        <p>It is time to move <em>your</em> company's website to the mobile side. Did you know </p>
+                        <p>Responsive Web Design is not just a nice to have anymore, it’s a necessity!<br>Mobile traffic has been growing steadily over the last 5 years and has increased by more than 50% in the last 12 months.<br>Mobile traffic now accounts for more than 20% of all page views.<br>If users cannot easily navigate your website on a mobile device, they won’t stay. We will make sure <em>your</em> website is optimally formatted for the device on which it is being viewed.</p>
                     </div>
                 </div>
             </div>
+            <hr />
             <div class="row">
                 <div class="col-md-3 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-code"></i>
-                        <h4>Development Stage</h4>
-                        <p>This is <em>your</em> chance to sit back and relax. Our technical staff will do all the hard work for <em>you</em> to make this process as seamless as possible. Our developers will take care in order to ensure the code complies with all the known conventions, and that documentation will be provided with each file.</p>
+                        <i class="service-icon hoverable fa fa-mobile"></i>
+                        <h4>The future is mobile!</h4>
+                        <p>If <em>you’re</em> not providing a mobile-friendly experience for your customers, they’ll find a competitor whose website is easier to use.<br>Researchers say that 5 billion people will use mobile phones by 2017. Making your website responsive is a small price to pay to reach all of these people.</p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center hoverable-color">
