@@ -32,7 +32,7 @@ include($root . '/public_html/variables/variables.php');
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <br />
-                    <img class="img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/phones.png" alt="">
+                    <img class="img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/mobile_desktop_pie_chart.png" alt="">
                 </div>
             </div>
             <hr />

@@ -20,7 +20,7 @@ include($root . '/public_html/variables/variables.php');
 	<?php include($root . '/public_html/includes/header.php'); ?>
 	
 	<!-- Services -->
-    <div id="website_design" class="main-content">
+    <div id="website_design" class="main-content-alternate">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">

@@ -34,7 +34,7 @@
         		<div class="modal-body show-on-error">
         			<div class="error">
         				<h1>
-        					<i class="popover-icon hoverable fa fa-ban fa-2x" data-trigger="hover" data-placement="top" data-content="Silly goose!"></i>
+        					<i class="popover-icon hoverable fa fa-exclamation-triangle fa-2x" data-trigger="hover" data-placement="top" data-content="Silly goose!"></i>
 						</h1>
 					</div>
         		</div>

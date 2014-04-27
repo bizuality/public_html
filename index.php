@@ -44,7 +44,7 @@ include($root . '/public_html/variables/variables.php');
     <div id="about" class="call-to-action">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 text-center">
+                <div class="col-lg-4 col-md-4 text-center hoverable-color">
                     <h3>
                     	<i class="fa fa-eye fa-2x"></i>
                     	<br />
@@ -52,7 +52,7 @@ include($root . '/public_html/variables/variables.php');
                     </h3>
                     <p>We will work closely with you to help design the best web, mobile and/or social media platform to grow your business.</p>
                 </div>
-                <div class="col-lg-4 col-md-4 text-center">
+                <div class="col-lg-4 col-md-4 text-center hoverable-color">
                     <h3>
                     	<i class="fa fa-laptop fa-2x"></i>
                     	<br />
@@ -60,7 +60,7 @@ include($root . '/public_html/variables/variables.php');
                     </h3>
                     <p>Whether you need to start from scratch or simply refresh your website content and template, we can help you complete your vision.</p>
                 </div>
-                <div class="col-lg-4 col-md-4 text-center">
+                <div class="col-lg-4 col-md-4 text-center hoverable-color">
                     <h3>
                     	<i class="fa fa-mobile fa-2x"></i>
                     	<br />
