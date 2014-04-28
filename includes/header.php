@@ -4,6 +4,7 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 include($root . '/public_html/variables/variables.php');
 
 ?>
+<link rel="icon" type="image/ico" href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/bizuality_favicon.ico"/>
 
 <!-- Bootstrap core CSS -->
 <link href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/css/bootstrap.min.css" rel="stylesheet">
