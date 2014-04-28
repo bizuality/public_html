@@ -1,23 +1,6 @@
-<?php $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-
-include($root . '/public_html/variables/variables.php');
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head profile="http://www.bizuality.com">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-	<link rel="icon" type="image/png" href="">
-
-    <title>bizualITy - Your Visual Business</title>
-
-	<?php include($root . '/public_html/includes/header.php'); ?>
+<?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); ?>
+<?php include($root . '/public_html/variables/mobileweboptimization_variables.php'); ?>
+<?php include($root . '/public_html/includes/header.php'); ?>
     
     <!-- Content Body -->
     <div id="website_design" class="main-content-alternate">
@@ -81,14 +64,4 @@ include($root . '/public_html/variables/variables.php');
     </div>
     <!-- /Content Body -->
     
-	<?php include($root . '/public_html/includes/footer.php'); ?>
-	
-	<?php include($root . '/public_html/includes/contact_modal.php'); ?>
-
-	<?php include($root . '/public_html/includes/javascript.php'); ?>
-	
-	<?php include($root . '/public_html/includes/analytics.php'); ?>
-
-</body>
-
-</html>
+<?php include($root . '/public_html/includes/footer.php'); ?>

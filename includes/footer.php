@@ -18,3 +18,10 @@
         </div>
     </footer>
 <!-- /Footer -->
+
+	<?php include($root . '/public_html/includes/contact_modal.php'); ?>
+	<?php include($root . '/public_html/includes/javascript.php'); ?>
+	<?php include($root . '/public_html/includes/analytics.php'); ?>
+
+</body>
+</html>

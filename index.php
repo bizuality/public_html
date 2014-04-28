@@ -1,22 +1,6 @@
-<?php $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-include($root . '/public_html/variables/variables.php');
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head profile="http://www.bizuality.com">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-	<link rel="icon" type="image/png" href="">
-
-    <title><?php echo $default_heading ?></title>
-
-	<?php include($root . '/public_html/includes/header.php'); ?>
+<?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); ?>
+<?php include($root . '/public_html/variables/index_variables.php'); ?>
+<?php include($root . '/public_html/includes/header.php'); ?>
     
     <!-- Full Page Image Header Area -->
     <div id="top" class="header">
@@ -74,15 +58,4 @@ include($root . '/public_html/variables/variables.php');
     </div>
     <!-- /Call to Action -->
 
-	<?php include($root . '/public_html/includes/footer.php'); ?>
-	<?php include($root . '/public_html/includes/contact_modal.php'); ?>
-	<?php include($root . '/public_html/includes/javascript.php'); ?>
-	<?php include($root . '/public_html/includes/analytics.php'); ?>
-<script>
-  $(document).ready(function(){
-    $('.carousel').carousel({interval: 500});
-  });
-</script>
-	
-</body>
-</html>
+<?php include($root . '/public_html/includes/footer.php'); ?>
