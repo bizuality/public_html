@@ -33,27 +33,26 @@ include($root . '/public_html/variables/variables.php');
             <div class="row">
                 <div class="col-md-4 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-eye"></i>
-                        <h4>Review Stage</h4>
-                        <p>About halfway through the process, we will have a review stage. This is <em>your</em> chance to point out any details you want changed or accept the design. Once the design is to <em>your</em> satisfaction, we will move on to one of the most important steps, testing!</p>
+                        <i class="service-icon hoverable fa fa-bullhorn"></i>
+                        <h4>Mission</h4>
+                        <p>Our mission is to provide mobile first websites to small businesses who do not already have a mobile implementation of their website. We also strive to provide our clients with outstanding user interfaces, exceptional social media marketing, and consistent search engine optimization results.</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-signal"></i>
-                        <h4>Testing Stage</h4>
-                        <p>This is one of the most important parts to any type of development. Testing is essential to ensure that <em>your</em> product functions the way it is intended. Cross browser capability is a big testing point here, our developers will do their best to make your website look identical on any platform.</p>
+                        <i class="service-icon hoverable fa fa-comment"></i>
+                        <h4>About Us</h4>
+                        <p>bizuality is a small startup that focuses on mobile web development. Founders Cary and Trevor share a mutual intrest in the betterment of technology through design and software.</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-laptop"></i>
-                        <h4>Launch Stage</h4>
-                        <p>Finally, the moment <em>you</em> have been waiting for, it is time for your website to reach the masses. Once a website goes live, it is out there for the world to see. This is when customers will start to see <em>your</em> efforts, and <em>you</em> will see your business start to thrive.</p>
+                        <i class="service-icon hoverable fa fa-map-marker"></i>
+                        <h4>Location</h4>
+                        <p>Based out of North Augusta, SC and Columbia, SC, bizuality focuses mainly on the local markets. Our goal is to help local business move to the mobile world by way of mobile we development. If you would like to schedule a meeting, please <a href="" data-toggle="modal" data-target="#contactModal">contact us</a>.</p>
                     </div>
                 </div>
             </div>
-            <hr />
             <div class="row">
             	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             		<div id="map_canvas">
