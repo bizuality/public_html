@@ -49,7 +49,7 @@ include($root . '/public_html/variables/variables.php');
                     <div class="service-item">
                         <i class="service-icon hoverable fa fa-map-marker"></i>
                         <h4>Location</h4>
-                        <p>Based out of North Augusta, SC and Columbia, SC, bizuality focuses mainly on the local markets. Our goal is to help local business move to the mobile world by way of mobile we development. If you would like to schedule a meeting, please <a href="" data-toggle="modal" data-target="#contactModal">contact us</a>.</p>
+                        <p>Based out of North Augusta, SC and Columbia, SC, bizuality focuses mainly on the local markets. Our goal is to help local businesses move to the mobile world by way of mobile we development. If you would like to schedule a meeting, please <a href="" data-toggle="modal" data-target="#contactModal">contact us</a>.</p>
                     </div>
                 </div>
             </div>
