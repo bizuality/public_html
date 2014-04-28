@@ -69,6 +69,13 @@ include($root . '/public_html/variables/variables.php');
                         <p>Finally, the moment <em>you</em> have been waiting for, it is time for your website to reach the masses. Once a website goes live, it is out there for the world to see. This is when customers will start to see <em>your</em> efforts, and <em>you</em> will see your business start to thrive.</p>
                     </div>
                 </div>
+                <div class="col-md-3 text-center hoverable-color">
+                    <div class="service-item">
+                        <i class="service-icon hoverable fa fa-laptop"></i>
+                        <h4>Launch Stage</h4>
+                        <p>Finally, the moment <em>you</em> have been waiting for, it is time for your website to reach the masses. Once a website goes live, it is out there for the world to see. This is when customers will start to see <em>your</em> efforts, and <em>you</em> will see your business start to thrive.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
