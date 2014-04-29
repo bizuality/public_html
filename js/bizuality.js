@@ -1,6 +1,5 @@
 /************ Contact Modal ************/
 $('#contactModal').modal('hide') // Hides the modal until called.
-    
 
 /************ Spin on Hover ************/
 $(".hoverable").mouseover(function(){
@@ -40,11 +39,11 @@ $(document).ready(function(){
 		// Check valid class from the live form validation 
 		if($('#first_name').hasClass('valid') && $('#last_name').hasClass('valid') && $('#email').hasClass('valid') && $('#phone').hasClass('valid') && $('#goal').hasClass('valid')) {
 			// If so start with the form submission
-			var first_name=$('#first_name').val();
-			var last_name=$('#last_name').val();
-			var email=$('#email').val();
-			var phone=$('#phone').val();
-			var goal=$('#goal').val();
+			var first_name = $('#first_name').val();
+			var last_name = $('#last_name').val();
+			var email = $('#email').val();
+			var phone = $('#phone').val();
+			var goal = $('#goal').val();
 			var formData = "first_name="+first_name+"&last_name="+last_name+"&email="+email+"&phone="+phone+"&goal="+goal;
         	$.ajax({ // Start the PHP submission
         		url : "/public_html/php/send_contact_form.php",
@@ -116,6 +115,7 @@ $(document).ready(function(){
     	}
   	});
 });
+
 
 /************ Carousel ************/
 $(document).ready(function(){

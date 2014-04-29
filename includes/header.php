@@ -62,7 +62,7 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
                         </ul>	
                     </li>
                     <li class="page-scroll">
-                        <a href="" data-toggle="modal" data-target="#contactModal"">Contact Us</a>
+                        <a href="" data-toggle="modal" data-target="#contactModal">Contact Us</a>
                     </li>
                 </ul>
             </div>
