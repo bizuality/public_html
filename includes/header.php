@@ -1,18 +1,26 @@
 <?php 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-
-include($root . '/public_html/variables/variables.php');
-
 ?>
-<link rel="icon" type="image/ico" href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/bizuality_favicon.ico"/>
 
-<!-- Bootstrap core CSS -->
-<link href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/css/bootstrap.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Add custom CSS here -->
-<link href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<link href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/css/bizuality.css" rel="stylesheet">
+<head profile="http://www.bizuality.com">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title><?php echo $title ?></title>
+    
+	<link rel="icon" type="image/ico" href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/bizuality_favicon.ico"/>
+
+	<!-- Bootstrap core CSS -->
+	<link href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Add custom CSS here -->
+	<link href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/css/bizuality.css" rel="stylesheet">
 </head>
 <body>
 
@@ -54,7 +62,7 @@ include($root . '/public_html/variables/variables.php');
                         </ul>	
                     </li>
                     <li class="page-scroll">
-                        <a href="" data-toggle="modal" data-target="#contactModal"">Contact Us</a>
+                        <a href="" data-toggle="modal" data-target="#contactModal">Contact Us</a>
                     </li>
                 </ul>
             </div>
