@@ -46,7 +46,7 @@ $(document).ready(function(){
 			var goal = $('#goal').val();
 			var formData = "first_name="+first_name+"&last_name="+last_name+"&email="+email+"&phone="+phone+"&goal="+goal;
         	$.ajax({ // Start the PHP submission
-        		url : "/public_html/php/send_contact_form.php",
+        		url : "/public_html/db/submissions/submit_contact_form.php",
         		type: "POST",
         		data : formData,
         		success: function(data, textStatus, jqXHR) {	//data - response from server
