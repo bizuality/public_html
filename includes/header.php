@@ -49,10 +49,12 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Services</a>
                         <ul class="dropdown-menu">
-                        	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/services/websitedesign.php">Website Design</a></li>
+                        	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/services/analytics.php">Analytics</a></li>
                         	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/services/mobileweboptimization.php">Mobile Web Optimization</a></li>
-                        	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/services/socialmediamarketing.php">Social Media Creation and Marketing</a></li>
                         	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/services/seo.php">Search Engine Optimization</a></li>
+                        	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/services/socialmediamarketing.php">Social Media Creation and Marketing</a></li>
+                        	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/services/websitedesign.php">Website Design</a></li>
+                        	
                         </ul>	
                     </li>
                     <li class="dropdown">
