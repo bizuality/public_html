@@ -5,7 +5,7 @@
     <!-- Full Page Image Header Area -->
     <div id="top" class="header">
         <div class="vert-text">
-        		<img class="img-responsive center-block" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/bizuality_logo_2.png">
+        		<img class="img-responsive center-block" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/bizuality_logo.png">
             <h3>
             	<i class="popover-icon hoverable spin-on-scroll fa fa-code fa-2x" data-trigger="hover" data-placement="bottom" data-content="We will do the hard work for you!"></i>
             	<i class="popover-icon hoverable spin-on-scroll fa fa-group fa-2x" data-trigger="hover" data-placement="bottom" data-content="Updating statuses is a thing of the past."></i>
