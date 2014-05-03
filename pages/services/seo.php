@@ -15,7 +15,7 @@
             <div class="row">
             	<div class="col-lg-6 col-md-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3">
             		<div class="input-group">
-            			<input id="query" class="form-control input-lg input-border text-color" type="text" placeholder="Go ahead, Google yourself.">
+            			<input id="query" class="form-control input-lg input-border text-color" type="text" placeholder="<?php echo $variables['search_text'] ?>">
             			<span class="input-group-btn"><button id="searchButton" class="btn btn-lg btn-primary">Search</button></span>
             		</div>
             	</div>
@@ -24,30 +24,30 @@
             <div class="row">
                 <div class="col-md-3 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-code"></i>
-                        <h4>Development Stage</h4>
-                        <p>This is <em>your</em> chance to sit back and relax. Our technical staff will do all the hard work for <em>you</em> to make this process as seamless as possible. Our developers will take care in order to ensure the code complies with all the known conventions, and that documentation will be provided with each file.</p>
+                        <i class="service-icon hoverable fa <?php echo $variables['col_01_icon'] ?>"></i>
+                        <h4><?php echo $variables['col_01_title'] ?></h4>
+                        <p><?php echo $variables['col_01_text'] ?></p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-eye"></i>
-                        <h4>Review Stage</h4>
-                        <p>About halfway through the process, we will have a review stage. This is <em>your</em> chance to point out any details you want changed or accept the design. Once the design is to <em>your</em> satisfaction, we will move on to one of the most important steps, testing!</p>
+                        <i class="service-icon hoverable fa <?php echo $variables['col_02_icon'] ?>"></i>
+                        <h4><?php echo $variables['col_02_title'] ?></h4>
+                        <p><?php echo $variables['col_02_text'] ?></p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-signal"></i>
-                        <h4>Testing Stage</h4>
-                        <p>This is one of the most important parts to any type of development. Testing is essential to ensure that <em>your</em> product functions the way it is intended. Cross browser capability is a big testing point here, our developers will do their best to make your website look identical on any platform.</p>
+                        <i class="service-icon hoverable fa <?php echo $variables['col_03_icon'] ?>"></i>
+                        <h4><?php echo $variables['col_03_title'] ?></h4>
+                        <p><?php echo $variables['col_03_text'] ?></p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-laptop"></i>
-                        <h4>Launch Stage</h4>
-                        <p>Finally, the moment <em>you</em> have been waiting for, it is time for your website to reach the masses. Once a website goes live, it is out there for the world to see. This is when customers will start to see <em>your</em> efforts, and <em>you</em> will see your business start to thrive.</p>
+                        <i class="service-icon hoverable fa <?php echo $variables['col_04_icon'] ?>"></i>
+                        <h4><?php echo $variables['col_04_title'] ?></h4>
+                        <p><?php echo $variables['col_04_text'] ?></p>
                     </div>
                 </div>
             </div>

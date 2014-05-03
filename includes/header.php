@@ -11,7 +11,7 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $title ?></title>
+    <title><?php echo $variables['title'] ?></title>
     
 	<link rel="icon" type="image/ico" href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/bizuality_favicon.ico"/>
 

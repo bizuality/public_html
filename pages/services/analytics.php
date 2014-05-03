@@ -16,30 +16,30 @@
             <div class="row">
                 <div class="col-md-3 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-eye"></i>
-                        <h4><?php echo $col_01_title ?></h4>
-                        <p><?php echo $col_01_text ?></p>
+                        <i class="service-icon hoverable fa <?php echo $variables['col_01_icon'] ?>"></i>
+                        <h4><?php echo $variables['col_01_title'] ?></h4>
+                        <p><?php echo $variables['col_01_text'] ?></p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-signal"></i>
-                        <h4>Testing Stage</h4>
-                        <p>This is one of the most important parts to any type of development. Testing is essential to ensure that <em>your</em> product functions the way it is intended. Cross browser capability is a big testing point here, our developers will do their best to make your website look identical on any platform.</p>
+                        <i class="service-icon hoverable fa <?php echo $variables['col_02_icon'] ?>"></i>
+                        <h4><?php echo $variables['col_02_title'] ?></h4>
+                        <p><?php echo $variables['col_02_text'] ?></p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-laptop"></i>
-                        <h4>Launch Stage</h4>
-                        <p>Finally, the moment <em>you</em> have been waiting for, it is time for your website to reach the masses. Once a website goes live, it is out there for the world to see. This is when customers will start to see <em>your</em> efforts, and <em>you</em> will see your business start to thrive.</p>
+                        <i class="service-icon hoverable fa <?php echo $variables['col_03_icon'] ?>"></i>
+                        <h4><?php echo $variables['col_03_title'] ?></h4>
+                        <p><?php echo $variables['col_03_text'] ?></p>
                     </div>
                 </div>
                 <div class="col-md-3 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-laptop"></i>
-                        <h4>Launch Stage</h4>
-                        <p>Finally, the moment <em>you</em> have been waiting for, it is time for your website to reach the masses. Once a website goes live, it is out there for the world to see. This is when customers will start to see <em>your</em> efforts, and <em>you</em> will see your business start to thrive.</p>
+                        <i class="service-icon hoverable fa <?php echo $variables['col_04_icon'] ?>"></i>
+                        <h4><?php echo $variables['col_04_title'] ?></h4>
+                        <p><?php echo $variables['col_04_text'] ?></p>
                     </div>
                 </div>
             </div>

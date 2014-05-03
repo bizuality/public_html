@@ -16,23 +16,23 @@
             <div class="row">
                 <div class="col-md-4 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-bullhorn"></i>
-                        <h4>Mission</h4>
-                        <p>Our mission is to provide mobile first websites to small businesses who do not already have a mobile implementation of their website. We also strive to provide our clients with outstanding user interfaces, exceptional social media marketing, and consistent search engine optimization results.</p>
+                        <i class="service-icon hoverable fa <?php echo $variables['col_01_icon'] ?>"></i>
+                        <h4><?php echo $variables['col_01_title'] ?></h4>
+                        <p><?php echo $variables['col_01_text'] ?></p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-comment"></i>
-                        <h4>About Us</h4>
-                        <p>bizuality is a small startup that focuses on mobile web development. Founders Cary and Trevor share a mutual intrest in the betterment of technology through design and software.</p>
-                    </div>
+                        <i class="service-icon hoverable fa <?php echo $variables['col_02_icon'] ?>"></i>
+                        <h4><?php echo $variables['col_02_title'] ?></h4>
+						<p><?php echo $variables['col_02_text'] ?></p>
+					</div>
                 </div>
                 <div class="col-md-4 text-center hoverable-color">
                     <div class="service-item">
-                        <i class="service-icon hoverable fa fa-map-marker"></i>
-                        <h4>Location</h4>
-                        <p>Based out of North Augusta, SC and Columbia, SC, bizuality focuses mainly on the local markets. Our goal is to help local businesses move to the mobile world by way of mobile we development. If you would like to schedule a meeting, please <a href="" data-toggle="modal" data-target="#contactModal">contact us</a>.</p>
+                        <i class="service-icon hoverable fa <?php echo $variables['col_03_icon'] ?>"></i>
+                        <h4><?php echo $variables['col_03_title'] ?></h4>
+                        <p><?php echo $variables['col_03_text'] ?></p>
                     </div>
                 </div>
             </div>

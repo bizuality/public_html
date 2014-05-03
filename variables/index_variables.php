@@ -2,11 +2,12 @@
 
 require_once(realpath($_SERVER["DOCUMENT_ROOT"]) .  '/public_html/db/load.php');
 
+$variables = array();
 
+$result = $bdb->select('SELECT variable_name, value FROM index_variables');
 
-//$title =  mysqli_query($con, "SELECT value FROM about_variables WHERE variable_name='title'") or die("MySQL Error");
-$title = $bdb->select('SELECT value FROM index_variables WHERE variable_name="title"');
-$title = mysql_fetch_assoc($title);
-$title = $title['value'];
+while(($row = mysql_fetch_assoc($result))) {
+	$variables[$row['variable_name']] = $row['value'];
+}
 
 ?>
