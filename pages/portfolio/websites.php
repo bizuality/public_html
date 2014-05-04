@@ -17,30 +17,30 @@
                     <div class="portfolio-item">
                     	<div class="thumb">
                     		<div class="text">
-                    			<h3>Trevor Hutto</h3>
+                    			<h3><?php echo $variables['col_01_caption_title'] ?></h3>
                     			<hr />
-                    			<p>Trevor is the co-founder, and developer for <em>bizuality</em>. He designed his school website as a one page scroller. This website features a black and white feel with garnet accent buttons. <a href="http://www.cse.sc.edu/~huttotw">Check it out</a>.
+                    			<p><?php echo $variables['col_01_caption_text'] ?></p>.
                     		</div>
-                        	<a href="http://www.cse.sc.edu/~huttotw" target="_blank">
-                            	<img class="img-portfolio img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/trevor_website_display.png">
+                        	<a href="<?php echo $variables['col_01_img_link'] ?>" target="_blank">
+                            	<img class="img-portfolio img-responsive" src="<?php echo $variables['col_01_img'] ?>">
                         	</a>
                         </div>
-                        <h4>Trevor Hutto</h4>
+                        <h4><?php echo $variables['col_01_title'] ?></h4>
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="portfolio-item">
                     	<div class="thumb">
                     		<div class="text">
-                    			<h3>Crowder Stewart LLP</h3>
+                    			<h3><?php echo $variables['col_02_caption_title'] ?></h3>
                     			<hr />
-                    			<p>Crowder Stewart LLP is a law firm based in Augusta, GA. Their website features a homepage carousel, and a box structure for their content. Go have a <a href="http://www.crowderstewart.com">look</a>.
+                    			<p><?php echo $variables['col_02_caption_text'] ?></p>.
                     		</div>
-                        	<a href="http://www.crowderstewart.com" target="_blank">
-                            	<img class="img-portfolio img-responsive" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/crowder_stewart_website_display.png">
+                        	<a href="<?php echo $variables['col_02_img_link'] ?>" target="_blank">
+                            	<img class="img-portfolio img-responsive" src="<?php echo $variables['col_02_img'] ?>">
                         	</a>
                         </div>
-                        <h4>Crowder Stewart LLP</h4>
+                        <h4><?php echo $variables['col_02_title'] ?></h4>
                     </div>
                 </div>
             </div>
