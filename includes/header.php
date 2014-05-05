@@ -85,3 +85,10 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
         <!-- /.container -->
     </nav>
 <!--/Navigation Bar-->
+
+	<div class="show-on-error-banner">
+		<div class="error-msg">
+		</div>
+    </div>
+<!-- End of Error Message -->
+

@@ -147,3 +147,27 @@ $('#searchButton').click(function(){
 	query = query.replace(" ", "+");
 	window.open(query, "_blank");
 });
+
+/************ URL Params ************/
+$(document).ready(function(){
+	var $_GET = {};
+
+	document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+    	function decode(s) {
+        	return decodeURIComponent(s.split("+").join(" "));
+    	}
+
+    	$_GET[decode(arguments[1])] = decode(arguments[2]);
+	});
+
+	if($_GET['msg'] == 'error') {
+		if($_GET['value'] == 1) {
+			$('.error-msg').append('<p>Your username or password is incorrect. Please try again.</p>');
+		}
+		if($_GET['value'] == 2) {
+			$('.error-msg').append('<p>You are not logged in.</p>');
+		}
+		$('.show-on-error-banner').slideDown('slow');
+	}
+});
+

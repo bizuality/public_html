@@ -432,7 +432,7 @@ i.scroll:hover {
 .input-border {
   border: 1px solid #fff;
 }
-.show-on-submit, .show-on-error {
+.show-on-submit, .show-on-error, .show-on-error-banner {
   display: none;
 }
 
@@ -530,6 +530,18 @@ i.scroll:hover {
 }
 .thumb:hover .text {
     display: block;
+}
+
+.error-msg {
+  color: #fff;
+  background-color: #cd5f5c;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.error-msg > p {
+	margin-top: 55px;
 }
 
 /**************** Custom Map ****************/
