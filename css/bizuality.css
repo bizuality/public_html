@@ -537,3 +537,22 @@ i.scroll:hover {
   width: 100%;
   height: 400px;
 }
+
+/**************** Sign In Form ****************/
+.sign-in-form {
+	display: block;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sign-in-form > input {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid #00efa0;
+	border-radius: 5px;
+	color: #00efa0;
+}

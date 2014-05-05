@@ -66,6 +66,18 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
                     <li class="page-scroll">
                         <a href="" data-toggle="modal" data-target="#contactModal">Contact Us</a>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Sign In</a>
+                        <ul class="dropdown-menu">
+							<form action="/public_html/db/check_login.php" method="post" accept-charset="UTF-8">
+								<div class="input-group sign-in-form">
+  									<input id="username" type="text" name="username" placeholder="Username"/>
+  									<input id="password" type="password" name="password" placeholder="Password" />
+  									<button id="signInButton" class="btn-custom-form btn btn-lg center-block" type="submit">Sign In</button>
+  								</div>
+							</form>
+                        </ul>	
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
