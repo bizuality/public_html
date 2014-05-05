@@ -64,8 +64,8 @@ if(!class_exists('Bizuality')){
 				$sto_password = $results['password'];
 				
 				if($sto_username == $username && $sto_password == $password) {
-					setcookie('bizuality[username]', $sto_username, 0, '', '', '', true);
-					setcookie('bizuality[password]', $sto_password, 0, '', '', '', true);
+					setcookie('bizuality[user]', $sto_username, time() + (60 * 60 * 24), '/', false);
+					setcookie('bizuality[pass]', $sto_password, time() + (60 * 60 * 24), '/', false);
 					header("Location: /public_html/pages/users_page.php");
 				}
 				else{
@@ -76,16 +76,14 @@ if(!class_exists('Bizuality')){
 		
 		function checkLogin($table) {
 			global $bdb;
-		
-			//Grab our authorization cookie array
+			
 			$cookie = $_COOKIE['bizuality'];
-			
 			//Set our user and authID variables
-			$username = $cookie['username'];
-			$password = $cookie['password'];
+			$username = $cookie['user'];
+			$password = $cookie['pass'];
 			
-			if (! empty ( $cookie) ) {
-				$sql = "SELECT * FROM $table WHRERE username ='" . $username . "'";
+			if (!empty($username)) {
+				$sql = "SELECT * FROM $table WHERE username ='" . $username . "'";
 				$results = $bdb->select($sql);
 			
 				//Fetch our results into an associative array

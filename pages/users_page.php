@@ -3,8 +3,7 @@
 require_once(realpath($_SERVER["DOCUMENT_ROOT"]) .  '/public_html/db/load.php');
 
 $table_name = 'user_logins';
-$b->checkLogin($table_name);
-
+$logged = $b->checkLogin($table_name);
 ?>
 
 <!DOCTYPE html>

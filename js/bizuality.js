@@ -167,6 +167,9 @@ $(document).ready(function(){
 		if($_GET['value'] == 2) {
 			$('.error-msg').append('<p>You are not logged in.</p>');
 		}
+		if($_GET['value'] == 3) {
+			$('.error-msg').append('<p>Here</p>');
+		}
 		$('.show-on-error-banner').slideDown('slow');
 	}
 });
