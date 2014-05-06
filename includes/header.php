@@ -1,5 +1,14 @@
 <?php 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+require_once(realpath($_SERVER["DOCUMENT_ROOT"]) .  '/public_html/db/load.php');
+
+session_start();
+$signin = false;
+if(isset($_SESSION['username'])) {
+	$signin = true;
+	$username = $_SESSION['username'];
+}
+session_write_close();
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +52,7 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll">
+                    <li>
                         <a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/about.php">About</a>
                     </li>
                     <li class="dropdown">
@@ -63,13 +72,14 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
                         	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/portfolio/websites.php">Websites</a></li>
                         </ul>	
                     </li>
-                    <li class="page-scroll">
+                    <li>
                         <a href="" data-toggle="modal" data-target="#contactModal">Contact Us</a>
                     </li>
+                    <?php if(!$signin) { echo '
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Sign In</a>
                         <ul class="dropdown-menu">
-							<form action="/public_html/db/check_login.php" method="post" accept-charset="UTF-8">
+							<form action="/public_html/db/login.php" method="post" accept-charset="UTF-8">
 								<div class="input-group sign-in-form">
   									<input id="username" type="text" name="username" placeholder="Username"/>
   									<input id="password" type="password" name="password" placeholder="Password" />
@@ -78,6 +88,16 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 							</form>
                         </ul>	
                     </li>
+                    '; }
+                    if($signin) { echo '
+				    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">' . $username . '</a>
+                        <ul class="dropdown-menu">
+                        	<li><a href="/public_html/pages/accounts/users_page.php">User\'s Hub</a></li>
+							<li><a href="/public_html/db/logout.php">Sign Out</a></li>
+                        </ul>	
+                    </li>
+                    '; } ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -86,9 +106,16 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
     </nav>
 <!--/Navigation Bar-->
 
+<!-- Error Message -->
 	<div class="show-on-error-banner">
 		<div class="error-msg">
 		</div>
     </div>
-<!-- End of Error Message -->
+<!-- /Error Message -->
 
+<!-- Error Message -->
+	<div class="show-on-notification-banner">
+		<div class="notification-msg">
+		</div>
+    </div>
+<!-- /Error Message -->

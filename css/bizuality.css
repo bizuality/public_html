@@ -432,7 +432,7 @@ i.scroll:hover {
 .input-border {
   border: 1px solid #fff;
 }
-.show-on-submit, .show-on-error, .show-on-error-banner {
+.show-on-submit, .show-on-error, .show-on-error-banner, .show-on-notification-banner {
   display: none;
 }
 
@@ -457,6 +457,10 @@ i.scroll:hover {
   color: #fff;
   background-color: #00efa0;
   border: 5px solid #fff;
+}
+
+.col-form {
+  margin: 5px;
 }
 /**************** Images ****************/
 
@@ -540,7 +544,15 @@ i.scroll:hover {
   border-radius: 5px;
 }
 
-.error-msg > p {
+.notification-msg {
+  color: #fff;
+  background-color: #0a5175;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.error-msg, .notification-msg> p {
 	margin-top: 55px;
 }
 
