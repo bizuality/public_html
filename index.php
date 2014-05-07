@@ -1,6 +1,6 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); ?>
 <?php include($root . '/public_html/variables/index_variables.php'); ?>
-<?php include($root . '/public_html/includes/header.php'); ?>
+<?php require_once($root . '/public_html/includes/header.php'); ?>
     
 <!-- Full Page Image Header Area -->
     <div id="top" class="header">

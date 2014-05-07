@@ -1,5 +1,4 @@
 <?php
-$url=strtok($_SERVER["REQUEST_URI"],'?');
 // Our main class
 if(!class_exists('Bizuality')){
 	class Bizuality {
@@ -45,11 +44,16 @@ if(!class_exists('Bizuality')){
 		function login($table) {
 			global $bdb;
 			
+			// So that we don't pile up parameters in the URL.
+			$uri_parts = explode('?', $_SERVER['HTTP_REFERER'], 2);
+			$url = $uri_parts[0];
+			
 			if (! empty($_POST)) {
 				$values = $bdb->clean($_POST);
 				
 				$username = $_POST['username'];
 				$password = $_POST['password'];
+				$password = $bdb->hash_password($password);
 				
 				$sql = "SELECT * FROM $table WHERE username = '" . $username . "'";
 				$results = $bdb->select($sql);
@@ -63,16 +67,19 @@ if(!class_exists('Bizuality')){
 				
 				$sto_username = $results['username'];
 				$sto_password = $results['password'];
+				$sto_pid = $results['sc_pid'];
+				$sto_analytics_sub = $results['analytics_sub'];
 				
 				if($sto_username == $username && $sto_password == $password) {
 					session_start();
 					$_SESSION['username'] = $sto_username;
-					$_SESSION['password'] = $sto_password;
+					$_SESSION['sc_pid'] = $sto_pid;
+					$_SESSION['analytics_sub'] = $sto_analytics_sub;
 					session_write_close();
 					header("Location: /public_html/pages/accounts/users_page.php");
 				}
 				else{
-					header("Location: $_SERVER[HTTP_REFERER]?msg=error&value=1");
+					header("Location: $url?msg=error&value=1");
 				}
 			}
 		}
@@ -80,10 +87,13 @@ if(!class_exists('Bizuality')){
 		function checkLogin($table) {
 			global $bdb;
 			
+			// So that we don't pile up parameters in the URL.
+			$uri_parts = explode('?', $_SERVER['HTTP_REFERER'], 2);
+			$url = $uri_parts[0];
+			
 			session_start();
 			//Set our user and authID variables
 			$username = $_SESSION['username'];
-			$password = $_SESSION['password'];
 			session_write_close();
 			
 			if (!empty($username)) {
@@ -94,9 +104,8 @@ if(!class_exists('Bizuality')){
 				$results = mysql_fetch_assoc( $results );
 			
 				$sto_username = $results['username'];
-				$sto_password = $results['password'];
 			
-				if($sto_username == $username && $sto_password == $password) {
+				if($sto_username == $username) {
 					$results = true;
 				}
 				else {
@@ -130,6 +139,10 @@ if(!class_exists('Bizuality')){
 		function changePassword($username, $table) {
 			global $bdb;
 			
+			// So that we don't pile up parameters in the URL.
+			$uri_parts = explode('?', $_SERVER['HTTP_REFERER'], 2);
+			$url = $uri_parts[0];
+			
 			$results = false;
 			if( !empty($_POST)){
 				
@@ -138,8 +151,11 @@ if(!class_exists('Bizuality')){
 				
 				// Set variables.
 				$old_password = $_POST['old_password'];
+				$old_password = $bdb->hash_password($old_password);
 				$new_password = $_POST['new_password'];
+				$new_password = $bdb->hash_password($new_password);
 				$confirm_password = $_POST['confirm_password'];
+				$confirm_password = $bdb->hash_password($confirm_password);
 				
 				$sql = "SELECT * FROM $table WHERE username ='" . $username . "'";
 				$results = $bdb->select($sql);
@@ -152,17 +168,85 @@ if(!class_exists('Bizuality')){
 					if($new_password == $confirm_password) {
 						$sql = "UPDATE $table SET password ='" . $new_password . "' WHERE username ='" . $username . "'";
 						$results = $bdb->update($sql);
+						if($results) {
+							header("Location: $url?msg=success&value=2");
+						}
 					}
 					else {
-						// new passwords do not match
+						header("Location: $url?msg=error&value=4");
 					}
 				}
 				else {
-					// old does not match stored
+					header("Location: $url?msg=error&value=3");
 				}	
 			}
 			
 			return $results;
+		}
+		
+		function askQuestion($username, $table) {
+			global $bdb;
+			
+			// So that we don't pile up parameters in the URL.
+			$uri_parts = explode('?', $_SERVER['HTTP_REFERER'], 2);
+			$url = $uri_parts[0];
+			
+			$results = false;
+			if( !empty($_POST)){
+				
+				// Clean up.
+				$values = $bdb->clean($_POST);
+				
+				// Set variables.
+				$category = $_POST['category'];
+				$question = $_POST['question'];
+				
+				$to = 'support@bizuality.com';
+				$subject = 'User Question - bizuality';
+				$message = $username . 'has a question...\n';
+				$message .= 'Their question is classified under' . $category . '.\n';
+				$message .= 'Question: \n';
+				$message .= $question;
+				$message = wordwrap($message, 70); // PHP does not allow line lengths over 70.
+				
+				
+				// Send the email...	
+				$results = mail($to, $subject, $message);
+				
+				header("Location: $url?msg=success&value=3");
+			}
+			else {
+				header("Location: $url?msg=error&value=6");	
+			}
+			
+			return $results;
+		}
+		
+		function checkAnalyticSub($username, $table) {
+			global $bdb;
+			
+			// So that we don't pile up parameters in the URL.
+			$uri_parts = explode('?', $_SERVER['HTTP_REFERER'], 2);
+			$url = $uri_parts[0];
+			
+			if(!empty($username)) {
+				$sql = "SELECT * FROM $table WHERE username ='" . $username . "'";
+				$results = $bdb->select($sql);
+			
+				//Fetch our results into an associative array
+				$results = mysql_fetch_assoc( $results );
+			
+				$isSub = $results['analytics_sub'];
+				
+				if($isSub){
+					header("Location: /public_html/pages/accounts/analytics.php");
+				}
+				else {
+					header("Location: $url?msg=error&value=6");	
+				}
+			}
+			
+			return $isSub;
 		}
 	}
 }

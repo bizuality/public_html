@@ -1,6 +1,6 @@
 <?php
 
-require_once(realpath($_SERVER["DOCUMENT_ROOT"]) .  '/public_html/db/load.php');
+require_once(realpath($_SERVER["DOCUMENT_ROOT"]) .  '/public_html/resources/load.php');
 
 $variables = array();
 

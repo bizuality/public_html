@@ -10,7 +10,7 @@ body {
 }
 
 p {
-  font-size: 1.15em;
+  font-size: 1.3em;
 }
 
 @media (max-width: 480px) {
@@ -365,28 +365,6 @@ i.scroll:hover {
   
 }
 
-.focus-area {
-  display: block;
-  border: 5px solid #fff;
-  border-radius: 5px;
-  color: #fff;
-  background-color: #00efa0;
-  vertical-align: middle;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.focus-area-alternate {
-  display: block;
-  border: 5px solid #00efa0;
-  border-radius: 5px;
-  color: #0a5175;
-  background-color: #fff;
-  vertical-align: middle;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
 /**************** Navigation Bar - Mobile ****************/
 @media (max-width: 768px) {
   .dropdown-menu > li > a {
@@ -553,7 +531,8 @@ i.scroll:hover {
 }
 
 .error-msg, .notification-msg> p {
-	margin-top: 55px;
+	margin-top: 50px;
+	padding: 5px;
 }
 
 /**************** Custom Map ****************/
@@ -563,14 +542,30 @@ i.scroll:hover {
 }
 
 /**************** Sign In Form ****************/
-.sign-in-form {
+.custom-form {
 	display: block;
 	width: 200px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.sign-in-form > input {
+.custom-form > input, textarea, select {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid #00efa0;
+	border-radius: 5px;
+	color: #00efa0;
+}
+
+.custom-form-lg {
+	display: block;
+}
+
+.custom-form-lg > input, textarea, select {
+	width: 80%;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	display: block;

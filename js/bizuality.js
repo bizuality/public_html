@@ -168,22 +168,31 @@ $(document).ready(function(){
 			$('.error-msg').append('<p>You are not logged in.</p>');
 		}
 		if($_GET['value'] == 3) {
-			$('.error-msg').append('<p>Your current password is incorrect.</p>');
+			$('.error-msg').append('<p>Your old password is incorrect.</p>');
 		}
 		if($_GET['value'] == 4) {
 			$('.error-msg').append('<p>Your new password can not be confirmed, please try again.</p>');
 		}
 		if($_GET['value'] == 5) {
-			$('.error-msg').append('<p>Your new password can not be changed.</p>');
+			$('.error-msg').append('<p>Your new password cannot be changed.</p>');
+		}
+		if($_GET['value'] == 6) {
+			$('.error-msg').append('<p>Your question was not submitted. Please try again.</p>');
+		}
+		if($_GET['value'] == 7) {
+			$('.error-msg').append('<p>You are not an analytics subscriber.</p>');
 		}
 		$('.show-on-error-banner').slideDown('slow');
 	}
 	if($_GET['msg'] == 'success') {
 		if($_GET['value'] == 1) {
-			$('.notification-msg').append('<p>You are now logged out.</p>');
+			$('.notification-msg').append('<p>You are now signed out.</p>');
 		}
 		if($_GET['value'] == 2) {
-			$('.notification-msg').append('<p>Your password is changed.</p>');
+			$('.notification-msg').append('<p>Your password has been changed.</p>');
+		}
+		if($_GET['value'] == 3) {
+			$('.notification-msg').append('<p>Your question has been sent, we will be in touch soon.</p>');
 		}
 		$('.show-on-notification-banner').slideDown('slow');
 	}	

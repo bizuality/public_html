@@ -68,8 +68,8 @@ if(!class_exists('BizualityDatabase')){
 		 * @param string $nonce A user-specific NONCE
 		 * @return string $secureHash The hashed password
 		 */
-		function hash_password($password, $nonce) {
-		  $secureHash = hash('sha512', $password . $nonce);
+		function hash_password($password) {
+		  $secureHash = hash('sha512', $password);
 		  
 		  return $secureHash;
 		}
