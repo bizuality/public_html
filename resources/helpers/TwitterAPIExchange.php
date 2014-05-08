@@ -191,6 +191,7 @@ class TwitterAPIExchange
 
         $options = array( 
             CURLOPT_HTTPHEADER => $header,
+            CURLOPT_SSL_VERIFYPEER => false,
             CURLOPT_HEADER => false,
             CURLOPT_URL => $this->url,
             CURLOPT_RETURNTRANSFER => true,
@@ -208,9 +209,8 @@ class TwitterAPIExchange
                 $options[CURLOPT_URL] .= $getfield;
             }
         }
-
         $feed = curl_init();
-        curl_setopt_array($feed, $options);
+		curl_setopt_array($feed, $options);
         $json = curl_exec($feed);
         curl_close($feed);
 
