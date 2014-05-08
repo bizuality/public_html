@@ -133,7 +133,12 @@ $(".hoverable-color").mouseover(function(){
 $(".hoverable-color").mouseout(function(){
 	$(this).removeClass('color-on-hover');
 });
-
+$(".hoverable-color-fixed").mouseover(function(){
+	$(this).addClass('color-on-hover');
+});
+$(".hoverable-color-fixed").mouseout(function(){
+	$(this).removeClass('color-on-hover');
+});
 $('.text').hide().removeClass('text').addClass('text-js');
 
 $('.thumb').hover(function(){

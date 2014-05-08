@@ -10,7 +10,7 @@ if($logged) {
 	$analytics_sub = $_SESSION['analytics_sub'];
 }
 
-if(basename($_SERVER['REQUEST_URI']) == 'analytics.php') {
+if(basename($_SERVER['REQUEST_URI']) == 'analytics.php' or basename($_SERVER['REQUEST_URI']) == 'more_visitor_info.php') {
 	if(!$analytics_sub) {
 		header("Location: /public_html/pages/accounts/users_page.php?msg=error&value=7");
 	}

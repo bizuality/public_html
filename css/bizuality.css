@@ -13,6 +13,7 @@ p {
   font-size: 1.3em;
 }
 table {
+  color: #fff;
   width: 700px;
   margin-right: auto;
   margin-left: auto;
@@ -300,6 +301,11 @@ i.scroll:hover {
 
 .center {
   text-align: center;
+}
+
+.thick {
+  height: 3px;
+  background-color: #fff;
 }
 
 /* Responsive */

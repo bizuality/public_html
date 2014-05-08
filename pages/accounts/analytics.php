@@ -30,7 +30,7 @@ $sc->getRecentVisitors(5);
                 </div>
             </div>
             <div class="row">
-            	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color">
+            	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color-fixed">
             		<i class="service-item hoverable fa fa-eye fa-4x"></i>
             		<h2>Today</h2>
             		<hr />
@@ -43,7 +43,7 @@ $sc->getRecentVisitors(5);
             		<h4>First Time Visits</h4>
             		<h2><?php echo $dailyStats['first_time_visits']; ?></h2>
                 </div>
-            	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color">
+            	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color-fixed">
             		<i class="service-item hoverable fa fa-eye fa-4x"></i>
             		<h2>This Week</h2>
             		<hr />
@@ -56,7 +56,7 @@ $sc->getRecentVisitors(5);
             		<h4>First Time Visits</h4>
             		<h2><?php echo $weeklyStats['first_time_visits']; ?></h2>
                 </div>
-            	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color">
+            	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color-fixed">
             		<i class="service-item hoverable fa fa-eye fa-4x"></i>
             		<h2>This Month</h2>
             		<hr />
@@ -69,7 +69,7 @@ $sc->getRecentVisitors(5);
             		<h4>First Time Visits</h4>
             		<h2><?php echo $monthlyStats['first_time_visits']; ?></h2>
                 </div>
-            	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color">
+            	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color-fixed">
             		<i class="service-item hoverable fa fa-eye fa-4x"></i>
             		<h2>This Year</h2>
             		<hr />
@@ -83,8 +83,23 @@ $sc->getRecentVisitors(5);
             		<h2><?php echo $yearlyStats['first_time_visits']; ?></h2>
                 </div>
             </div>
+            <hr class="thick"/>
             <div class="row">
-            	<div class="col-lg-4 col-md-4 col-sm-4 hoverable-color text-center">
+               <div class="col-lg-4 col-md-4 col-sm-4 hoverable-color-fixed text-center">
+            		<i class="hoverable fa fa-tasks fa-4x"></i>
+            		<h2 class="text-center">Operating Systems</h2>
+            		<hr />
+					<?php
+						$length = count($oss);
+						$result = '<table>';
+						for ($i = 0; $i < $length; $i++) {
+							$result .= '<tr><td class="text-left"><p>' . ($i + 1) . ')&nbsp;</p></td><td class="text-left">' . $oss[$i]['os_name'] . '</td><td class="text-right"><p>' . $oss[$i]['percentage'] . '</p></td></tr>';
+						}
+						$result .= '</table>';
+					?>
+					<p><?php echo $result; ?></p>
+                </div>
+            	<div class="col-lg-4 col-md-4 col-sm-4 hoverable-color-fixed text-center">
             		<i class="hoverable fa fa-mobile fa-4x"></i>
             		<h2 class="text-center">Devices</h2>
             		<hr />
@@ -100,21 +115,7 @@ $sc->getRecentVisitors(5);
 					?>
 					<p><?php echo $result; ?></p>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 hoverable-color text-center">
-            		<i class="hoverable fa fa-tasks fa-4x"></i>
-            		<h2 class="text-center">Operating Systems</h2>
-            		<hr />
-					<?php
-						$length = count($oss);
-						$result = '<table>';
-						for ($i = 0; $i < $length; $i++) {
-							$result .= '<tr><td class="text-left"><p>' . ($i + 1) . ')&nbsp;</p></td><td class="text-left">' . $oss[$i]['os_name'] . '</td><td class="text-right"><p>' . $oss[$i]['percentage'] . '</p></td></tr>';
-						}
-						$result .= '</table>';
-					?>
-					<p><?php echo $result; ?></p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 hoverable-color text-center">
+                <div class="col-lg-4 col-md-4 col-sm-4 hoverable-color-fixed text-center">
                		<i class="hoverable fa fa-compass fa-4x"></i>
             		<h2 class="text-center">Browsers</h2>
             		<hr />
@@ -129,8 +130,9 @@ $sc->getRecentVisitors(5);
 					<p><?php echo $result; ?></p>
                 </div>
             </div>
+            <hr class="thick"/>
             <div class="row">
-            	<div class="col-lg-6 col-md-6 col-sm-6 hoverable-color text-center">
+            	<div class="col-lg-6 col-md-6 col-sm-6 hoverable-color-fixed text-center">
             		<i class="hoverable fa fa-bookmark-o fa-4x"></i>
             		<h2 class="text-center">Popular Pages</h2>
             		<hr />
@@ -144,7 +146,7 @@ $sc->getRecentVisitors(5);
 					?>
 					<p><?php echo $result; ?></p>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 hoverable-color text-center">
+                <div class="col-lg-6 col-md-6 col-sm-6 hoverable-color-fixed text-center">
                		<i class="hoverable fa fa-ellipsis-h fa-4x"></i>
             		<h2 class="text-center">Referring URL's</h2>
             		<hr />
@@ -161,8 +163,9 @@ $sc->getRecentVisitors(5);
 					<p><?php echo $result; ?></p>
                 </div>
             </div>
-            <div class="row">
-               	<div class="col-lg-4 col-md-4 col-sm-4 hoverable-color text-center">
+            <hr class="thick"/>
+            <div class="row text-center">
+               	<div class="col-lg-4 col-md-4 col-sm-4 hoverable-color-fixed text-center">
                		<i class="hoverable fa fa-ellipsis-h fa-4x"></i>
             		<h2 class="text-center">Recent Keywords</h2>
             		<hr />
@@ -175,8 +178,9 @@ $sc->getRecentVisitors(5);
 						$result .= '</table>';
 					?>
 					<p><?php echo $result; ?></p>
+					<br />
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-8 hoverable-color text-center">
+                <div class="col-lg-8 col-md-8 col-sm-8 hoverable-color-fixed text-center">
             		<i class="hoverable fa fa-male fa-4x"></i>
             		<h2 class="text-center">Your Most Recent Visitor</h2>
             		<hr />
@@ -258,10 +262,13 @@ $sc->getRecentVisitors(5);
 							<td class="text-right"><p><?php echo $recentVisitors[0]['visit_length']; ?></p></td>
 						</tr>
 					</table>
+					<br />
                 </div>
+                <a href="/public_html/pages/accounts/more_visitor_info.php" class="btn btn-default btn-lg text-center">Get More Visitor Information</a>
             </div>
+            <hr class="thick"/>
             <div class="row">
-            	<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 hoverable-color text-center">
+            	<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 hoverable-color-fixed text-center">
             		<i class="hoverable fa fa-location-arrow fa-4x"></i>
             		<h2 class="text-center">Locations</h2>
             		<hr />
