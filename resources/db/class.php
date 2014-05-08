@@ -184,6 +184,51 @@ if(!class_exists('Bizuality')){
 			return $results;
 		}
 		
+		function changeEmail($username, $table) {
+			global $bdb;
+			
+			// So that we don't pile up parameters in the URL.
+			$uri_parts = explode('?', $_SERVER['HTTP_REFERER'], 2);
+			$url = $uri_parts[0];
+			
+			$results = false;
+			if( !empty($_POST)){
+				
+				// Clean up.
+				$values = $bdb->clean($_POST);
+				
+				// Set variables.
+				$old_email = $_POST['old_email'];
+				$new_email = $_POST['new_email'];
+				$confirm_email = $_POST['confirm_email'];
+				
+				$sql = "SELECT * FROM $table WHERE username ='" . $username . "'";
+				$results = $bdb->select($sql);
+				
+				$results = mysql_fetch_assoc( $results );
+				
+				$sto_email = $results['email'];
+				
+				if($old_email == $sto_email){
+					if($new_password == $confirm_password) {
+						$sql = "UPDATE $table SET email ='" . $new_email . "' WHERE username ='" . $username . "'";
+						$results = $bdb->update($sql);
+						if($results) {
+							header("Location: $url?msg=success&value=4");
+						}
+					}
+					else {
+						header("Location: $url?msg=error&value=8");
+					}
+				}
+				else {
+					header("Location: $url?msg=error&value=9");
+				}	
+			}
+			
+			return $results;
+		}
+		
 		function askQuestion($username, $table) {
 			global $bdb;
 			

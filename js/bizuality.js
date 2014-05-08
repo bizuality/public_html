@@ -168,10 +168,10 @@ $(document).ready(function(){
 			$('.error-msg').append('<p>You are not logged in.</p>');
 		}
 		if($_GET['value'] == 3) {
-			$('.error-msg').append('<p>Your old password is incorrect.</p>');
+			$('.error-msg').append('<p>Your old password is incorrect. Please try again.</p>');
 		}
 		if($_GET['value'] == 4) {
-			$('.error-msg').append('<p>Your new password can not be confirmed, please try again.</p>');
+			$('.error-msg').append('<p>Your new password cannot be confirmed, please try again.</p>');
 		}
 		if($_GET['value'] == 5) {
 			$('.error-msg').append('<p>Your new password cannot be changed.</p>');
@@ -181,6 +181,12 @@ $(document).ready(function(){
 		}
 		if($_GET['value'] == 7) {
 			$('.error-msg').append('<p>You are not an analytics subscriber.</p>');
+		}
+		if($_GET['value'] == 8) {
+			$('.error-msg').append('<p>Your new email cannot be confirmed, please try again.</p>');
+		}
+		if($_GET['value'] == 9) {
+			$('.error-msg').append('<p>Your old email is incorrect. Please try again.</p>');
 		}
 		$('.show-on-error-banner').slideDown('slow');
 	}
@@ -193,6 +199,9 @@ $(document).ready(function(){
 		}
 		if($_GET['value'] == 3) {
 			$('.notification-msg').append('<p>Your question has been sent, we will be in touch soon.</p>');
+		}
+		if($_GET['value'] == 4) {
+			$('.notification-msg').append('<p>Your email has been updated.');
 		}
 		$('.show-on-notification-banner').slideDown('slow');
 	}	

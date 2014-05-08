@@ -12,7 +12,15 @@ body {
 p {
   font-size: 1.3em;
 }
+table {
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
+tr {
+  border-bottom: 1px solid #fff;
+}
 @media (max-width: 480px) {
   h1, .h1 {
     font-size: 30px;

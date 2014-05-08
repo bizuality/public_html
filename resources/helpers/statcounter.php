@@ -35,6 +35,12 @@ $weeklyStats = ""; // Array of this weeks statistics.
 $monthlyStats = ""; // Array of this years statistics.
 $yearlyStats = ""; // Array of this years statistics.
 $popularPages = ""; // Array of recent visitor data.
+$browsers = ""; // Array of recent visitor data.
+$oss = ""; // Array of browsers.
+$keywords = ""; // Array of keywords
+$recentActivity = ""; // Array of recent activity.
+$cameFrom = ""; // Array of came from links.
+$recentVisitors = ""; // Array of came from links.
 
 /*****************************************************************************************
  * Class StatCounter
@@ -148,6 +154,95 @@ class StatCounter {
 		
 		return true;
 		
+	}
+	
+	function getBrowsers($numberOfResults){
+		global $baseURL;
+		global $version;
+		global $browsers;
+		
+		$query = "?vn=" . $version . "&s=browsers" . "&de=all" . "&pi=" . $this->pid . "&n=" . $numberOfResults .  "&t=" . time() . "&u=" . $this->username;
+		$query = $baseURL . $query . "&sha1=" . sha1($query . $this->password);
+		$response = file_get_contents($query, true);
+		$response = json_decode($response, true);
+		$browsers = $response['sc_data']; // 2D array of browsers.
+		
+		return true;
+		
+	}
+	
+	function getOSs($numberOfResults){
+		global $baseURL;
+		global $version;
+		global $oss;
+		
+		$query = "?vn=" . $version . "&s=os" . "&de=all" . "&pi=" . $this->pid . "&n=" . $numberOfResults . "&t=" . time() . "&u=" . $this->username;
+		$query = $baseURL . $query . "&sha1=" . sha1($query . $this->password);
+		$response = file_get_contents($query, true);
+		$response = json_decode($response, true);
+		$oss = $response['sc_data']; // 2D array of keywords.
+		
+		return true;
+		
+	}
+	
+	function getKeywordActivity($numberOfResults){
+		global $baseURL;
+		global $version;
+		global $keywords;
+		
+		$query = "?vn=" . $version . "&s=keyword-activity" . "&pi=" . $this->pid . "&n=" . $numberOfResults . "&t=" . time() . "&u=" . $this->username . "&e=1";
+		$query = $baseURL . $query . "&sha1=" . sha1($query . $this->password);
+		$response = file_get_contents($query, true);
+		$response = json_decode($response, true);
+		$keywords = $response['sc_data']; // 2D array of operating systems.
+		
+		return true;
+		
+	}
+	
+	function getRecentActivity($numberOfResults){
+		global $baseURL;
+		global $version;
+		global $recentActivity;
+		
+		$query = "?vn=" . $version . "&s=pageload" . "&de=all" . "&pi=" . $this->pid . "&n=" . $numberOfResults . "&t=" . time() . "&u=" . $this->username;
+		$query = $baseURL . $query . "&sha1=" . sha1($query . $this->password);
+		$response = file_get_contents($query, true);
+		$response = json_decode($response, true);
+		$recentActivity = $response['sc_data']; // 2D array of recent activity.
+		
+		return true;
+		
+	}
+	
+	function getCameFrom($numberOfResults){
+		global $baseURL;
+		global $version;
+		global $cameFrom;
+		
+		$query = "?vn=" . $version . "&s=camefrom" . "&pi=" . $this->pid . "&n=" . $numberOfResults . "&t=" . time() . "&u=" . $this->username;
+		$query = $baseURL . $query . "&sha1=" . sha1($query . $this->password);
+		$response = file_get_contents($query, true);
+		$response = json_decode($response, true);
+		$cameFrom = $response['sc_data']; // 2D array of came from data.
+		
+		return true;
+		
+	}
+	
+	function getRecentVisitors($numberOfResults){
+		global $baseURL;
+		global $version;
+		global $recentVisitors;
+		
+		$query = "?vn=" . $version . "&s=visitor" . "&pi=" . $this->pid . "&n=" . $numberOfResults . "&t=" . time() . "&u=" . $this->username;
+		$query = $baseURL . $query . "&sha1=" . sha1($query . $this->password);
+		$response = file_get_contents($query, true);
+		$response = json_decode($response, true);
+		$recentVisitors = $response['sc_data']; // 2D array of recent visitor data.
+		
+		return true;
 		
 	}
 }
