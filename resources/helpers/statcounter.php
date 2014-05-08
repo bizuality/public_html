@@ -34,7 +34,7 @@ $dailyStats = ""; // Array of todays statistics.
 $weeklyStats = ""; // Array of this weeks statistics.
 $monthlyStats = ""; // Array of this years statistics.
 $yearlyStats = ""; // Array of this years statistics.
-$recentVisitors = ""; // Array of recent visitor data.
+$popularPages = ""; // Array of recent visitor data.
 
 /*****************************************************************************************
  * Class StatCounter
@@ -135,16 +135,20 @@ class StatCounter {
 		return true;
 	}
 	
-	function getRecentVisitors($numberOfResults){
+	function getPopularPages($numberOfResults){
 		global $baseURL;
 		global $version;
-		global $recentVisitors;
+		global $popularPages;
 		
-		$query = "?vn=" . $version . "&s=visitor" . "&pi=" . $this->pid ."&n=" . $numberOfResults . "&t=" . time() . "&u=" . $this->username;
+		$query = "?vn=" . $version . "&s=popular" . "&pi=" . $this->pid . "&n=" . $numberOfResults . "&c=0" . "&ct=page_view" . "&t=" . time() . "&u=" . $this->username;
 		$query = $baseURL . $query . "&sha1=" . sha1($query . $this->password);
 		$response = file_get_contents($query, true);
 		$response = json_decode($response, true);
-		$recentVisitors = $response['sc_data']; // 0 to get the one and only result. This year's.
+		$popularPages = $response['sc_data']; // 2D array of popular pages.
+		
+		return true;
+		
+		
 	}
 }
 // Instantiate our new Statcounter.
