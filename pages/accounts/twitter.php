@@ -1,6 +1,6 @@
 <?php
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-include($root . '/public_html/variables/user_analytics_variables.php');
+include($root . '/public_html/variables/user_twitter_variables.php');
 require_once($root . '/public_html/includes/secure_header.php');
 
 $settings = array(

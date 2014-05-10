@@ -2,7 +2,7 @@
 
 require_once($root .  '/public_html/resources/load.php');
 
-$table_name = 'user_logins';
+$table_name = 'users';
 $logged = $b->checkLogin($table_name);
 if($logged) {
 	$username = $_SESSION['username'];
