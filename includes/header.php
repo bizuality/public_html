@@ -1,5 +1,20 @@
 <?php 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
+
+require_once($root .  '/public_html/resources/load.php');
+
+// Controls the Sign In / Sign Out links
+session_start();
+
+$signin = false;
+
+if(isset($_SESSION['username'])) {
+	$signin = true;
+	$username = $_SESSION['username'];
+}
+
+session_write_close();
+
 ?>
 
 <!DOCTYPE html>
@@ -13,14 +28,14 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 
     <title><?php echo $variables['title'] ?></title>
     
-	<link rel="icon" type="image/ico" href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/bizuality_favicon.ico"/>
+	<link rel="icon" type="image/ico" href="/public_html/img/bizuality_favicon.ico"/>
 
 	<!-- Bootstrap core CSS -->
-	<link href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/public_html/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Add custom CSS here -->
-	<link href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/css/bizuality.css" rel="stylesheet">
+	<link href="/public_html/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/public_html/css/bizuality.css" rel="stylesheet">
 </head>
 <body>
 
@@ -43,29 +58,53 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll">
+                    <li>
                         <a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/about.php">About</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Services</a>
                         <ul class="dropdown-menu">
-                        	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/services/analytics.php">Analytics</a></li>
-                        	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/services/mobileweboptimization.php">Mobile Web Optimization</a></li>
-                        	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/services/seo.php">Search Engine Optimization</a></li>
-                        	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/services/socialmediamarketing.php">Social Media Creation and Marketing</a></li>
-                        	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/services/websitedesign.php">Website Design</a></li>
+                        	<li><a href="/public_html/pages/services/analytics.php">Analytics</a></li>
+                        	<li><a href="/public_html/pages/services/mobileweboptimization.php">Mobile Web Optimization</a></li>
+                        	<li><a href="/public_html/pages/services/seo.php">Search Engine Optimization</a></li>
+                        	<li><a href="/public_html/pages/services/socialmediamarketing.php">Social Media Creation and Marketing</a></li>
+                        	<li><a href="/public_html/pages/services/websitedesign.php">Website Design</a></li>
                         	
                         </ul>	
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Portfolio</a>
                         <ul class="dropdown-menu">
-                        	<li><a href="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/pages/portfolio/websites.php">Websites</a></li>
+                        	<li><a href="/public_html/pages/portfolio/websites.php">Websites</a></li>
                         </ul>	
                     </li>
-                    <li class="page-scroll">
+                    <li>
                         <a href="" data-toggle="modal" data-target="#contactModal">Contact Us</a>
                     </li>
+                    <?php if(!$signin) { echo '
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Sign In</a>
+                        <ul class="dropdown-menu">
+							<form action="/public_html/resources/helpers/login.php" method="post" accept-charset="UTF-8">
+								<div class="input-group custom-form">
+  									<input id="username" type="text" name="username" placeholder="Username"/>
+  									<input id="password" type="password" name="password" placeholder="Password" />
+  									<button id="signInButton" class="btn-custom-form btn btn-lg center-block" type="submit">Sign In</button>
+  								</div>
+							</form>
+                        </ul>	
+                    </li>
+                    '; }
+                    if($signin) { echo '
+				    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">' . $username . '</a>
+                        <ul class="dropdown-menu">
+                        	<li><a href="/public_html/pages/accounts/users_page.php">User\'s Hub</a></li>
+                        	<li><a href="/public_html/pages/accounts/settings.php">Settings</a></li>
+							<li><a href="/public_html/resources/helpers/logout.php">Sign Out</a></li>
+                        </ul>	
+                    </li>
+                    '; } ?>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -73,3 +112,17 @@ $root = realpath($_SERVER["DOCUMENT_ROOT"]);
         <!-- /.container -->
     </nav>
 <!--/Navigation Bar-->
+
+<!-- Error Message -->
+	<div class="show-on-error-banner">
+		<div class="error-msg">
+		</div>
+    </div>
+<!-- /Error Message -->
+
+<!-- Error Message -->
+	<div class="show-on-notification-banner">
+		<div class="notification-msg">
+		</div>
+    </div>
+<!-- /Error Message -->

@@ -10,9 +10,18 @@ body {
 }
 
 p {
-  font-size: 1.15em;
+  font-size: 1.3em;
+}
+table {
+  color: #fff;
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
+tr {
+  border-bottom: 1px solid #fff;
+}
 @media (max-width: 480px) {
   h1, .h1 {
     font-size: 30px;
@@ -294,6 +303,11 @@ i.scroll:hover {
   text-align: center;
 }
 
+.thick {
+  height: 3px;
+  background-color: #fff;
+}
+
 /* Responsive */
 
 @media (max-width: 768px) {
@@ -365,28 +379,6 @@ i.scroll:hover {
   
 }
 
-.focus-area {
-  display: block;
-  border: 5px solid #fff;
-  border-radius: 5px;
-  color: #fff;
-  background-color: #00efa0;
-  vertical-align: middle;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.focus-area-alternate {
-  display: block;
-  border: 5px solid #00efa0;
-  border-radius: 5px;
-  color: #0a5175;
-  background-color: #fff;
-  vertical-align: middle;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
 /**************** Navigation Bar - Mobile ****************/
 @media (max-width: 768px) {
   .dropdown-menu > li > a {
@@ -432,7 +424,7 @@ i.scroll:hover {
 .input-border {
   border: 1px solid #fff;
 }
-.show-on-submit, .show-on-error {
+.show-on-submit, .show-on-error, .show-on-error-banner, .show-on-notification-banner {
   display: none;
 }
 
@@ -457,6 +449,10 @@ i.scroll:hover {
   color: #fff;
   background-color: #00efa0;
   border: 5px solid #fff;
+}
+
+.col-form {
+  margin: 5px;
 }
 /**************** Images ****************/
 
@@ -532,8 +528,64 @@ i.scroll:hover {
     display: block;
 }
 
+.error-msg {
+  color: #fff;
+  background-color: #cd5f5c;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.notification-msg {
+  color: #fff;
+  background-color: #0a5175;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.error-msg, .notification-msg> p {
+	margin-top: 50px;
+	padding: 5px;
+}
+
 /**************** Custom Map ****************/
 #map_canvas {
   width: 100%;
   height: 400px;
+}
+
+/**************** Sign In Form ****************/
+.custom-form {
+	display: block;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.custom-form > input, textarea, select {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid #00efa0;
+	border-radius: 5px;
+	color: #00efa0;
+}
+
+.custom-form-lg {
+	display: block;
+}
+
+.custom-form-lg > input, textarea, select {
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid #00efa0;
+	border-radius: 5px;
+	color: #00efa0;
 }

@@ -68,8 +68,8 @@ if(!class_exists('BizualityDatabase')){
 		 * @param string $nonce A user-specific NONCE
 		 * @return string $secureHash The hashed password
 		 */
-		function hash_password($password, $nonce) {
-		  $secureHash = hash_hmac('sha512', $password . $nonce, SITE_KEY);
+		function hash_password($password) {
+		  $secureHash = hash('sha512', $password);
 		  
 		  return $secureHash;
 		}
@@ -107,6 +107,12 @@ if(!class_exists('BizualityDatabase')){
 		 * @param array $equals The value being searched for
 		 */
 		function select($sql) {
+			$results = mysql_query($sql);
+			
+			return $results;
+		}
+		
+		function update($sql) {
 			$results = mysql_query($sql);
 			
 			return $results;

@@ -37,16 +37,18 @@ $(window).scroll(function() { // Stops spinning when scrolling stops.
 $(document).ready(function(){
 	$("#submitButton").click(function(){
 		// Check valid class from the live form validation 
-		if($('#first_name').hasClass('valid') && $('#last_name').hasClass('valid') && $('#email').hasClass('valid') && $('#phone').hasClass('valid') && $('#goal').hasClass('valid')) {
+		if($('#first_name').hasClass('valid') && $('#last_name').hasClass('valid') && $('#email').hasClass('valid') && $('#phone').hasClass('valid') && $('#company').hasClass('valid') && $('#website').hasClass('valid')&& $('#goal').hasClass('valid')) {
 			// If so start with the form submission
 			var first_name = $('#first_name').val();
 			var last_name = $('#last_name').val();
 			var email = $('#email').val();
 			var phone = $('#phone').val();
+			var company = $('#company').val();
+			var website = $('#website').val();
 			var goal = $('#goal').val();
-			var formData = "first_name="+first_name+"&last_name="+last_name+"&email="+email+"&phone="+phone+"&goal="+goal;
+			var formData = "first_name="+first_name+"&last_name="+last_name+"&email="+email+"&phone="+phone+"&company="+company+"&website="+website+"&goal="+goal;
         	$.ajax({ // Start the PHP submission
-        		url : "/public_html/db/submissions/submit_contact_form.php",
+        		url : "/public_html/resources/helpers/contact_form.php",
         		type: "POST",
         		data : formData,
         		success: function(data, textStatus, jqXHR) {	//data - response from server
@@ -105,6 +107,24 @@ $(document).ready(function(){
 			$(this).removeClass("valid").addClass("invalid");
 		}
 	});
+	$('#company').on('input', function(){
+		var input = $(this).val();
+		if(input.length > 0){
+			$(this).removeClass("invalid").addClass("valid");
+		}
+    	else {
+    		$(this).removeClass("valid").addClass("invalid");
+    	}
+  	});
+  	$('#website').on('input', function(){
+		var input = $(this).val();
+		if(input.length > 0){
+			$(this).removeClass("invalid").addClass("valid");
+		}
+    	else {
+    		$(this).removeClass("valid").addClass("invalid");
+    	}
+  	});
 	$('#goal').on('input', function(){
 		var input = $(this).val();
 		if(input.length > 0){
@@ -133,7 +153,12 @@ $(".hoverable-color").mouseover(function(){
 $(".hoverable-color").mouseout(function(){
 	$(this).removeClass('color-on-hover');
 });
-
+$(".hoverable-color-fixed").mouseover(function(){
+	$(this).addClass('color-on-hover');
+});
+$(".hoverable-color-fixed").mouseout(function(){
+	$(this).removeClass('color-on-hover');
+});
 $('.text').hide().removeClass('text').addClass('text-js');
 
 $('.thumb').hover(function(){
@@ -147,3 +172,63 @@ $('#searchButton').click(function(){
 	query = query.replace(" ", "+");
 	window.open(query, "_blank");
 });
+
+/************ URL Params ************/
+$(document).ready(function(){
+	var $_GET = {};
+
+	document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+    	function decode(s) {
+        	return decodeURIComponent(s.split("+").join(" "));
+    	}
+
+    	$_GET[decode(arguments[1])] = decode(arguments[2]);
+	});
+
+	if($_GET['msg'] == 'error') {
+		if($_GET['value'] == 1) {
+			$('.error-msg').append('<p>Your username or password is incorrect. Please try again.</p>');
+		}
+		if($_GET['value'] == 2) {
+			$('.error-msg').append('<p>You are not logged in.</p>');
+		}
+		if($_GET['value'] == 3) {
+			$('.error-msg').append('<p>Your old password is incorrect. Please try again.</p>');
+		}
+		if($_GET['value'] == 4) {
+			$('.error-msg').append('<p>Your new password cannot be confirmed, please try again.</p>');
+		}
+		if($_GET['value'] == 5) {
+			$('.error-msg').append('<p>Your new password cannot be changed.</p>');
+		}
+		if($_GET['value'] == 6) {
+			$('.error-msg').append('<p>Your question was not submitted. Please try again.</p>');
+		}
+		if($_GET['value'] == 7) {
+			$('.error-msg').append('<p>You are not an analytics subscriber.</p>');
+		}
+		if($_GET['value'] == 8) {
+			$('.error-msg').append('<p>Your new email cannot be confirmed, please try again.</p>');
+		}
+		if($_GET['value'] == 9) {
+			$('.error-msg').append('<p>Your old email is incorrect. Please try again.</p>');
+		}
+		$('.show-on-error-banner').slideDown('slow');
+	}
+	if($_GET['msg'] == 'success') {
+		if($_GET['value'] == 1) {
+			$('.notification-msg').append('<p>You are now signed out.</p>');
+		}
+		if($_GET['value'] == 2) {
+			$('.notification-msg').append('<p>Your password has been changed.</p>');
+		}
+		if($_GET['value'] == 3) {
+			$('.notification-msg').append('<p>Your question has been sent, we will be in touch soon.</p>');
+		}
+		if($_GET['value'] == 4) {
+			$('.notification-msg').append('<p>Your email has been updated.');
+		}
+		$('.show-on-notification-banner').slideDown('slow');
+	}	
+});
+
