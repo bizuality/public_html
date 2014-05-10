@@ -9,7 +9,7 @@ if(!class_exists('Bizuality')){
 			if( !empty($_POST)){
 			
 				// Set the fields to the correct values.
-				$fields = array('first_name', 'last_name', 'email', 'phone', 'goal');
+				$fields = array('first_name', 'last_name', 'email', 'phone', 'company', 'website', 'goal');
 				
 				// Clean up.
 				$values = $bdb->clean($_POST);
@@ -19,8 +19,9 @@ if(!class_exists('Bizuality')){
 				$last_name = $_POST['last_name'];
 				$email = $_POST['email'];
 				$phone = $_POST['phone'];
+				$company = $_POST['company'];
+				$website = $_POST['website'];
 				$goal = $_POST['goal'];
-				
 				
 				// Package variables.
 				$values = array(
@@ -28,6 +29,8 @@ if(!class_exists('Bizuality')){
 								'last_name' => $last_name,
 								'email' => $email,
 								'phone' => $phone,
+								'company' => $company,
+								'website' => $website,
 								'goal' => $goal
 							);
 				
@@ -39,6 +42,7 @@ if(!class_exists('Bizuality')){
 				}
 					
 			}
+			return true;
 		}
 		
 		function login($table) {
@@ -69,12 +73,20 @@ if(!class_exists('Bizuality')){
 				$sto_password = $results['password'];
 				$sto_pid = $results['sc_pid'];
 				$sto_analytics_sub = $results['analytics_sub'];
+				$sto_twitter_user = $results['twitter_user'];
+				$sto_twitter_user_competitor_01 = $results['twitter_user_competitor_01'];
+				$sto_twitter_user_competitor_02 = $results['twitter_user_competitor_02'];
+				$sto_twitter_user_competitor_03 = $results['twitter_user_competitor_03'];
 				
 				if($sto_username == $username && $sto_password == $password) {
 					session_start();
 					$_SESSION['username'] = $sto_username;
 					$_SESSION['sc_pid'] = $sto_pid;
 					$_SESSION['analytics_sub'] = $sto_analytics_sub;
+					$_SESSION['twitter_user'] = $sto_twitter_user;
+					$_SESSION['twitter_user_competitor_01'] = $sto_twitter_user_competitor_01;
+					$_SESSION['twitter_user_competitor_02'] = $sto_twitter_user_competitor_02;
+					$_SESSION['twitter_user_competitor_03'] = $sto_twitter_user_competitor_03;
 					session_write_close();
 					header("Location: /public_html/pages/accounts/users_page.php");
 				}
@@ -229,6 +241,51 @@ if(!class_exists('Bizuality')){
 			return $results;
 		}
 		
+		function changeCompetitor($username, $table) {
+			global $bdb;
+			
+			// So that we don't pile up parameters in the URL.
+			$uri_parts = explode('?', $_SERVER['HTTP_REFERER'], 2);
+			$url = $uri_parts[0];
+			
+			$results = false;
+			if( !empty($_POST)){
+				
+				// Clean up.
+				$values = $bdb->clean($_POST);
+				
+				// Set variables.
+				$old_email = $_POST['old_email'];
+				$new_email = $_POST['new_email'];
+				$confirm_email = $_POST['confirm_email'];
+				
+				$sql = "SELECT * FROM $table WHERE username ='" . $username . "'";
+				$results = $bdb->select($sql);
+				
+				$results = mysql_fetch_assoc( $results );
+				
+				$sto_email = $results['email'];
+				
+				if($old_email == $sto_email){
+					if($new_password == $confirm_password) {
+						$sql = "UPDATE $table SET email ='" . $new_email . "' WHERE username ='" . $username . "'";
+						$results = $bdb->update($sql);
+						if($results) {
+							header("Location: $url?msg=success&value=4");
+						}
+					}
+					else {
+						header("Location: $url?msg=error&value=8");
+					}
+				}
+				else {
+					header("Location: $url?msg=error&value=9");
+				}	
+			}
+			
+			return $results;
+		}
+		
 		function askQuestion($username, $table) {
 			global $bdb;
 			
@@ -253,7 +310,6 @@ if(!class_exists('Bizuality')){
 				$message .= 'Question: \n';
 				$message .= $question;
 				$message = wordwrap($message, 70); // PHP does not allow line lengths over 70.
-				
 				
 				// Send the email...	
 				$results = mail($to, $subject, $message);

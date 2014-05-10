@@ -37,16 +37,18 @@ $(window).scroll(function() { // Stops spinning when scrolling stops.
 $(document).ready(function(){
 	$("#submitButton").click(function(){
 		// Check valid class from the live form validation 
-		if($('#first_name').hasClass('valid') && $('#last_name').hasClass('valid') && $('#email').hasClass('valid') && $('#phone').hasClass('valid') && $('#goal').hasClass('valid')) {
+		if($('#first_name').hasClass('valid') && $('#last_name').hasClass('valid') && $('#email').hasClass('valid') && $('#phone').hasClass('valid') && $('#company').hasClass('valid') && $('#website').hasClass('valid')&& $('#goal').hasClass('valid')) {
 			// If so start with the form submission
 			var first_name = $('#first_name').val();
 			var last_name = $('#last_name').val();
 			var email = $('#email').val();
 			var phone = $('#phone').val();
+			var company = $('#company').val();
+			var website = $('#website').val();
 			var goal = $('#goal').val();
-			var formData = "first_name="+first_name+"&last_name="+last_name+"&email="+email+"&phone="+phone+"&goal="+goal;
+			var formData = "first_name="+first_name+"&last_name="+last_name+"&email="+email+"&phone="+phone+"&company="+company+"&website="+website+"&goal="+goal;
         	$.ajax({ // Start the PHP submission
-        		url : "/public_html/db/submissions/submit_contact_form.php",
+        		url : "/public_html/resources/helpers/contact_form.php",
         		type: "POST",
         		data : formData,
         		success: function(data, textStatus, jqXHR) {	//data - response from server
@@ -105,6 +107,24 @@ $(document).ready(function(){
 			$(this).removeClass("valid").addClass("invalid");
 		}
 	});
+	$('#company').on('input', function(){
+		var input = $(this).val();
+		if(input.length > 0){
+			$(this).removeClass("invalid").addClass("valid");
+		}
+    	else {
+    		$(this).removeClass("valid").addClass("invalid");
+    	}
+  	});
+  	$('#website').on('input', function(){
+		var input = $(this).val();
+		if(input.length > 0){
+			$(this).removeClass("invalid").addClass("valid");
+		}
+    	else {
+    		$(this).removeClass("valid").addClass("invalid");
+    	}
+  	});
 	$('#goal').on('input', function(){
 		var input = $(this).val();
 		if(input.length > 0){

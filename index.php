@@ -19,7 +19,6 @@
 			</h3>
             <h3><?php echo $variables['tag_line'] ?></h3>
             <a href="#findOutMore" class="btn btn-default btn-lg"><?php echo $variables['scroll_button_text'] ?></a>
-
         </div>
     </div>
     <!-- /Full Page Image Header Area -->

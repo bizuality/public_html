@@ -21,6 +21,7 @@ class TwitterAPIExchange
     private $getfield;
     protected $oauth;
     public $url;
+    private $user_timeline;
 
     /**
      * Create the API access object. Requires an array of settings::
@@ -259,5 +260,68 @@ class TwitterAPIExchange
         $return .= implode(', ', $values);
         return $return;
     }
+    
+    public function getUserTimeline($twitter_user) {
+    	global $user_timeline;
+    	
+    	$url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
+		$requestMethod = "GET";
+		$getfield = '?screen_name=' . $twitter_user . '&count=1000' . '&include_rts=0' . '&include_entities=1';
+		$this->user_timeline = json_decode($this->setGetfield($getfield)->buildOauth($url, $requestMethod)->performRequest(),$assoc = TRUE);
+		
+		return $this->user_timeline;
+    }
+    
+    public function searchTweets($query) {
+    	
+    	$url = "https://api.twitter.com/1.1/search/tweets.json";
+		$requestMethod = "GET";
+		$getfield = '?q=' . $query . '&count=100' . '&lang=en';
+		$this->search_results = json_decode($this->setGetfield($getfield)->buildOauth($url, $requestMethod)->performRequest(),$assoc = TRUE);
+		
+		return $this->search_results;
 
+    }
+    
+    public function getTotalRetweets(){
+    	
+    	$total = 0;
+    	foreach($this->user_timeline as $item) {
+    		$total += $item['retweet_count'];
+    	}
+    	
+    	return $total;
+    }
+    
+    public function getTotalFavorites() {
+    	
+    	$total = 0;
+    	foreach($this->user_timeline as $item) {
+    		$total += $item['favorite_count'];
+    	}
+    	
+    	return $total;
+    }
+    
+    public function getMostPopularTweet($key) {
+    	
+    	$tweet = $this->user_timeline[0];
+    	foreach($this->user_timeline as $item) {
+    		if($item[$key] > $tweet[$key]) {
+    			$tweet = $item;
+    		}
+    	}
+    	
+    	return $tweet;
+    }
+	
 }
+
+$settings = array(
+    'oauth_access_token' => "2458969478-EpqF3ujJl5rR7pcWa0wDMPpPXTfDkttUY2nAhKs",
+    'oauth_access_token_secret' => "oZz2fgNC590hIMyH48yGJEyQqlroitnUIJjITMLm8xhgC",
+    'consumer_key' => "FhU6GORQ4RRZsCMtRE2uZ3HW0",
+    'consumer_secret' => "hTU00OqAMjI7VT16WO1lssF7yLPIEMft5Jl7XNpwbZ8umWCCAa"
+);
+
+$twitter = new TwitterAPIExchange($settings);

@@ -1,6 +1,6 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 include($root . '/public_html/variables/user_analytics_variables.php');
-require_once($root . '/public_html/includes/secure_header.php');
+require_once($root .'/public_html/includes/secure_header.php');
 	
 $sc->set_pid($pid);
 $sc->getDailyStats();
@@ -18,7 +18,16 @@ $sc->getRecentVisitors(5);
 ?>
 
 <!-- Content Body -->
-    <div id="website_design" class="main-content-alternate">
+
+	<div id="top" class="header">
+        <div class="vert-text">
+        	<a href="#analytics" class="btn btn-default btn-lg">Continue to Site Analytics</a>
+            <h1>
+            	<a class="icon-link" href="/public_html/pages/accounts/twitter.php"><i class="service-icon hoverable fa fa-twitter fa-4x" data-trigger="hover"></i></a>&nbsp;
+			</h1>
+        </div>
+    </div>
+    <div id="analytics" class="main-content-alternate">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">

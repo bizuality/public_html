@@ -29,7 +29,7 @@ require_once($root . '/public_html/includes/secure_header.php');
             <div class="row">
             	<div class="col-lg-12 col-md-12 col-sm-12 text-center hoverable-color">
             		<h2>Have a more specific question?</h2>
-            		<form class="col-form" action="/public_html/db/helpers/ask_question.php" method="post" accept-charset="UTF-8">
+            		<form class="col-form" action="/public_html/resources/helpers/ask_question.php" method="post" accept-charset="UTF-8">
 						<div class="input-group custom-form-lg">
 							<select id="category" name="category">
   								<option value="updating page">I need help updating my page.</option>
