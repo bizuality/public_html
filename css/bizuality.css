@@ -327,9 +327,13 @@ i.scroll:hover {
 
 }
 /**************** Navigation Bar - Full ****************/
-
-.nav > li > a{
+.nav > li > a {
   color: #00efa0;
+  font-size: 1.7em;
+}
+
+.dropdown-menu > li > a {
+  font-size: 1.4em;
 }
 
 .navbar, .navbar-fixed-top  > .container {
