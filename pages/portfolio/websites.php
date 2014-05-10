@@ -1,6 +1,6 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); ?>
-<?php include($root . '/public_html/variables/websites_variables.php'); ?>
-<?php include($root . '/public_html/includes/header.php'); ?>
+<?php include($root . '/variables/websites_variables.php'); ?>
+<?php include($root . '/includes/header.php'); ?>
     
     <!-- Portfolio -->
     <div id="portfolio" class="main-content-alternate">
@@ -48,4 +48,4 @@
     </div>
     <!-- /Portfolio -->
     
-<?php include($root . '/public_html/includes/footer.php'); ?>
+<?php include($root . '/includes/footer.php'); ?>

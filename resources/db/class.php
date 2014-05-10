@@ -88,7 +88,7 @@ if(!class_exists('Bizuality')){
 					$_SESSION['twitter_user_competitor_02'] = $sto_twitter_user_competitor_02;
 					$_SESSION['twitter_user_competitor_03'] = $sto_twitter_user_competitor_03;
 					session_write_close();
-					header("Location: /public_html/pages/accounts/users_page.php");
+					header("Location: /pages/accounts/users_page.php");
 				}
 				else{
 					header("Location: $url?msg=error&value=1");
@@ -125,7 +125,7 @@ if(!class_exists('Bizuality')){
 				}
 			}
 			else {
-				header("Location: /public_html/index.php?msg=error&value=2");
+				header("Location: /index.php?msg=error&value=2");
 				exit;
 			}
 			return $results;
@@ -303,16 +303,36 @@ if(!class_exists('Bizuality')){
 				$category = $_POST['category'];
 				$question = $_POST['question'];
 				
+				$sql = "SELECT * FROM $table WHERE username ='" . $username . "'";
+				$results = $bdb->select($sql);
+			
+				//Fetch our results into an associative array
+				$results = mysql_fetch_assoc( $results );
+				
 				$to = 'support@bizuality.com';
+				
 				$subject = 'User Question - bizuality';
-				$message = $username . 'has a question...\n';
-				$message .= 'Their question is classified under' . $category . '.\n';
-				$message .= 'Question: \n';
-				$message .= $question;
+				
+				$message = '<html><body bgcolor="#00efa0" text="#ffffff" width="500px">';
+				$message .= 'Date: ' . date('l\, F j\, Y h:i:s A') . '<br />';
+				$message .= '<h1 align="center">' . $username . ' has a question...</h1>';
+				$message .= '<br />';
+				$message .= '<h2 align="center">Their question is classified under "' . $category . '".</h2>';
+				$message .= '<br />';
+				$message .= '<h3>Question: </h3>';
+				$message .= '<p>' . $question . '</p>';
+				$message .= '<br />';
+				$message .= '<p>They can be reached at: ' . $results['email'] . '</p>';
+				$message .= '</body></html>';
 				$message = wordwrap($message, 70); // PHP does not allow line lengths over 70.
 				
+				$headers = 'From: support@bizuality.com' . "\r\n" .
+    						'Reply-To: no-reply@bizuality.com' . "\r\n" .
+    						'X-Mailer: PHP/' . phpversion() . "\r\n" .
+    						'Content-Type: text/html; charset=\"iso-8859-1\"';
+				
 				// Send the email...	
-				$results = mail($to, $subject, $message);
+				$results = mail($to, $subject, $message, $headers);
 				
 				header("Location: $url?msg=success&value=3");
 			}
@@ -340,7 +360,7 @@ if(!class_exists('Bizuality')){
 				$isSub = $results['analytics_sub'];
 				
 				if($isSub){
-					header("Location: /public_html/pages/accounts/analytics.php");
+					header("Location: /pages/accounts/analytics.php");
 				}
 				else {
 					header("Location: $url?msg=error&value=6");	

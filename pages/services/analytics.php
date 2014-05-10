@@ -1,10 +1,9 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); ?>
-<?php include($root . '/public_html/variables/analytics_variables.php'); ?>
-<?php include($root . '/public_html/includes/header.php'); ?>
+<?php include($root . '/variables/analytics_variables.php'); ?>
+<?php include($root . '/includes/header.php'); ?>
 
-    
     <!-- Content Body -->
-    <div id="website_design" class="main-content-alternate">
+    <div id="analytics" class="main-content-alternate">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
@@ -47,4 +46,4 @@
     </div>
     <!-- /Content Body -->
     
-<?php include($root . '/public_html/includes/footer.php'); ?>
+<?php include($root . '/includes/footer.php'); ?>

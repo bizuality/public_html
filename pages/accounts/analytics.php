@@ -1,6 +1,6 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-include($root . '/public_html/variables/user_analytics_variables.php');
-require_once($root .'/public_html/includes/secure_header.php');
+include($root . '/variables/user_analytics_variables.php');
+require_once($root .'/includes/secure_header.php');
 	
 $sc->set_pid($pid);
 $sc->getDailyStats();
@@ -23,7 +23,7 @@ $sc->getRecentVisitors(5);
         <div class="vert-text">
         	<a href="#analytics" class="btn btn-default btn-lg">Continue to Site Analytics</a>
             <h1>
-            	<a class="icon-link" href="/public_html/pages/accounts/twitter.php"><i class="service-icon hoverable fa fa-twitter fa-4x" data-trigger="hover"></i></a>&nbsp;
+            	<a class="icon-link" href="/pages/accounts/twitter.php"><i class="service-icon hoverable fa fa-twitter fa-4x" data-trigger="hover"></i></a>&nbsp;
 			</h1>
         </div>
     </div>
@@ -32,7 +32,7 @@ $sc->getRecentVisitors(5);
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
                 	<hr />
-                	<img class="img-responsive center-block" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/bizuality_logo_small.png">
+                	<img class="img-responsive center-block" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/img/bizuality_logo_small.png">
                     <h1>Analytics</h1>
                     <hr />
                     <p>As of <?php echo date('l\, F j\, Y h:i:s A'); ?></p>
@@ -273,7 +273,7 @@ $sc->getRecentVisitors(5);
 					</table>
 					<br />
                 </div>
-                <a href="/public_html/pages/accounts/more_visitor_info.php" class="btn btn-default btn-lg text-center">Get More Visitor Information</a>
+                <a href="/pages/accounts/more_visitor_info.php" class="btn btn-default btn-lg text-center">Get More Visitor Information</a>
             </div>
             <hr class="thick"/>
             <div class="row">
@@ -299,4 +299,4 @@ $sc->getRecentVisitors(5);
 <!-- /Content Body -->
 
 
-<?php include($root . '/public_html/includes/footer.php'); ?>
+<?php include($root . '/includes/footer.php'); ?>

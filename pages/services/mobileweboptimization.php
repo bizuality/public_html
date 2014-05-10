@@ -1,6 +1,6 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); ?>
-<?php include($root . '/public_html/variables/mobileweboptimization_variables.php'); ?>
-<?php include($root . '/public_html/includes/header.php'); ?>
+<?php include($root . '/variables/mobileweboptimization_variables.php'); ?>
+<?php include($root . '/includes/header.php'); ?>
     
     <!-- Content Body -->
     <div id="website_design" class="main-content-alternate">
@@ -64,4 +64,4 @@
     </div>
     <!-- /Content Body -->
     
-<?php include($root . '/public_html/includes/footer.php'); ?>
+<?php include($root . '/includes/footer.php'); ?>

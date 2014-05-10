@@ -1,8 +1,8 @@
 <?php
 
-define('DB_NAME', 'bizuality');
+define('DB_NAME', 'bemberry_bizuality');
 
-define('DB_USER', 'trevor');
+define('DB_USER', 'bemberry_root');
 
 define('DB_PASS', 'rootpassword');
 
@@ -22,6 +22,6 @@ define('TWITTER_CONSUMER_KEY', 'FhU6GORQ4RRZsCMtRE2uZ3HW0');
 define('TWITTER_CONSUMER_SECRET', 'hTU00OqAMjI7VT16WO1lssF7yLPIEMft5Jl7XNpwbZ8umWCCAa');
 
 /************** Paths **************/
-define('PATH_TO_LOAD.php', '/public_html/resources/load.php');
+define('PATH_TO_LOAD.php', '/resources/load.php');
 
 ?>

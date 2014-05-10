@@ -1,7 +1,7 @@
 <?php
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-include($root . '/public_html/variables/user_twitter_variables.php');
-require_once($root . '/public_html/includes/secure_header.php');
+include($root . '/variables/user_twitter_variables.php');
+require_once($root . '/includes/secure_header.php');
 
 $settings = array(
     'oauth_access_token' => "2458969478-EpqF3ujJl5rR7pcWa0wDMPpPXTfDkttUY2nAhKs",
@@ -16,7 +16,7 @@ $searchResults = $twitter->searchTweets($twitter_user);
 
 if(empty($user_timeline)) {
 	echo '<h1 class="error-msg">You do not have any tweets!</h1>';
-	include($root . '/public_html/includes/footer.php');
+	include($root . '/includes/footer.php');
 	die();
 }
 if(!empty($twitter_user_competitor_01)) {
@@ -196,5 +196,5 @@ if(!empty($twitter_user_competitor_03)) {
     </div>
 <!-- /Content Body -->
     
-<?php include($root . '/public_html/includes/footer.php'); ?>
+<?php include($root . '/includes/footer.php'); ?>
 

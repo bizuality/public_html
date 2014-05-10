@@ -1,15 +1,15 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); ?>
-<?php include($root . '/public_html/variables/about_variables.php'); ?>
-<?php include($root . '/public_html/includes/header.php'); ?>
+<?php include($root . '/variables/about_variables.php'); ?>
+<?php include($root . '/includes/header.php'); ?>
     
     <!-- Content Body -->
-    <div id="website_design" class="main-content-alternate">
+    <div id="about" class="main-content-alternate">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
                 	<hr />
                     <h2>About</h2>
-                    <img class="img-responsive center-block" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/img/bizuality_logo_small.png">
+                    <img class="img-responsive center-block" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/img/bizuality_logo_small.png">
                     <hr />
                 </div>
             </div>
@@ -48,5 +48,5 @@
     
     
     
-<?php include($root . '/public_html/includes/footer.php'); ?>
-<?php include($root . '/public_html/includes/map_javascript.php'); ?>
+<?php include($root . '/includes/footer.php'); ?>
+<?php include($root . '/includes/map_javascript.php'); ?>

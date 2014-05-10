@@ -1,8 +1,8 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); ?>
-<?php include($root . '/public_html/variables/websitedesign_variables.php'); ?>	
-<?php include($root . '/public_html/includes/header.php'); ?>
+<?php include($root . '/variables/websitedesign_variables.php'); ?>
+<?php include($root . '/includes/header.php'); ?>
 	
-	<!-- Services -->
+<!-- Services -->
     <div id="website_design" class="main-content-alternate">
         <div class="container">
             <div class="row">
@@ -69,4 +69,4 @@
     </div>
     <!-- /Services -->
     
-<?php include($root . '/public_html/includes/footer.php'); ?>
+<?php include($root . '/includes/footer.php'); ?>

@@ -1,6 +1,6 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); 
 
-require_once($root .  '/public_html/resources/load.php');
+require_once($root .  '/resources/load.php');
 
 /*****************************************************************************************
  * Author: Trevor Hutto

@@ -16,7 +16,7 @@
             				<input class="form-control input-lg" id="company" name="company" type="text" placeholder="Company Name (Optional)">
             				<input class="form-control input-lg" id="website" name="website" type="text" placeholder="Company Website (Optional)">
             				<input class="form-control input-lg" id="phone" name="phone" type="text" required placeholder="Phone Number">
-            				<textarea class="form-control input-lg styled-textarea" id="goal" name="goal" type="text" required placeholder="What's your goal?"></textarea>
+            				<textarea class="form-control input-lg styled-textarea" id="goal" name="goal" type="text" required placeholder="Tell us more."></textarea>
             				<a id="submitButton" class="btn-custom-form btn btn-lg" type="submit">Submit</a>
             			</div>
           			</form>
