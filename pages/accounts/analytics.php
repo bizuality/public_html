@@ -163,7 +163,7 @@ $sc->getRecentVisitors(5);
 						$result = '<table>';
 						for ($i = 0; $i < $length; $i++) {
 							if(!empty($cameFrom[$i]['referring_url'])) {
-								$result .= '<tr><td class="text-left"><p>' . ($i + 1) . ')&nbsp;</p></td><td class="text-left"><p>' . $cameFrom[$i]['referring_url'] . '</p></td><td class="text-right">' . $cameFrom[$i]['page_views'] . '</td></tr>';
+								$result .= '<tr><td class="text-left"><p>' . ($i + 1) . ')&nbsp;</p></td><td class="text-left"><p>' . wordwrap($cameFrom[$i]['referring_url'], 40, '<br>', true) . '</p></td><td class="text-right">' . $cameFrom[$i]['page_views'] . '</td></tr>';
 							}
 						}
 						$result .= '</table>';
