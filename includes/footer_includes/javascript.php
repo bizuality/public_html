@@ -1,10 +1,11 @@
  <!-- JavaScript -->
-    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/js/jquery-1.10.2.js"></script>
-    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/js/bootstrap.js"></script>
-    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/js/bootstrap-hover-dropdown.js"</script>
-    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/js/bootstrap-popover.js"</script>
-    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/js/bizuality.js"</script>
-    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/public_html/js/jquery.form.js"</script>
+    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/js/jquery-1.10.2.js"></script>
+    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/js/bootstrap.js"></script>
+    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/js/bootstrap-hover-dropdown.js"</script>
+    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/js/bootstrap-popover.js"</script>
+    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/js/bizuality.js"</script>
+    <script src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/js/Chart.min.js"</script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     
     
     
