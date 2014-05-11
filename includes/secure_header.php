@@ -21,4 +21,6 @@ if(basename($_SERVER['REQUEST_URI']) == 'analytics.php' or basename($_SERVER['RE
 }
 
 require_once($root . '/includes/header.php');
+
 ?>
+

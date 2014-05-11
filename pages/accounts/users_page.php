@@ -31,7 +31,7 @@ require_once($root . '/includes/secure_header.php');
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color">
             		<h2>
-            			<a class="icon-link" href="/pages/accounts/analytics.php">
+            			<a class="icon-link load-warning" href="/pages/accounts/analytics.php">
             				<i class="popover-icon fa <?php echo $variables['col_03_icon']; ?> fa-4x"></i>
             			</a>
 					</h2>

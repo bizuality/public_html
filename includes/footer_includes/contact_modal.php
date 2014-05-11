@@ -9,7 +9,7 @@
         		<!-- Modal Body-->
        			<div class="modal-body hide-on-submit">
        				<form id="contactForm" method="post" action="">
-            			<div class="input-group">
+            			<div class="input-group text-center">
             				<input class="form-control input-lg" id="first_name" name="first_name" minlength="2" type="text" required placeholder="First Name">
             				<input class="form-control input-lg" id="last_name" name="last_name" minlength="2" type="text" required placeholder="Last Name">
             				<input class="form-control input-lg" id="email" name="email" type="email" required placeholder="Email">

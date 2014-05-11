@@ -37,7 +37,7 @@ $(window).scroll(function() { // Stops spinning when scrolling stops.
 $(document).ready(function(){
 	$("#submitButton").click(function(){
 		// Check valid class from the live form validation 
-		if($('#first_name').hasClass('valid') && $('#last_name').hasClass('valid') && $('#email').hasClass('valid') && $('#phone').hasClass('valid') && $('#company').hasClass('valid') && $('#website').hasClass('valid')&& $('#goal').hasClass('valid')) {
+		if($('#first_name').hasClass('valid') && $('#last_name').hasClass('valid') && $('#email').hasClass('valid') && $('#phone').hasClass('valid') && $('#goal').hasClass('valid')) {
 			// If so start with the form submission
 			var first_name = $('#first_name').val();
 			var last_name = $('#last_name').val();
@@ -48,7 +48,7 @@ $(document).ready(function(){
 			var goal = $('#goal').val();
 			var formData = "first_name="+first_name+"&last_name="+last_name+"&email="+email+"&phone="+phone+"&company="+company+"&website="+website+"&goal="+goal;
         	$.ajax({ // Start the PHP submission
-        		url : "/public_html/resources/helpers/contact_form.php",
+        		url : "/resources/helpers/contact_form.php",
         		type: "POST",
         		data : formData,
         		success: function(data, textStatus, jqXHR) {	//data - response from server
@@ -171,6 +171,11 @@ $('#searchButton').click(function(){
 	query += $('#query').val();
 	query = query.replace(" ", "+");
 	window.open(query, "_blank");
+});
+
+/************ Search Bar ************/
+$('.load-warning').click(function() {
+	$('.load-warning-msg').slideDown('slow');
 });
 
 /************ URL Params ************/

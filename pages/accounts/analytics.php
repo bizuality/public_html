@@ -1,7 +1,7 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 include($root . '/variables/user_analytics_variables.php');
 require_once($root .'/includes/secure_header.php');
-	
+
 $sc->set_pid($pid);
 $sc->getDailyStats();
 $sc->getWeeklyStats();
@@ -18,7 +18,6 @@ $sc->getRecentVisitors(5);
 ?>
 
 <!-- Content Body -->
-
 	<div id="top" class="header">
         <div class="vert-text">
         	<a href="#analytics" class="btn btn-default btn-lg">Continue to Site Analytics</a>

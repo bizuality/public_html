@@ -15,7 +15,7 @@ require_once($root . '/includes/secure_header.php');
                 </div>
             </div>
             <div class="row">
-            	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color service-item">
+            	<div class="col-lg-3 col-md-3 col-sm-6 text-center hoverable-color service-item">
             		<h3><?php echo $variables['col_01_heading'] ?></h3>
             		<form class="col-form" action="/resources/helpers/change_password.php" method="post" accept-charset="UTF-8">
 						<div class="input-group custom-form">
@@ -26,13 +26,24 @@ require_once($root . '/includes/secure_header.php');
   						</div>
 					</form>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color service-item">
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center hoverable-color service-item">
             		<h3><?php echo $variables['col_02_heading'] ?></h3>
             		<form class="col-form" action="/resources/helpers/change_email.php" method="post" accept-charset="UTF-8">
 						<div class="input-group custom-form">
   							<input id="old_email" type="text" name="old_email" placeholder="Old Email"/>
   							<input id="new_email" type="text" name="new_email" placeholder="New Email" />
   							<input id="confirm_email" type="text" name="confirm_email" placeholder="Confirm New Email" />
+  							<button class="btn-custom-form btn btn-lg center-block" type="submit">Submit</button>
+  						</div>
+					</form>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center hoverable-color service-item">
+            		<h3><?php echo $variables['col_02_heading'] ?></h3>
+            		<form class="col-form" action="/resources/helpers/change_email.php" method="post" accept-charset="UTF-8">
+						<div class="input-group custom-form">
+  							<input id="old_email" type="text" name="old_email" placeholder="Old Email"/>
+  							<input id="new_email" type="text" name="new_email" placeholder="New Email" />
+  							<input id="twitter_competitors" type="text" name="twitter_competitors" placeholder="Confirm New Email" />
   							<button class="btn-custom-form btn btn-lg center-block" type="submit">Submit</button>
   						</div>
 					</form>
