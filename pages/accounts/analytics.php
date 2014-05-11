@@ -21,6 +21,7 @@ $sc->getRecentVisitors(5);
 	<div id="top" class="header">
         <div class="vert-text">
         	<a href="#analytics" class="btn btn-default btn-lg">Continue to Site Analytics</a>
+        	<h3>or</h3>
             <h1>
             	<a class="icon-link" href="/pages/accounts/twitter.php"><i class="service-icon hoverable fa fa-twitter fa-4x" data-trigger="hover"></i></a>&nbsp;
 			</h1>

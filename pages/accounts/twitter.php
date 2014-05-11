@@ -14,8 +14,8 @@ $twitter = new TwitterAPIExchange($settings);
 $user_timeline = $twitter->getUserTimeline($twitter_user);
 $searchResults = $twitter->searchTweets($twitter_user);
 
-if(empty($user_timeline)) {
-	echo '<h1 class="error-msg">You do not have any tweets!</h1>';
+if(empty($twitter_user)) {
+	echo '<p class="error-msg">You do not have any tweets!</p>';
 	include($root . '/includes/footer.php');
 	die();
 }
