@@ -118,7 +118,8 @@ class StatCounter {
 		global $currentYear;
 		global $monthlyStats;
 		
-		$query = "?vn=" . $version . "&s=summary" . "&g=weekly" . "&sy=" . $currentYear . "&sm=" . $currentMonth . "&ey=" . $currentYear . "&em=" . $currentMonth . "&pi=" . $this->pid . "&t=" . time() . "&u=" . $this->username;		$query = $baseURL . $query . "&sha1=" . sha1($query . $this->password);
+		$query = "?vn=" . $version . "&s=summary" . "&g=weekly" . "&sy=" . $currentYear . "&sm=" . $currentMonth . "&ey=" . $currentYear . "&em=" . $currentMonth . "&pi=" . $this->pid . "&t=" . time() . "&u=" . $this->username;
+		$query = $baseURL . $query . "&sha1=" . sha1($query . $this->password);
 		$response = file_get_contents($query, true);
 		$response = json_decode($response, true);
 		$monthlyStats = $response['sc_data'][0]; // 0 to get the one and only result. This month's.
