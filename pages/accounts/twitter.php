@@ -111,8 +111,10 @@ if(!empty($twitter_user_competitor_03)) {
 					<i class="hoverable fa fa-bullseye fa-4x"></i>
 					<h2>Competitors</h2>
 					<?php
+						$noCompetitors = true;
 						$results = "";
 						if(!empty($twitter_user_competitor_01)){
+							$noCompetitors = false;
 							$results .= '<div class="col-lg-6 col-md-6 col-sm-6 hoverable-color-fixed text-center">';
 							$results .= '<h3>' . $comp_01_user_timeline[0]['user']['name'] . '</h3>';
 							$results .= '<p>' . $comp_01_user_timeline[0]['user']['description'] . '</p>';
@@ -130,10 +132,10 @@ if(!empty($twitter_user_competitor_03)) {
 							$results .= '</div>';
 						}
 						echo $results;
-					?>
-					<?php
+
 						$results = "";
-						else if(!empty($twitter_user_competitor_02)){
+						if(!empty($twitter_user_competitor_02)){
+							$noCompetitors = false;
 							$results .= '<div class="col-lg-6 col-md-6 col-sm-6 hoverable-color-fixed text-center">';
 							$results .= '<h3>' . $comp_02_user_timeline[0]['user']['name'] . '</h3>';
 							$results .= '<p>' . $comp_02_user_timeline[0]['user']['description'] . '</p>';
@@ -151,10 +153,10 @@ if(!empty($twitter_user_competitor_03)) {
 							$results .= '</div>';
 						}
 						echo $results;
-					?>
-					<?php
+
 						$results = "";
-						else if(!empty($twitter_user_competitor_03)){
+						if(!empty($twitter_user_competitor_03)){
+							$noCompetitors = false;
 							$results .= '<div class="col-lg-6 col-md-6 col-sm-6 hoverable-color-fixed text-center">';
 							$results .= '<h3>' . $comp_03_user_timeline[0]['user']['name'] . '</h3>';
 							$results .= '<p>' . $comp_03_user_timeline[0]['user']['description'] . '</p>';
@@ -172,15 +174,14 @@ if(!empty($twitter_user_competitor_03)) {
 							$results .= '</div>';
 						}
 						echo $results;
-					?>
-					<?php
+
 						$results = "";
-						else {
-							$results .= '<div class="col-lg-10 col-md-10 col-sm-10 hoverable-color-fixed text-center">';
-							$results .= '<h3>You have not told us about your competitors yet. Let us know who they are.</h3>';
-							$results .= '<p><a href="$root/pages/accounts/faq.php">Our FAQ section.</a></p>';
+						if($noCompetitors) {
+							$results .= '<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 hoverable-color-fixed text-center">';
+							$results .= '<h3>You have not told us about your competitors yet. <a href="/pages/accounts/faq.php">Let us know</a> who they are.</h3>';
 							$results .='</div>';
 						}
+						echo $results;
 					?>
 				</div>
 			</div>
