@@ -118,7 +118,7 @@ class StatCounter {
 		global $currentYear;
 		global $monthlyStats;
 		
-		$query = "?vn=" . $version . "&s=summary" . "&g=weekly" . "&sy=" . $currentYear . "&sm=" . $currentMonth . "&ey=" . $currentYear . "&em=" . $currentMonth . "&pi=" . $this->pid . "&t=" . time() . "&u=" . $this->username;
+		$query = "?vn=" . $version . "&s=summary" . "&g=monthly" . "&sy=" . $currentYear . "&sm=" . $currentMonth . "&ey=" . $currentYear . "&em=" . $currentMonth . "&pi=" . $this->pid . "&t=" . time() . "&u=" . $this->username;
 		$query = $baseURL . $query . "&sha1=" . sha1($query . $this->password);
 		$response = file_get_contents($query, true);
 		$response = json_decode($response, true);
@@ -222,7 +222,7 @@ class StatCounter {
 		global $version;
 		global $cameFrom;
 		
-		$query = "?vn=" . $version . "&s=camefrom" . "&pi=" . $this->pid . "&n=" . $numberOfResults . "&t=" . time() . "&u=" . $this->username;
+		$query = "?vn=" . $version . "&s=camefrom" . "&pi=" . $this->pid . "&c=1" . "&n=" . $numberOfResults . "&t=" . time() . "&u=" . $this->username;
 		$query = $baseURL . $query . "&sha1=" . sha1($query . $this->password);
 		$response = file_get_contents($query, true);
 		$response = json_decode($response, true);

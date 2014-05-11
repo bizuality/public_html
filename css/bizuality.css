@@ -22,6 +22,12 @@ table {
 tr {
   border-bottom: 1px solid #fff;
 }
+
+.break {
+	width: 100%;
+	word-break: break-all;
+}
+
 @media (max-width: 480px) {
   h1, .h1 {
     font-size: 30px;
@@ -325,6 +331,14 @@ i.scroll:hover {
 	height: 75%;
   }
 
+}
+
+.scrollable {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
 }
 /**************** Navigation Bar - Full ****************/
 .nav > li > a {
