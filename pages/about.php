@@ -14,21 +14,21 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 text-center hoverable-color">
+                <div class="col-md-4 col-sm-6 text-center hoverable-color">
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_01_icon'] ?>"></i>
                         <h4><?php echo $variables['col_01_title'] ?></h4>
                         <p><?php echo $variables['col_01_text'] ?></p>
                     </div>
                 </div>
-                <div class="col-md-4 text-center hoverable-color">
+                <div class="col-md-4 col-sm-6 text-center hoverable-color">
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_02_icon'] ?>"></i>
                         <h4><?php echo $variables['col_02_title'] ?></h4>
 						<p><?php echo $variables['col_02_text'] ?></p>
 					</div>
                 </div>
-                <div class="col-md-4 text-center hoverable-color">
+                <div class="col-md-4 col-sm-12 text-center hoverable-color">
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_03_icon'] ?>"></i>
                         <h4><?php echo $variables['col_03_title'] ?></h4>

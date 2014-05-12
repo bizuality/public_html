@@ -15,7 +15,7 @@ require_once($root . '/includes/secure_header.php');
                 </div>
             </div>
             <div class="row">
-            	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color service-item">
+            	<div class="col-lg-3 col-md-3 col-sm-6 text-center hoverable-color service-item">
             		<h3><?php echo $variables['col_01_heading'] ?></h3>
             		<form class="col-form" action="/resources/helpers/change_password.php" method="post" accept-charset="UTF-8">
 						<div class="input-group custom-form">
@@ -26,7 +26,7 @@ require_once($root . '/includes/secure_header.php');
   						</div>
 					</form>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color service-item">
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center hoverable-color service-item">
             		<h3><?php echo $variables['col_02_heading'] ?></h3>
             		<form class="col-form" action="/resources/helpers/change_email.php" method="post" accept-charset="UTF-8">
 						<div class="input-group custom-form">

@@ -14,8 +14,8 @@ $twitter = new TwitterAPIExchange($settings);
 $user_timeline = $twitter->getUserTimeline($twitter_user);
 $searchResults = $twitter->searchTweets($twitter_user);
 
-if(empty($user_timeline)) {
-	echo '<h1 class="error-msg">You do not have any tweets!</h1>';
+if(empty($twitter_user)) {
+	echo '<p class="error-msg">You do not have any tweets!</p>';
 	include($root . '/includes/footer.php');
 	die();
 }
@@ -111,9 +111,11 @@ if(!empty($twitter_user_competitor_03)) {
 					<i class="hoverable fa fa-bullseye fa-4x"></i>
 					<h2>Competitors</h2>
 					<?php
+						$noCompetitors = true;
 						$results = "";
 						if(!empty($twitter_user_competitor_01)){
-							$results = '<div class="col-lg-4 col-md-4 col-sm-4 hoverable-color-fixed text-center">';
+							$noCompetitors = false;
+							$results .= '<div class="col-lg-6 col-md-6 col-sm-6 hoverable-color-fixed text-center">';
 							$results .= '<h3>' . $comp_01_user_timeline[0]['user']['name'] . '</h3>';
 							$results .= '<p>' . $comp_01_user_timeline[0]['user']['description'] . '</p>';
 							$results .= '<hr />';
@@ -130,11 +132,11 @@ if(!empty($twitter_user_competitor_03)) {
 							$results .= '</div>';
 						}
 						echo $results;
-					?>
-					<?php
+
 						$results = "";
 						if(!empty($twitter_user_competitor_02)){
-							$results = '<div class="col-lg-4 col-md-4 col-sm-4 hoverable-color-fixed text-center">';
+							$noCompetitors = false;
+							$results .= '<div class="col-lg-6 col-md-6 col-sm-6 hoverable-color-fixed text-center">';
 							$results .= '<h3>' . $comp_02_user_timeline[0]['user']['name'] . '</h3>';
 							$results .= '<p>' . $comp_02_user_timeline[0]['user']['description'] . '</p>';
 							$results .= '<hr />';
@@ -151,11 +153,11 @@ if(!empty($twitter_user_competitor_03)) {
 							$results .= '</div>';
 						}
 						echo $results;
-					?>
-					<?php
+
 						$results = "";
 						if(!empty($twitter_user_competitor_03)){
-							$results = '<div class="col-lg-4 col-md-4 col-sm-4 hoverable-color-fixed text-center">';
+							$noCompetitors = false;
+							$results .= '<div class="col-lg-6 col-md-6 col-sm-6 hoverable-color-fixed text-center">';
 							$results .= '<h3>' . $comp_03_user_timeline[0]['user']['name'] . '</h3>';
 							$results .= '<p>' . $comp_03_user_timeline[0]['user']['description'] . '</p>';
 							$results .= '<hr />';
@@ -170,6 +172,14 @@ if(!empty($twitter_user_competitor_03)) {
 							$results .= '<p><i class="hoverable fa fa-edit"></i> ' . number_format($comp_03_user_timeline[0]['user']['statuses_count']) . '</p>';
 							$results .= '</div>';
 							$results .= '</div>';
+						}
+						echo $results;
+
+						$results = "";
+						if($noCompetitors) {
+							$results .= '<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 hoverable-color-fixed text-center">';
+							$results .= '<h3>You have not told us about your competitors yet. <a href="/pages/accounts/faq.php">Let us know</a> who they are.</h3>';
+							$results .='</div>';
 						}
 						echo $results;
 					?>

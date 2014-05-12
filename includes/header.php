@@ -31,6 +31,7 @@ if(isset($_SESSION['username'])) {
 	<!-- Add custom CSS here -->
 	<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="/css/bizuality.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -115,7 +116,7 @@ if(isset($_SESSION['username'])) {
     </div>
 <!-- /Error Message -->
 
-<!-- Error Message -->
+<!-- Notification Message -->
 	<div class="show-on-notification-banner">
 		<div class="notification-msg">
 		</div>

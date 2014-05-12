@@ -15,28 +15,28 @@ require_once($root . '/includes/secure_header.php');
                 </div>
             </div>
             <div class="row">
-            	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color service-item">
+            	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center hoverable-color">
             		<h2>
             			<a class="icon-link" href="/db/helpers/logout.php">
             				<i class="popover-icon fa <?php echo $variables['col_01_icon'] ?> fa-4x"></i>
             			</a>
 					</h2>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center hoverable-color">
             		<h2>
             			<a class="icon-link" href="/pages/accounts/settings.php">
             				<i class="popover-icon fa <?php echo $variables['col_02_icon']; ?> fa-4x"></i>
             			</a>
 					</h2>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center hoverable-color">
             		<h2>
             			<a class="icon-link" href="/pages/accounts/analytics.php">
             				<i class="popover-icon fa <?php echo $variables['col_03_icon']; ?> fa-4x"></i>
             			</a>
 					</h2>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center hoverable-color">
             		<h2>
             			<a class="icon-link" href="/pages/accounts/faq.php">
             				<i class="popover-icon fa <?php echo $variables['col_04_icon']; ?> fa-4x"></i>

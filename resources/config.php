@@ -8,9 +8,9 @@ define('DB_PASS', 'rootpassword');
 
 
 /************** StatCounter **************/
-define('SC_USER', 'demo_user');
+define('SC_USER', 'bizuality');
 
-define('SC_PASS', 'statcounter');
+define('SC_PASS', 'Gamecock4570');
 
 /************** Twitter **************/
 define('TWITTER_OAUTH_ACCESS_TOKEN', '2458969478-EpqF3ujJl5rR7pcWa0wDMPpPXTfDkttUY2nAhKs');

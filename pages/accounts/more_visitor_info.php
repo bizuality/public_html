@@ -33,39 +33,39 @@ $sc->getRecentVisitors(500);
             		<table>
 						<tr>
 							<td class="text-left">Log Visits</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['log_visits'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['log_visits'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Entries in Visit</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['entries_in_visit'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['entries_in_visit'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Entry Time</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['entry_t'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['entry_t'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Entry URL</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['entry_url'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['entry_url'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Keywords</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['se_keywords'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['se_keywords'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Exit Time</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['exit_t'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['exit_t'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Exit URL</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['exit_url'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['exit_url'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Browser</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['browser_name'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['browser_name'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">OS</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['os'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['os'] . '</td>
 						</tr>
 					</table>
 				</div>
@@ -73,43 +73,43 @@ $sc->getRecentVisitors(500);
 					<table>
 						<tr>
 							<td class="text-left">Display Width</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['width'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['width'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Display Height</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['height'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['height'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">JavaScript Enabled</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['javascript'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['javascript'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Country</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['country'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['country'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Provider</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['isp'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['isp'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">IP Address</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['ip_address'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['ip_address'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Latitude</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['latitude'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['latitude'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Longitude</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['longitude'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['longitude'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Number of Entires</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['num_entry'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['num_entry'] . '</td>
 						</tr>
 						<tr>
 							<td class="text-left">Visit Length</td>
-							<td class="text-right"><p>' . $recentVisitors[$i]['visit_length'] . '</p></td>
+							<td class="text-right break">' . $recentVisitors[$i]['visit_length'] . '</td>
 						</tr>
 					</table>
 				</div>

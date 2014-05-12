@@ -1,7 +1,7 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 include($root . '/variables/user_analytics_variables.php');
 require_once($root .'/includes/secure_header.php');
-	
+
 $sc->set_pid($pid);
 $sc->getDailyStats();
 $sc->getWeeklyStats();
@@ -18,10 +18,10 @@ $sc->getRecentVisitors(5);
 ?>
 
 <!-- Content Body -->
-
 	<div id="top" class="header">
         <div class="vert-text">
         	<a href="#analytics" class="btn btn-default btn-lg">Continue to Site Analytics</a>
+        	<h3>or</h3>
             <h1>
             	<a class="icon-link" href="/pages/accounts/twitter.php"><i class="service-icon hoverable fa fa-twitter fa-4x" data-trigger="hover"></i></a>&nbsp;
 			</h1>
@@ -141,7 +141,7 @@ $sc->getRecentVisitors(5);
             </div>
             <hr class="thick"/>
             <div class="row">
-            	<div class="col-lg-6 col-md-6 col-sm-6 hoverable-color-fixed text-center">
+            	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 hoverable-color-fixed text-center">
             		<i class="hoverable fa fa-bookmark-o fa-4x"></i>
             		<h2 class="text-center">Popular Pages</h2>
             		<hr />
@@ -149,13 +149,13 @@ $sc->getRecentVisitors(5);
 						$length = count($popularPages);
 						$result = '<table>';
 						for ($i = 0; $i < $length; $i++) {
-							$result .= '<tr><td class="text-left"><p>' . ($i + 1) . ')&nbsp;</p></td><td class="text-left">' . $popularPages[$i]['url'] . '</td><td class="text-right"><p>' . $popularPages[$i]['page_views'] . '</p></td></tr>';
+							$result .= '<tr><td class="text-left"><p>' . ($i + 1) . ')&nbsp;</p></td><td class="text-left break">' . $popularPages[$i]['url'] . '</td><td class="text-right"><p>' . $popularPages[$i]['page_views'] . '</p></td></tr>';
 						}
 						$result .= '</table>';
 					?>
 					<p><?php echo $result; ?></p>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 hoverable-color-fixed text-center">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 hoverable-color-fixed text-center">
                		<i class="hoverable fa fa-ellipsis-h fa-4x"></i>
             		<h2 class="text-center">Referring URL's</h2>
             		<hr />
@@ -164,7 +164,7 @@ $sc->getRecentVisitors(5);
 						$result = '<table>';
 						for ($i = 0; $i < $length; $i++) {
 							if(!empty($cameFrom[$i]['referring_url'])) {
-								$result .= '<tr><td class="text-left"><p>' . ($i + 1) . ')&nbsp;</p></td><td class="text-left"><p>' . $cameFrom[$i]['referring_url'] . '</p></td><td class="text-right">' . $cameFrom[$i]['page_views'] . '</td></tr>';
+								$result .= '<tr><td class="text-left"><p>' . ($i + 1) . ')&nbsp;</p></td><td class="text-left break"><p>' . $cameFrom[$i]['referring_url'] . '</p></td><td class="text-right">' . $cameFrom[$i]['page_views'] . '</td></tr>';
 							}
 						}
 						$result .= '</table>';
@@ -182,7 +182,7 @@ $sc->getRecentVisitors(5);
 						$length = count($keywords);
 						$result = '<table>';
 						for ($i = 0; $i < $length; $i++) {
-							$result .= '<tr><td class="text-left"><p>' . ($i + 1) . ')&nbsp;</p></td><td class="text-left"><p>' . $keywords[$i]['search_engine_host'] . '</p></td><td class="text-right">' . $keywords[$i]['keyword'] . '</td></tr>';
+							$result .= '<tr><td class="text-left"><p>' . ($i + 1) . ')&nbsp;</p></td><td class="text-left"><p>' . $keywords[$i]['search_engine_host'] . '</p></td><td class="text-right break">' . $keywords[$i]['keyword'] . '</td></tr>';
 						}
 						$result .= '</table>';
 					?>
@@ -196,79 +196,79 @@ $sc->getRecentVisitors(5);
 					<table>
 						<tr>
 							<td class="text-left">Log Visits</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['log_visits']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['log_visits']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Entries in Visit</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['entries_in_visit']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['entries_in_visit']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Entry Time</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['entry_t']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['entry_t']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Entry URL</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['entry_url']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['entry_url']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Keywords</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['se_keywords']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['se_keywords']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Exit Time</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['exit_t']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['exit_t']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Exit URL</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['exit_url']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['exit_url']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Browser</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['browser_name']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['browser_name']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">OS</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['os']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['os']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Display Width</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['width']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['width']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Display Height</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['height']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['height']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">JavaScript Enabled</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['javascript']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['javascript']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Country</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['country']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['country']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Provider</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['isp']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['isp']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">IP Address</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['ip_address']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['ip_address']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Latitude</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['latitude']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['latitude']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Longitude</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['longitude']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['longitude']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Number of Entires</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['num_entry']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['num_entry']; ?></td>
 						</tr>
 						<tr>
 							<td class="text-left">Visit Length</td>
-							<td class="text-right"><p><?php echo $recentVisitors[0]['visit_length']; ?></p></td>
+							<td class="text-right break"><?php echo $recentVisitors[0]['visit_length']; ?></td>
 						</tr>
 					</table>
 					<br />
