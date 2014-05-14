@@ -1,6 +1,7 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 include($root . '/variables/user_analytics_variables.php');
 require_once($root .'/includes/secure_header.php');
+require_once($root . '/resources/helpers/StatCounterAPIExchange.php');
 
 $sc->set_pid($pid);
 $sc->getDailyStats();
@@ -24,6 +25,8 @@ $sc->getRecentVisitors(5);
         	<h3>or</h3>
             <h1>
             	<a class="icon-link" href="/pages/accounts/twitter.php"><i class="service-icon hoverable fa fa-twitter fa-4x" data-trigger="hover"></i></a>&nbsp;
+				<a class="icon-link" href="/pages/accounts/facebook.php"><i class="service-icon hoverable fa fa-facebook fa-4x" data-trigger="hover"></i></a>
+				
 			</h1>
         </div>
     </div>
@@ -31,10 +34,10 @@ $sc->getRecentVisitors(5);
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
-                	<hr />
+                	<hr class="thick"/>
                 	<img class="img-responsive center-block" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/img/bizuality_logo_small.png">
                     <h1>Analytics</h1>
-                    <hr />
+                    <hr class="thick"/>
                     <p>As of <?php echo date('l\, F j\, Y h:i:s A'); ?></p>
                 </div>
             </div>
@@ -164,7 +167,7 @@ $sc->getRecentVisitors(5);
 						$result = '<table>';
 						for ($i = 0; $i < $length; $i++) {
 							if(!empty($cameFrom[$i]['referring_url'])) {
-								$result .= '<tr><td class="text-left"><p>' . ($i + 1) . ')&nbsp;</p></td><td class="text-left break"><p>' . $cameFrom[$i]['referring_url'] . '</p></td><td class="text-right">' . $cameFrom[$i]['page_views'] . '</td></tr>';
+								$result .= '<tr><td class="text-left"><p>' . ($i + 1) . ')&nbsp;</p></td><td class="text-left break">' . $cameFrom[$i]['referring_url'] . '</td><td class="text-right">' . $cameFrom[$i]['page_views'] . '</td></tr>';
 							}
 						}
 						$result .= '</table>';

@@ -7,9 +7,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
-                	<hr />
+                	<hr class="thick"/>
                     <h2>Social Media Creation and Marketing</h2>
-                    <hr />
+                    <hr class="thick"/>
                 </div>
             </div>
             <div class="row">
@@ -40,6 +40,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_05_icon'] ?>"></i>
                         <h4><?php echo $variables['col_05_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_05_text'] ?></p>
                     </div>
                 </div>
@@ -47,6 +48,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_06_icon'] ?>"></i>
                         <h4><?php echo $variables['col_06_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_06_text'] ?></p>
                     </div>
                 </div>
@@ -54,6 +56,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_07_icon'] ?>"></i>
                         <h4><?php echo $variables['col_07_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_07_text'] ?></p>
                     </div>
                 </div>
@@ -61,6 +64,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_08_icon'] ?>"></i>
                         <h4><?php echo $variables['col_08_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_08_text'] ?></p>
                     </div>
                 </div>

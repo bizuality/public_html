@@ -7,9 +7,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
-                	<hr />
+                	<hr class="thick"/>
                     <h2>Our Work</h2>
-                    <hr />
+                    <hr class="thick"/>
                 </div>
             </div>
             <div class="row">

@@ -8,10 +8,10 @@ require_once($root . '/includes/secure_header.php');
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
-                	<hr />
+                	<hr class="thick"/>
                 	<img class="img-responsive center-block" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/img/bizuality_logo_small.png">
                     <h1><?php echo $username; ?>'s Settings</h1>
-                    <hr />
+                    <hr class="thick"/>
                 </div>
             </div>
             <div class="row">

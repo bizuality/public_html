@@ -14,7 +14,6 @@ p {
 }
 table {
   color: #fff;
-  width: 700px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -315,6 +314,10 @@ i.scroll:hover {
   background-color: #fff;
 }
 
+.short {
+  width: 50%;
+}
+
 /* Responsive */
 
 
@@ -395,24 +398,17 @@ i.scroll:hover {
 }
 
 /**************** Navigation Bar - Mobile ****************/
-@media (max-width: 400px) {
-    .nav > li > a {
-    font-size: 1.5em;
-  }
-  .dropdown-menu > li > a {
-    font-size: 1.45em;
-  }
-}
 @media (max-width: 768px) {
-  .dropdown-menu > li > a {
-    color: #00efa0;
+    .nav > li > a {
+    font-size: 1.4em;
   }
-
-  .dropdown-menu > li > a:hover {
+  .dropdown-menu > li > a {
+    font-size: 1.25em;
     color: #fff;
-    background-color: #00efa0;
+    background-color: #0a5175;
   }
 }
+
 
 /**************** Popover ****************/
 .popover {
@@ -592,7 +588,7 @@ i.scroll:hover {
   height: 400px;
 }
 
-/**************** Sign In Form ****************/
+/*************** Sign In Form ***************/
 .custom-form {
 	display: block;
 	width: 200px;
@@ -625,4 +621,16 @@ i.scroll:hover {
 	border: 2px solid #00efa0;
 	border-radius: 5px;
 	color: #00efa0;
+}
+
+/*************** Analytics Formatting ***************/
+.img-analytics {
+	border-radius: 5px;
+	border: 5px solid #fff;
+	width: 80%;
+	//height 350px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: auto;
+	margin-left: auto;
 }

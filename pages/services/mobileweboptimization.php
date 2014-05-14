@@ -7,9 +7,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
-                	<hr />
+                	<hr class="thick"/>
                     <h2>Mobile Web Optimization</h2>
-                    <hr />
+                    <hr class="thick"/>
                 </div>
             </div>
             <div class="row">
@@ -25,6 +25,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_02_icon'] ?>"></i>
                         <h4><?php echo $variables['col_02_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_02_text'] ?></p>
                     </div>
                 </div>
@@ -35,6 +36,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_03_icon'] ?>"></i>
                         <h4><?php echo $variables['col_03_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_03_text'] ?></p>
                     </div>
                 </div>
@@ -42,6 +44,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_04_icon'] ?>"></i>
                         <h4><?php echo $variables['col_04_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_04_text'] ?></p>
                     </div>
                 </div>
@@ -49,6 +52,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_05_icon'] ?>"></i>
                         <h4><?php echo $variables['col_05_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_05_text'] ?></p>
                     </div>
                 </div>
@@ -56,6 +60,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_06_icon'] ?>"></i>
                         <h4><?php echo $variables['col_06_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_06_text'] ?></p>
                     </div>
                 </div>

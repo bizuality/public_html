@@ -1,5 +1,6 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 include($root . '/variables/user_analytics_variables.php');
+include($root . '/resources/helpers/StatCounterAPIExchange.php');
 require_once($root . '/includes/secure_header.php');
 
 $sc->set_pid($pid);
@@ -11,10 +12,10 @@ $sc->getRecentVisitors(500);
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
-                	<hr />
+                	<hr class="thick"/>
                 	<img class="img-responsive center-block" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/img/bizuality_logo_small.png">
                     <h1>Enhanced Visitor Information</h1>
-                    <hr />
+                    <hr class="thick"/>
                     <p>As of <?php echo date('l\, F j\, Y h:i:s A'); ?></p>
                 </div>
             </div>

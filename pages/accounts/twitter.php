@@ -2,12 +2,13 @@
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 include($root . '/variables/user_twitter_variables.php');
 require_once($root . '/includes/secure_header.php');
+require_once($root . '/resources/helpers/TwitterAPIExchange.php');
 
 $settings = array(
-    'oauth_access_token' => "2458969478-EpqF3ujJl5rR7pcWa0wDMPpPXTfDkttUY2nAhKs",
-    'oauth_access_token_secret' => "oZz2fgNC590hIMyH48yGJEyQqlroitnUIJjITMLm8xhgC",
-    'consumer_key' => "FhU6GORQ4RRZsCMtRE2uZ3HW0",
-    'consumer_secret' => "hTU00OqAMjI7VT16WO1lssF7yLPIEMft5Jl7XNpwbZ8umWCCAa"
+    'oauth_access_token' => TWITTER_OAUTH_ACCESS_TOKEN,
+    'oauth_access_token_secret' => TWITTER_OAUTH_ACCESS_TOKEN_SECRET,
+    'consumer_key' => TWITTER_CONSUMER_KEY,
+    'consumer_secret' => TWITTER_CONSUMER_SECRET
 );
 
 $twitter = new TwitterAPIExchange($settings);

@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 
 // Controls the Sign In / Sign Out links
@@ -18,8 +19,7 @@ if(isset($_SESSION['username'])) {
 <head profile="http://www.bizuality.com">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Our mission is to provide businesses with mobile optimized websites with efficient user interfaces, exceptional social media integration, consistent search engine optimization results, and custom analytics that provide our customers the tools they need to grow their business.">
 
     <title><?php echo $variables['title'] ?></title>
     
@@ -33,6 +33,7 @@ if(isset($_SESSION['username'])) {
 	<link href="/css/bizuality.css" rel="stylesheet">
 
 </head>
+<?php flush() ?>
 <body>
 
 <!--Navigation Bar-->

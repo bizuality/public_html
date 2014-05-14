@@ -7,10 +7,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
-                	<hr />
+                	<hr class="thick"/>
                     <h2>About</h2>
                     <img class="img-responsive center-block" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/img/bizuality_logo_small.png">
-                    <hr />
+                    <hr class="thick"/>
                 </div>
             </div>
             <div class="row">
@@ -18,6 +18,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_01_icon'] ?>"></i>
                         <h4><?php echo $variables['col_01_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_01_text'] ?></p>
                     </div>
                 </div>
@@ -25,6 +26,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_02_icon'] ?>"></i>
                         <h4><?php echo $variables['col_02_title'] ?></h4>
+                        <hr class="short"/>
 						<p><?php echo $variables['col_02_text'] ?></p>
 					</div>
                 </div>
@@ -32,6 +34,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_03_icon'] ?>"></i>
                         <h4><?php echo $variables['col_03_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_03_text'] ?></p>
                     </div>
                 </div>
@@ -45,6 +48,10 @@
         </div>
     </div>
     <!-- /Content Body -->
+    
+    <!-- Google Map JS-->
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <!-- /Google Map JS -->
     
     
     
