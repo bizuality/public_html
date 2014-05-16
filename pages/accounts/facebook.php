@@ -170,6 +170,37 @@ if($session) {
             		</div>
             	</div>
             </div>
+            <hr class="thick" />
+            <div class="row">
+            	<div class="col-xs-12 text-center">
+            		<h2>Impressions</h2>
+            		<hr class="short" />
+            	</div>
+            	<div class="col-sm-4 col-xs-12 text-center hoverable-color-fixed">
+            		<h3>By Gender/Age This Week</h3>
+            		<hr class="short" />
+            		<div class="col-xs-6 text-center">
+            			<h2><i class="fa fa-female"></i></h2>
+            			<h4>65-74</h4>
+            			<h4>55-64</h4>
+            			<h4>45-54</h4>
+            			<h4>35-44</h4>
+            			<h4>25-34</h4>
+            			<h4>18-24</h4>
+            			<h4>13-17</h4>
+            		</div>
+            		<div class="col-xs-6 text-center">
+            			<h2><i class="fa fa-male"></i></h2>
+            			<h4>65-74</h4>
+            			<h4>55-64</h4>
+            			<h4>45-54</h4>
+            			<h4>35-44</h4>
+            			<h4>25-34</h4>
+            			<h4>18-24</h4>
+            			<h4>13-17</h4>
+            		</div>
+            	</div>
+            </div>
         </div>
     </div>
     

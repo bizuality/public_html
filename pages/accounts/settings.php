@@ -40,7 +40,7 @@ require_once($root . '/includes/secure_header.php');
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center service-item">
                 	<?php
                 		if(!isset($_SESSION['facebook'])) {
-                			echo '<a href="/resources/helpers/facebook_test.php" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Login with Facebook</a>';
+                			echo '<a href="/resources/helpers/facebook_login.php" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Login with Facebook</a>';
                 		}
                 		else {
                 			echo '<p><i class="fa fa-facebook"></i> Logged In</p>';
