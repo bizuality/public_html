@@ -24,22 +24,21 @@ use Facebook\GraphObject;
 FacebookSession::setDefaultApplication('637873329634271','39c1e47d1c334308ed868d350c8defc1');
  
 // login helper with redirect_uri
-$helper = new FacebookRedirectLoginHelper('http://bizuality.local/pages/accounts/settings.php' );
-
-$session = "";
+$helper = new FacebookRedirectLoginHelper('http://bizuality.local/resources/helpers/facebook_test.php' );
 
 try {
   $session = $helper->getSessionFromRedirect();
 } catch(FacebookRequestException $ex) {
   // When Facebook returns an error
-} catch(\Exception $ex) {
+} catch(Exception $ex) {
   // When validation fails or other local issues
 }
 if ($session) {
 	$_SESSION['facebook'] = $session->getToken();
+	header("Location: /pages/accounts/settings.php");
 }
 else {
-	echo '<a href="' . $helper->getLoginUrl() . '">Login</a>';
+	header("Location:" . $helper->getLoginUrl());
 }
 
 session_write_close();

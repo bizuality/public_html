@@ -245,6 +245,8 @@ i.service-icon {
   color: #ffffff;
   background: #0a5175;
   padding: 50px 0;
+  border-top: 15px solid #fff;
+  border-bottom: 15px solid #fff;
 }
 
 .call-to-action .btn {
@@ -507,6 +509,9 @@ i.scroll:hover {
 .slide-down-onload {
   display: none;
 }
+.slide-up-onload {
+  display: none;
+}
 .hoverable-color {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -580,6 +585,33 @@ i.scroll:hover {
 
 .load-warning-msg {
   display: none;
+}
+
+@media(min-width: 768px){
+.ribbon {
+  margin-top: 60px;
+  margin-left: -10px;
+  background-color: #fff;
+  position: absolute;
+  color: #0a5175;
+  padding: 0 25px 0 25px;
+  border-top: 3px ridge #00efa0;
+  border-bottom: 3px ridge #00efa0;
+  border-right: 3px ridge #00efa0;
+  border-radius: 5px;
+  z-index: 1000;
+  text-align: right;
+  float: right;
+  box-shadow: 5px 5px 5px 5px #0a5175;
+  overflow: hidden;
+
+}
+
+.vert-center {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  margin-top: 5%;
 }
 
 /**************** Custom Map ****************/

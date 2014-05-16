@@ -20,7 +20,7 @@
             		</div>
             	</div>
             </div>
-            <hr />
+            <hr class="thick"/>
             <div class="row">
                 <div class="col-md-3 col-sm-6 text-center hoverable-color">
                     <div class="service-item">

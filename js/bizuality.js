@@ -171,7 +171,12 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$('.slide-down-onload').slideDown(2250);
 });
-
+$(document).ready(function(){
+	$('.slide-up-onload').slideUp(1250);
+});
+$(document).ready(function(){
+	$('.ribbon').animate({width: "70%"}, 1000);
+});
 $(".hoverable-color").mouseover(function(){
 	$(this).addClass('color-on-hover');
 });
@@ -235,13 +240,19 @@ $(document).ready(function(){
 			$('.error-msg').append('<p>Your question was not submitted. Please try again.</p>');
 		}
 		if($_GET['value'] == 7) {
-			$('.error-msg').append('<p>You are not an analytics subscriber.</p>');
+			$('.error-msg').append('<p>You are not an analytics subscriber. If you would like to become one, <a href="/pages/accounts/faq.php#question">let us know</a>.</p>');
 		}
 		if($_GET['value'] == 8) {
 			$('.error-msg').append('<p>Your new email cannot be confirmed, please try again.</p>');
 		}
 		if($_GET['value'] == 9) {
 			$('.error-msg').append('<p>Your old email is incorrect. Please try again.</p>');
+		}
+		if($_GET['value'] == 10) {
+			$('.error-msg').append('<p>You are not logged in with Facebook. Please login below.</p>');
+		}
+		if($_GET['value'] == 11) {
+			$('.error-msg').append('<p>You have not told us the name of your Facebook Page. Tell us about it in the <a href="/pages/accounts/faq.php#question">"help" form</a>.</p>');
 		}
 		$('.show-on-error-banner').slideDown('slow');
 	}

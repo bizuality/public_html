@@ -68,6 +68,5 @@ class FacebookAPIExchange {
 		
 		return $response;
 	}
-	
 }
 ?>

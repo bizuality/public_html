@@ -15,7 +15,7 @@ require_once($root . '/includes/secure_header.php');
                 </div>
             </div>
             <div class="row">
-            	<div class="col-lg-3 col-md-3 col-sm-6 text-center hoverable-color service-item">
+            	<div class="col-lg-3 col-md-3 col-sm-6 text-center service-item">
             		<h3><?php echo $variables['col_01_heading'] ?></h3>
             		<form class="col-form" action="/resources/helpers/change_password.php" method="post" accept-charset="UTF-8">
 						<div class="input-group custom-form">
@@ -26,7 +26,7 @@ require_once($root . '/includes/secure_header.php');
   						</div>
 					</form>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center hoverable-color service-item">
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center service-item">
             		<h3><?php echo $variables['col_02_heading'] ?></h3>
             		<form class="col-form" action="/resources/helpers/change_email.php" method="post" accept-charset="UTF-8">
 						<div class="input-group custom-form">
@@ -36,6 +36,17 @@ require_once($root . '/includes/secure_header.php');
   							<button class="btn-custom-form btn btn-lg center-block" type="submit">Submit</button>
   						</div>
 					</form>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center service-item">
+                	<?php
+                		if(!isset($_SESSION['facebook'])) {
+                			echo '<a href="/resources/helpers/facebook_test.php" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Login with Facebook</a>';
+                		}
+                		else {
+                			echo '<p><i class="fa fa-facebook"></i> Logged In</p>';
+                			echo '<p>View your <a href="/pages/accounts/facebook.php">Facebook Analytics</a>!</p>';
+                		}
+                	?>
                 </div>
             </div>
         </div>

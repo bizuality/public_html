@@ -45,7 +45,7 @@ $sc->getRecentVisitors(5);
             	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color-fixed">
             		<i class="service-item hoverable fa fa-eye fa-4x"></i>
             		<h2>Today</h2>
-            		<hr />
+            		<hr class="short"/>
             		<h4>Page Views</h2>
             		<h2><?php echo $dailyStats['page_views']; ?></h2>
             		<h4>Unique Visits</h4>
@@ -58,7 +58,7 @@ $sc->getRecentVisitors(5);
             	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color-fixed">
             		<i class="service-item hoverable fa fa-eye fa-4x"></i>
             		<h2>This Week</h2>
-            		<hr />
+            		<hr class="short"/>
             		<h4>Page Views</h4>
             		<h2><?php echo $weeklyStats['page_views']; ?></h2>
             		<h4>Unique Visits</h4>
@@ -71,7 +71,7 @@ $sc->getRecentVisitors(5);
             	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color-fixed">
             		<i class="service-item hoverable fa fa-eye fa-4x"></i>
             		<h2>This Month</h2>
-            		<hr />
+            		<hr class="short"/>
             		<h4>Page Views</h4>
             		<h2><?php echo $monthlyStats['page_views']; ?></h2>
             		<h4>Unique Visits</h4>
@@ -84,7 +84,7 @@ $sc->getRecentVisitors(5);
             	<div class="col-lg-3 col-md-3 col-sm-3 text-center hoverable-color-fixed">
             		<i class="service-item hoverable fa fa-eye fa-4x"></i>
             		<h2>This Year</h2>
-            		<hr />
+            		<hr class="short"/>
             		<h4>Page Views</h4>
             		<h2><?php echo $yearlyStats['page_views']; ?></h2>
             		<h4>Unique Visits</h4>

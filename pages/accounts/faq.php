@@ -28,7 +28,13 @@ require_once($root . '/includes/secure_header.php');
             </div>
             <div class="row">
             	<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 text-center hoverable-color service-item">
-            		<h2>Have a more specific question?</h2>
+            	   	<h2>Why are my Facebook analytics lagging?</h2>
+            		<p>We analyze the data that comes from Facebook in realtime, however, it takes Facebook up to 48 hours to process the data from your page on their end. There is nothing we can do at this time to prevent lagging from Facebook.</p>
+                </div>
+            </div>
+            <div id="#question" class="row">
+            	<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 text-center hoverable-color service-item">
+            		<h2>How else can we help you?</h2>
             		<form class="col-form" action="/resources/helpers/ask_question.php" method="post" accept-charset="UTF-8">
 						<div class="input-group custom-form-lg">
 							<select id="category" name="category">
@@ -37,8 +43,9 @@ require_once($root . '/includes/secure_header.php');
   								<option value="understanding analytics">I need help understanding my analytics.</option>
   								<option value="account information">I need help with my account information. </option>
   								<option value="updating competitors">I need to update my competitors.</option>
+  								<option value="subscribing to analytics">I want to subscribe to analytics.</option>
 							</select>
-  							<textarea id="question" type="text" name="question" placeholder="What can we help you with?"></textarea>
+  							<textarea id="question" type="text" name="question" placeholder="Tell us more!"></textarea>
   							<button id="signInButton" class="btn-custom-form btn btn-lg center-block" type="submit">Submit</button>
   						</div>
 					</form>
