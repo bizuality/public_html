@@ -83,7 +83,7 @@ if(isset($_SESSION['username'])) {
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Sign In</a>
                         <ul class="dropdown-menu">
 							<form action="/resources/helpers/login.php" method="post" accept-charset="UTF-8">
-								<div class="input-group custom-form">
+								<div class="input-group custom-form text-center">
   									<input id="username" type="text" name="username" placeholder="Username"/>
   									<input id="password" type="password" name="password" placeholder="Password" />
   									<button id="signInButton" class="btn-custom-form btn btn-lg center-block" type="submit">Sign In</button>

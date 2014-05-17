@@ -24,7 +24,7 @@ use Facebook\GraphObject;
 FacebookSession::setDefaultApplication('637873329634271','39c1e47d1c334308ed868d350c8defc1');
  
 // login helper with redirect_uri
-$helper = new FacebookRedirectLoginHelper('http://bizuality.local/resources/helpers/facebook_test.php' );
+$helper = new FacebookRedirectLoginHelper('http://bizuality.local/resources/helpers/facebook_login.php' );
 
 try {
   $session = $helper->getSessionFromRedirect();

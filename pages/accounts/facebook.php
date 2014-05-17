@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 if(!isset($_SESSION['facebook'])) {
 	header("Location: /pages/accounts/settings.php?msg=error&value=10");

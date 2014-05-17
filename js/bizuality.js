@@ -252,7 +252,7 @@ $(document).ready(function(){
 			$('.error-msg').append('<p>You are not logged in with Facebook. Please login below.</p>');
 		}
 		if($_GET['value'] == 11) {
-			$('.error-msg').append('<p>You have not told us the name of your Facebook Page. Tell us about it in the <a href="/pages/accounts/faq.php#question">"help" form</a>.</p>');
+			$('.error-msg').append('<p>You have not told us the name of your Facebook Page. Tell us about it in the <a href="/pages/accounts/faq.php#question">"help" form.</p>');
 		}
 		$('.show-on-error-banner').slideDown('slow');
 	}
