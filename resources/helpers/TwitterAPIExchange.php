@@ -316,12 +316,3 @@ class TwitterAPIExchange
     }
 	
 }
-
-$settings = array(
-    'oauth_access_token' => "2458969478-EpqF3ujJl5rR7pcWa0wDMPpPXTfDkttUY2nAhKs",
-    'oauth_access_token_secret' => "oZz2fgNC590hIMyH48yGJEyQqlroitnUIJjITMLm8xhgC",
-    'consumer_key' => "FhU6GORQ4RRZsCMtRE2uZ3HW0",
-    'consumer_secret' => "hTU00OqAMjI7VT16WO1lssF7yLPIEMft5Jl7XNpwbZ8umWCCAa"
-);
-
-$twitter = new TwitterAPIExchange($settings);

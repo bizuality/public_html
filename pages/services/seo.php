@@ -7,9 +7,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
-                	<hr />
+                	<hr class="thick"/>
                     <h2>Search Engine Optimization</h2>
-                    <hr />
+                    <hr class="thick"/>
                 </div>
             </div>
             <div class="row">
@@ -20,12 +20,13 @@
             		</div>
             	</div>
             </div>
-            <hr />
+            <hr class="thick"/>
             <div class="row">
                 <div class="col-md-3 col-sm-6 text-center hoverable-color">
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_01_icon'] ?>"></i>
                         <h4><?php echo $variables['col_01_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_01_text'] ?></p>
                     </div>
                 </div>
@@ -33,6 +34,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_02_icon'] ?>"></i>
                         <h4><?php echo $variables['col_02_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_02_text'] ?></p>
                     </div>
                 </div>
@@ -40,6 +42,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_03_icon'] ?>"></i>
                         <h4><?php echo $variables['col_03_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_03_text'] ?></p>
                     </div>
                 </div>
@@ -47,6 +50,7 @@
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_04_icon'] ?>"></i>
                         <h4><?php echo $variables['col_04_title'] ?></h4>
+                        <hr class="short"/>
                         <p><?php echo $variables['col_04_text'] ?></p>
                     </div>
                 </div>

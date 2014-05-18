@@ -32,27 +32,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 text-center hoverable-color">
-                    <h3>
-                    	<i class="service-icon hoverable fa <?php echo $variables['col_01_icon'] ?> fa-2x"></i>
-                    	<br />
-                    	<?php echo $variables['col_01_title'] ?>
-                    </h3>
+                	<h3><i class="service-icon hoverable fa <?php echo $variables['col_01_icon'] ?> fa-2x"></i></h3>
+                    <h3><?php echo $variables['col_01_title'] ?></h3>
+                    <hr class="short" />
                     <p><?php echo $variables['col_01_text'] ?></p>
                 </div>
                 <div class="col-lg-4 col-md-4 text-center hoverable-color">
-                    <h3>
-                    	<i class="service-icon hoverable fa <?php echo $variables['col_02_icon'] ?> fa-2x"></i>
-                    	<br />
-                    	<?php echo $variables['col_02_title'] ?>
-                    </h3>
+                    <h3><i class="service-icon hoverable fa <?php echo $variables['col_02_icon'] ?> fa-2x"></i></h3>
+                    <h3><?php echo $variables['col_02_title'] ?></h3>
+                    <hr class="short" />
                     <p><?php echo $variables['col_02_text'] ?></p>
                 </div>
                 <div class="col-lg-4 col-md-4 text-center hoverable-color">
-                    <h3>
-                    	<i class="service-icon hoverable fa <?php echo $variables['col_03_icon'] ?> fa-2x"></i>
-                    	<br />
-                    	<?php echo $variables['col_03_title'] ?>
-                    </h3>
+                    <h3><i class="service-icon hoverable fa <?php echo $variables['col_03_icon'] ?> fa-2x"></i></h3>
+                    <h3><?php echo $variables['col_03_title'] ?></h3>
+                    <hr class="short" />
                     <p><?php echo $variables['col_03_text'] ?></p>
                 </div>
             </div>

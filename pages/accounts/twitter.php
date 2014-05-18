@@ -2,12 +2,13 @@
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 include($root . '/variables/user_twitter_variables.php');
 require_once($root . '/includes/secure_header.php');
+require_once($root . '/resources/helpers/TwitterAPIExchange.php');
 
 $settings = array(
-    'oauth_access_token' => "2458969478-EpqF3ujJl5rR7pcWa0wDMPpPXTfDkttUY2nAhKs",
-    'oauth_access_token_secret' => "oZz2fgNC590hIMyH48yGJEyQqlroitnUIJjITMLm8xhgC",
-    'consumer_key' => "FhU6GORQ4RRZsCMtRE2uZ3HW0",
-    'consumer_secret' => "hTU00OqAMjI7VT16WO1lssF7yLPIEMft5Jl7XNpwbZ8umWCCAa"
+    'oauth_access_token' => TWITTER_OAUTH_ACCESS_TOKEN,
+    'oauth_access_token_secret' => TWITTER_OAUTH_ACCESS_TOKEN_SECRET,
+    'consumer_key' => TWITTER_CONSUMER_KEY,
+    'consumer_secret' => TWITTER_CONSUMER_SECRET
 );
 
 $twitter = new TwitterAPIExchange($settings);
@@ -41,25 +42,33 @@ if(!empty($twitter_user_competitor_03)) {
     <div id="website_design" class="main-content-alternate">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                	<h1><?php echo $user_timeline[0]['user']['name']; ?></h1>
+                <div class="col-md-4 col-md-offset-4 text-center slide-down-onload">
+                	<hr class="thick" />
+                	<h1><i class="fa fa-twitter-square"></i> <?php echo $user_timeline[0]['user']['name']; ?></h1>
                 	<p><?php echo $user_timeline[0]['user']['location']; ?></p>
                 	<p><small><p><?php echo $user_timeline[0]['user']['description']; ?></p></small></p>
+                	<hr class="thick" />
+                	<p>As of <?php echo date('l\, F j\, Y h:i:s A'); ?></p>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 text-center hoverable-color-fixed">
                 	<i class="hoverable fa fa-group fa-4x"></i>
-                	<p>Followers</p>
-                	<h1><?php echo number_format($user_timeline[0]['user']['followers_count']); ?></h1>
+                	<hr class="short" />
+                	<h4>Followers</h4>
+                	<h2><?php echo number_format($user_timeline[0]['user']['followers_count']); ?></h2>
                 </div>
                	<div class="col-lg-4 col-md-4 col-sm-4 text-center hoverable-color-fixed">
                 	<i class="hoverable fa fa-user fa-4x"></i>
-                	<p>Following</p>
-                	<h1><?php echo number_format($user_timeline[0]['user']['friends_count']); ?></h1>
+                	<hr class="short" />
+                	<h4>Following</h4>
+                	<h2><?php echo number_format($user_timeline[0]['user']['friends_count']); ?></h2>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 text-center hoverable-color-fixed">
                 	<i class="hoverable fa fa-edit fa-4x"></i>
-                	<p>Tweets</p>
-                	<h1><?php echo number_format($user_timeline[0]['user']['statuses_count']); ?></h1>
+                	<hr class="short" />
+                	<h4>Tweets</h4>
+                	<h2><?php echo number_format($user_timeline[0]['user']['statuses_count']); ?></h2>
                 </div>
             </div>
             <hr class="thick"/>
