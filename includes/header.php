@@ -19,7 +19,7 @@ if(isset($_SESSION['username'])) {
 <head profile="http://www.bizuality.com">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Our mission is to provide businesses with mobile optimized websites with efficient user interfaces, exceptional social media integration, consistent search engine optimization results, and custom analytics that provide our customers the tools they need to grow their business.">
+    <meta name="description" content="Our mission is to provide businesses with mobile optimized websites with efficient user interfaces.">
 
     <title><?php echo $variables['title'] ?></title>
     
