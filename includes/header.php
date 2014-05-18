@@ -76,6 +76,9 @@ if(isset($_SESSION['username'])) {
                         </ul>	
                     </li>
                     <li>
+                        <a href="#" data-toggle="modal" data-target="#quoteModal">quote</a>
+                    </li>
+                    <li>
                         <a href="#" data-toggle="modal" data-target="#contactModal">Contact Us</a>
                     </li>
                     <?php if(!$signin) { echo '
