@@ -2,55 +2,8 @@
 <?php include($root . '/variables/index_variables.php'); ?>
 <?php require_once($root . '/includes/header.php'); ?>
 
-<!-- Facebook Button -->
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=637873329634271&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
-<!-- /Facebook Button -->
-
-<!-- Twitter Button -->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<!--/Twitter Button -->
-
-<!-- LinkedIn Button -->
-<script src="//platform.linkedin.com/in.js" type="text/javascript">
-  lang: en_US
-</script>
-<!-- /LinkedIn Button -->
-
-<!-- +1 Button -->
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-<!-- /+1 Button -->
-
-<!-- Full Page Image Header Area -->
-
-
     <div id="top" class="header">
         <div class="vert-text">
-        	<div class="ribbon-menu">
-        		<div class="ribbon-menu-content">
-        			<div class="row">
-        				<p>Be Social</p>
-        			</div>
-        			<div class="row">
-        				<div class="fb-like" data-href="https://www.facebook.com/bizuality" data-width="100" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
-        			</div>
-        			<div class="row">
-        				<script type="IN/Share" data-url="http://www.bizuality.com" data-counter="top"></script>
-        			</div>
-        			<div class="row">
-        				<a href="https://twitter.com/bizuality" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @bizuality</a>
-        			</div>
-        			<div class="row">
-        				<div class="g-plusone" data-size="tall" data-annotation="bubble" expandTo="top" data-href="http://www.bizuality.com"></div>
-        			</div>
-        		</div>
-        	</div>
         	<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1  col-sm-10 col-sm-offset-1  col-xs-10 col-xs-offset-1 text-center">
         		<img class="img-responsive center-block" src="<?php realpath($_SERVER["DOCUMENT_ROOT"]); ?>/img/bizuality_logo.png">
         		<div class="hidden-xs">
