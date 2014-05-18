@@ -1,8 +1,7 @@
 <?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); ?>
 <?php include($root . '/variables/index_variables.php'); ?>
 <?php require_once($root . '/includes/header.php'); ?>
-    
-<!-- Full Page Image Header Area -->
+
     <div id="top" class="header">
         <div class="vert-text">
         	<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1  col-sm-10 col-sm-offset-1  col-xs-10 col-xs-offset-1 text-center">
