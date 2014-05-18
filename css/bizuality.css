@@ -605,7 +605,7 @@ i.scroll:hover {
   box-shadow: 5px 5px 5px 5px #0a5175;
   overflow: hidden;
 
-}
+  }
 }
 
 .vert-center {
@@ -613,6 +613,45 @@ i.scroll:hover {
   vertical-align: middle;
   float: none;
   margin-top: 5%;
+}
+
+.ribbon-menu {
+  position: absolute;
+  background-color: #0a5175;
+  opacity: .8;
+  top: 50px;
+  left: 5%;
+  width: 150px;
+  height: 30px;
+  border-width: 0 5px 5px 5px;
+  border-style: solid;
+  border-color: #fff;
+  border-radius: 0 0 50px 50px;
+  overflow: hidden;
+  -webkit-transition: width ease-out 1s, height ease-out 1s, background-color ease-out 1s, opacity ease-out 1s;
+    -moz-transition: width ease-out 1s, height ease-out 1s, background-color ease-out 1s, opacity ease-out 1s;
+    -o-transition: width ease-out 1s, height ease-out 1s, background-color ease-out 1s, opacity ease-out 1s;
+    transition: width ease-out 1s, height ease-out 1s, background-color ease-out 1s;, opacity ease-out 1s;
+  z-index: 100;
+}
+
+.ribbon-menu:hover {
+  position: absolute;
+  opacity: 1;
+  top: 50px;
+  left: 5%
+  width: 150px;
+  height: 300px;
+  border-width: 0 5px 5px 5px;
+  border-style: solid;
+  border-color: #fff;
+  border-radius: 0 0 50px 50px;
+  z-index: 100;
+}
+
+.ribbon-menu-content {
+  margin-top: 3px;
+  font-size: .2em;
 }
 
 /**************** Custom Map ****************/
