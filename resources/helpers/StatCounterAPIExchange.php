@@ -1,4 +1,4 @@
-<?php $root = realpath($_SERVER["DOCUMENT_ROOT"]); 
+<?php $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 
 require_once($root .  '/resources/load.php');
 

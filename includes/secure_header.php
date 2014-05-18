@@ -13,6 +13,7 @@ if($logged) {
 	$twitter_user_competitor_02 = $_SESSION['twitter_user_competitor_02'];
 	$twitter_user_competitor_03 = $_SESSION['twitter_user_competitor_03'];
 	$facebook_user = $_SESSION['facebook_user'];
+	$instagram_user = $_SESSION['instagram_user'];
 }
 
 if(basename($_SERVER['REQUEST_URI']) == 'analytics.php' or basename($_SERVER['REQUEST_URI']) == 'more_visitor_info.php') {

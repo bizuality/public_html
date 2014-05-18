@@ -78,6 +78,7 @@ if(!class_exists('Bizuality')){
 				$sto_twitter_user_competitor_02 = $results['twitter_user_competitor_02'];
 				$sto_twitter_user_competitor_03 = $results['twitter_user_competitor_03'];
 				$sto_facebook_user = $results['facebook_user'];
+				$sto_instagram_user = $results['instagram_user'];
 				
 				if($sto_username == $username && $sto_password == $password) {
 					session_start();
@@ -89,6 +90,7 @@ if(!class_exists('Bizuality')){
 					$_SESSION['twitter_user_competitor_02'] = $sto_twitter_user_competitor_02;
 					$_SESSION['twitter_user_competitor_03'] = $sto_twitter_user_competitor_03;
 					$_SESSION['facebook_user'] = $sto_facebook_user;
+					$_SESSION['instagram_user'] = $sto_instagram_user;
 					session_write_close();
 					header("Location: /pages/accounts/users_page.php");
 				}
