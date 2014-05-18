@@ -20,6 +20,7 @@
 <!-- /Footer -->
 
 	<?php include($root . '/includes/footer_includes/contact_modal.php'); ?>
+	<?php include($root . '/includes/footer_includes/quote_modal.php'); ?>
 	<?php include($root . '/includes/footer_includes/javascript.php'); ?>
 	<?php include($root . '/includes/footer_includes/analytics.php'); ?>
 

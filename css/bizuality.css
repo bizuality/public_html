@@ -427,6 +427,20 @@ i.scroll:hover {
 .modal-title {
   color: #00efa0;
 }
+
+.modal-body {
+  color: #0a5175;
+}
+
+.alternate-background {
+  background-color: #0a5175;
+  color: #fff;
+}
+
+.modal-footer {
+  color: #00efa0;
+}
+
 .btn-custom-form {
   color: #fff;
   background-color: #00efa0;

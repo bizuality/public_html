@@ -76,9 +76,12 @@ if(isset($_SESSION['username'])) {
                         </ul>	
                     </li>
                     <li>
-                        <a href="" data-toggle="modal" data-target="#contactModal">Contact Us</a>
+                        <a href="#" data-toggle="modal" data-target="#contactModal">Contact Us</a>
                     </li>
                     <?php if(!$signin) { echo '
+                    <li>
+                        <a href="#" class="navbar-button" data-toggle="modal" data-target="#quoteModal">Get A Quote</a>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Sign In</a>
                         <ul class="dropdown-menu">
