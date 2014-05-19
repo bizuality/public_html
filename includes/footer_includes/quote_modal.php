@@ -8,12 +8,12 @@
 		var formsValue = document.getElementById('forms').value;
 		var animationValue = document.getElementById('animation').value;
 		
-		price += (contentValue * 15);
-		price += (picturesValue * 20);
-		price += (videosValue * 20);
-		price += (membersValue * 50);
-		price += (formsValue * 30);
-		price += (animationValue * 30);
+		price += (contentValue * 250);
+		price += (picturesValue * 35);
+		price += (videosValue * 35);
+		price += (membersValue * 175);
+		price += (formsValue * 75);
+		price += (animationValue * 100);
 		
 		
 		document.getElementById('price').innerHTML='<i class="fa fa-dollar"></i> ' + price;
@@ -28,13 +28,13 @@
             		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             		<span class="modal-title text-center">
             			<h2>Get A Quote</h2>
-            			<p>Adjust the sliders based on your needs.</p>
-            			<small>A hosting fee of $200 is charged once a year, and an initial design fee of $300 dollars is charged at startup.</small>
+            			<h4>Adjust the sliders based on your needs.</h4>
+            			<p>A hosting fee of $200 is charged once a year, and an initial design fee of $300 dollars is charged at startup.</p>
             		</span>
         		</div>
         		<!-- Modal Body-->
        			<div class="modal-body alternate-background">
-       				<form id="contactForm" class="text-center" method="post" action="">
+       				<form id="quoteForm" class="text-center" method="post" action="">
             			<div class="input-group center-block text-center">
             				<div class="row">
             					<div class="col-sm-6 col-xs-12">
@@ -50,7 +50,7 @@
             					</div>
             					<div class="col-sm-6 col-xs-12">
             						<p>Member Areas:</p>
-            						<small>Our default offer does not include member's areas. Adjust the sliders based of the percentage of your site you would like tucked behind a username and password.</small>
+            						<small>Our default offer does not include member's areas. Adjust the sliders based on the percentage of your site you would like tucked behind a username and password.</small>
             						<input class="form-control input-lg" id="members" name="members" type="range" onchange="updatePrice()" value="0" min="0" max="5">
             						<p>Forms:</p>
             						<small>Base price includes 1 contact form. Increases here would include calendars and help forms.</small>
@@ -66,7 +66,6 @@
             			</span>
             			<span>
             				<p class="text-center">If you would like something more, <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#contactModal">tell us about it</a> and we will work up a quote!</p>
-
             			</span>
           			</form>
         		</div>
