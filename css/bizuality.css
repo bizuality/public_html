@@ -670,6 +670,12 @@ i.scroll:hover {
 	color: #00efa0;
 }
 
+.slider {
+  background-color: #0a5175;
+  color: #fff;
+  border: none;
+}
+
 /*************** Analytics Formatting ***************/
 .img-analytics {
 	border-radius: 5px;

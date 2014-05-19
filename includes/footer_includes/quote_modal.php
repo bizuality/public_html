@@ -40,24 +40,24 @@
             					<div class="col-sm-6 col-xs-12">
             						<p>Content:</p>
             						<small>We offer a default of 5 pages. Consider each notch to be about 5 pages.</small>
-            						<input class="form-control input-lg" id="content" name="content" type="range" onchange="updatePrice()" value="0" min="0" max="5">
+            						<input class="form-control input-lg slider" id="content" name="content" type="range" onchange="updatePrice()" value="0" min="0" max="5">
             						<p>Pictures:</p>
             						<small>Consider each notch to increase pictures per page by 2.</small>
-            						<input class="form-control input-lg" id="pictures" name="pictures" type="range" onchange="updatePrice()" value="0" min="0" max="5">
+            						<input class="form-control input-lg slider" id="pictures" name="pictures" type="range" onchange="updatePrice()" value="0" min="0" max="5">
             						<p>Videos:</p>
             						<small>Consider each notch to increase videos per page by 1.</small>
-            						<input class="form-control input-lg" id="videos" name="videos" type="range" onchange="updatePrice()" value="0" min="0" max="5">
+            						<input class="form-control input-lg slider" id="videos" name="videos" type="range" onchange="updatePrice()" value="0" min="0" max="5">
             					</div>
             					<div class="col-sm-6 col-xs-12">
             						<p>Member Areas:</p>
             						<small>Our default offer does not include member's areas. Adjust the sliders based on the percentage of your site you would like tucked behind a username and password.</small>
-            						<input class="form-control input-lg" id="members" name="members" type="range" onchange="updatePrice()" value="0" min="0" max="5">
+            						<input class="form-control input-lg slider" id="members" name="members" type="range" onchange="updatePrice()" value="0" min="0" max="5">
             						<p>Forms:</p>
             						<small>Base price includes 1 contact form. Increases here would include calendars and help forms.</small>
-            						<input class="form-control input-lg" id="forms" name="forms" type="range" onchange="updatePrice()" value="0" min="0" max="5">
+            						<input class="form-control input-lg slider" id="forms" name="forms" type="range" onchange="updatePrice()" value="0" min="0" max="5">
             						<p>Animation:</p>
             						<small>By default we offer simple animations such as fades and slides.</small>
-            						<input class="form-control input-lg" id="animation" name="animation" type="range" onchange="updatePrice()" value="0" min="0" max="5">
+            						<input class="form-control input-lg slider" id="animation" name="animation" type="range" onchange="updatePrice()" value="0" min="0" max="5">
             					</div>
             				</div>
             			</div>
