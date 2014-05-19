@@ -676,6 +676,32 @@ i.scroll:hover {
   border: none;
 }
 
+input[type='range'] {
+		-webkit-appearance: none;
+		border-radius: 5px;
+		height: 10px;
+		vertical-align: middle;
+	}
+input[type='range']::-moz-range-track {
+		-moz-appearance: none;
+		border-radius: 5px;
+	}
+input[type='range']::-webkit-slider-thumb {
+		-webkit-appearance: none !important;
+		border-radius: 20px;
+		background-color: #FFF;
+		border: 1px solid #999;
+		height: 10px;
+		width: 30px;
+	}
+input[type='range']::-moz-range-thumb {
+		-moz-appearance: none;
+		border-radius: 20px;
+		background-color: #FFF;
+		height: 10px;
+		width: 30px;
+	}
+
 /*************** Analytics Formatting ***************/
 .img-analytics {
 	border-radius: 5px;
