@@ -71,6 +71,8 @@ if(!class_exists('Bizuality')){
 				
 				$sto_username = $results['username'];
 				$sto_password = $results['password'];
+				$sto_latitude = $results['latitude'];
+				$sto_longitude = $results['longitude'];
 				$sto_pid = $results['sc_pid'];
 				$sto_analytics_sub = $results['analytics_sub'];
 				$sto_twitter_user = $results['twitter_user'];
@@ -83,6 +85,8 @@ if(!class_exists('Bizuality')){
 				if($sto_username == $username && $sto_password == $password) {
 					session_start();
 					$_SESSION['username'] = $sto_username;
+					$_SESSION['latitude'] = $sto_latitude;
+					$_SESSION['longitude'] = $sto_longitude;
 					$_SESSION['sc_pid'] = $sto_pid;
 					$_SESSION['analytics_sub'] = $sto_analytics_sub;
 					$_SESSION['twitter_user'] = $sto_twitter_user;

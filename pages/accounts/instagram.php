@@ -5,6 +5,12 @@ if(!isset($_SESSION['instagram_user'])) {
 }
 else {
 	$instagram_user = $_SESSION['instagram_user'];
+	$locationKnown = false;
+	if(isset($_SESSION['latitude']) and isset($_SESSION['longitude'])) {
+		$latitude = $_SESSION['latitude'];
+		$longitude = $_SESSION['longitude'];
+		$locationKnown = true;
+	}
 }
 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
@@ -14,9 +20,14 @@ require_once($root . '/resources/helpers/InstagramAPIExchange.php');
 
 
 $instagram = new InstagramAPIExchange(INSTAGRAM_CLIENT_ID);
-$instagram->setGetField('users/' . $instagram_user);
+$instagram->setGetField('users/' . $instagram_user . '/?');
 $user_info = $instagram->performRequest();
 $user_info = $user_info['data'];
+if($locationKnown) {
+	$instagram->setGetField('media/search?' . 'lat=' . $latitude . '&lng=' . $longitude);
+	$close_by = $instagram->performRequest();
+	$close_by = $close_by['data'];
+}
 
 session_write_close();
 ?>
@@ -50,6 +61,22 @@ session_write_close();
                 	<h4>Media</h4>
                 	<h2><?php echo $user_info['counts']['media']; ?></h2>
                 </div>
+            </div>
+            <div class="row">
+            	<?php if($locationKnown) {
+            		echo '<div class="col-lg-12 text-center">
+            				<h2>People Nearby</h2>
+            				<hr class="thick" />
+            			';
+            		foreach($close_by as $location) {
+            			echo '
+            				<div class="col-md-2 col-xs-4 text-center hoverable-color-fixed">
+                				<img class="img-responsive center-block" src="'. $location['images']['low_resolution']['url'] . '">
+                			</div>
+            			';
+            		}
+            		echo '</div>';
+            	} ?>
             </div>
         </div>
     </div>

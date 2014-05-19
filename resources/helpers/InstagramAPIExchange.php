@@ -41,7 +41,7 @@ class InstagramAPIExchange {
 			throw new Exception('The GET field is not set.');
 		}
 		
-		$request = $this->URL . $this->get_field . '?' . 'client_id=' . $this->client_id;
+		$request = $this->URL . $this->get_field . '&client_id=' . $this->client_id;
 		
 		return $request;
 	}

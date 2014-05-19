@@ -1,4 +1,12 @@
 <?php
+session_start();
+if(!isset($_SESSION['twitter_user'])) {
+	header("Location: /pages/accounts/faq.php?msg=error&value=13");
+}
+else {
+	$twitter_user = $_SESSION['twitter_user'];
+}
+
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 include($root . '/variables/user_twitter_variables.php');
 require_once($root . '/includes/secure_header.php');
@@ -15,11 +23,6 @@ $twitter = new TwitterAPIExchange($settings);
 $user_timeline = $twitter->getUserTimeline($twitter_user);
 $searchResults = $twitter->searchTweets($twitter_user);
 
-if(empty($twitter_user)) {
-	echo '<p class="error-msg">You do not have any tweets!</p>';
-	include($root . '/includes/footer.php');
-	die();
-}
 if(!empty($twitter_user_competitor_01)) {
 	$twitter_comp_01 = new TwitterAPIExchange($settings);
 	$comp_01_user_timeline = $twitter_comp_01->getUserTimeline($twitter_user_competitor_01);
@@ -36,6 +39,7 @@ if(!empty($twitter_user_competitor_03)) {
 	$comp_03_searchResults = $twitter_comp_03->searchTweets($twitter_user_competitor_03);
 }
 
+session_write_close();
 ?>
 
 <!-- Content Body -->
