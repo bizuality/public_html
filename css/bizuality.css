@@ -9,6 +9,10 @@ body {
   
 }
 
+h1 > small, h2 > small, h3 > small, h4 > small {
+  color: #0a5175;
+}
+
 p {
   font-size: 1.3em;
 }
@@ -613,6 +617,17 @@ i.scroll:hover {
   vertical-align: middle;
   float: none;
   margin-top: 5%;
+}
+
+.img-fade {
+  opacity: 0.4;
+  background-color: #000;
+  filter: alpha(opacity=40); /* IE */
+}
+
+.img-fade:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100); /* IE */
 }
 
 /**************** Custom Map ****************/

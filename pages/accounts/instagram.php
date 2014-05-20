@@ -24,7 +24,8 @@ $instagram->setGetField('users/' . $instagram_user . '/?');
 $user_info = $instagram->performRequest();
 $user_info = $user_info['data'];
 if($locationKnown) {
-	$instagram->setGetField('media/search?' . 'lat=' . $latitude . '&lng=' . $longitude);
+	$instagram->setGetField('media/search?' . 'lat=' . $latitude . '&lng=' . $longitude . '&distance=5000' . '&count=1000');
+	//$instagram->setGetField('media/search?' . 'lat=40.7127' . '&lng=74.0059' . '&distance=5000' . '&count=1000');
 	$close_by = $instagram->performRequest();
 	$close_by = $close_by['data'];
 }
@@ -65,15 +66,26 @@ session_write_close();
             <div class="row">
             	<?php if($locationKnown) {
             		echo '<div class="col-lg-12 text-center">
-            				<h2>People Nearby</h2>
+            				<h2>People Nearby <small>(5 km)</small></h2>
             				<hr class="thick" />
             			';
+            		$count = 0;
             		foreach($close_by as $location) {
-            			echo '
-            				<div class="col-md-2 col-xs-4 text-center hoverable-color-fixed">
-                				<img class="img-responsive center-block" src="'. $location['images']['low_resolution']['url'] . '">
-                			</div>
-            			';
+            			echo '<div class="col-md-2 col-xs-4 text-center hoverable-color-fixed">';
+            				if(strpos($location['caption']['text'], ' ') !== false) {
+            					echo '<a href="' . $location['link'] . '" target="_blank" alt="More information on ' . $location['user']['username'] . '">';
+            						echo '<img class="img-responsive center-block" src="'. $location['images']['low_resolution']['url'] . '">';
+            					echo '</a>';
+            				}
+            				else {
+            					echo '<img class="img-responsive center-block img-fade" src="'. $location['images']['low_resolution']['url'] . '">';
+            				}
+                		echo '<p><i class="fa fa-thumbs-up"></i> ' . $location['likes']['count'] . '</p>';
+                		echo '</div>';
+                		if($count >= 20) {
+                			break;
+                		}
+                		$count++;
             		}
             		echo '</div>';
             	} ?>
