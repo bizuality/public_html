@@ -197,19 +197,19 @@ $('.thumb').hover(function(){
 $(document).ready(function(){
   $('.vert-text-footer').animate({'margin-bottom': "15px"}, 1250);
 });
-       $(document).ready(function(){
-           $('li img').on('click',function(){
-                var src = $(this).attr('src');
-                var img = '<img src="' + src + '" class="img-responsive"/>';
-                $('#myModal').modal();
-                $('#myModal').on('shown.bs.modal', function(){
-                    $('#myModal .modal-body').html(img);
-                });
-                $('#myModal').on('hidden.bs.modal', function(){
-                    $('#myModal .modal-body').html('');
-                });
-           });  
-        })
+$(document).ready(function(){
+	$('li img').on('click',function(){
+    	var src = $(this).attr('src');
+        var img = '<img src="' + src + '" class="img-responsive"/>';
+        $('#myModal').modal();
+        $('#myModal').on('shown.bs.modal', function(){
+        	$('#myModal .modal-body').html(img);
+    	});
+    	$('#myModal').on('hidden.bs.modal', function(){
+        	$('#myModal .modal-body').html('');
+    	});
+	});  
+});
 
 /************ Search Bar ************/
 $('#searchButton').click(function(){

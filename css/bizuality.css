@@ -63,24 +63,23 @@ tr {
   }
 }
 
-.img-ul {         
+ul.thumbnails {         
   padding:0 0 0 0;
   margin:0 0 0 0;
-  display: block;
 }
 
-.img-ul li {     
+ul.thumbnails li {     
   list-style:none;
   margin-bottom:25px; 
       
 }
 
-.img-ul li img {
+ul li img {
   cursor: pointer;
-  width: 200px;
   height: 200px;
-  display:block;
+  width: 200px;
 }
+
 
 .vert-text {
   display: table-cell;
@@ -247,9 +246,8 @@ i.service-icon {
 
 .callout {
   background-color: #fff;
-  color: #00efa0;
   display: table;
-  height: 300px;
+  color: #00efa0;
   width: 100%;
   padding: 20px 10px 20px 10px;
   margin-top: 20px;
