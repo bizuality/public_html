@@ -4,10 +4,25 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  background-color: #00efa0;
   font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
 }
 
+.green-color {
+  color: #00efa0;
+}
+
+.blue-color {
+  color: #0a5175;
+}
+
+.green-background {
+  background-color: #00ef00;
+}
+
+.blue-background {
+  background-color: #0a5175;
+}
 p {
   font-size: 1.3em;
 }
@@ -46,6 +61,22 @@ tr {
     h6, .h6 {
     font-size: 8px;
   }
+}
+
+ul {         
+  padding:0 0 0 0;
+  margin:0 0 0 0;
+}
+
+ul li {     
+  list-style:none;
+  margin-bottom:25px;           
+}
+
+ul li img {
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
 }
 
 .vert-text {
@@ -212,15 +243,16 @@ i.service-icon {
 /* Callout */
 
 .callout {
-  color: #ffffff;
+  background-color: #fff;
+  color: #00efa0;
   display: table;
-  height: 400px;
+  height: 300px;
   width: 100%;
-  background: url(../img/callout.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  padding: 20px 10px 20px 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 20px 0 20px 0 #888;
+
 }
 
 /* Portfolio */
@@ -327,10 +359,6 @@ i.scroll:hover {
 
   .header {
 	background: #00efa0; 
-  }
-
-  .callout {
-	background: url(../img/callout.jpg) no-repeat center center scroll; 
   }
 
   .map {
@@ -646,12 +674,28 @@ i.scroll:hover {
 .vert-text-footer-col {
   display: table-cell;
   padding: 3px 3px 3px 3px;
+  vertical-align: middle;
 }
 
 .vert-text-footer-special {
   color: #fff;
   background-color: #0a5175;
   border-radius: 5px;
+  padding: 1px 1px 1px 1px;
+}
+
+.img-zoom {
+  width: 400px;
+  z-index: 1;
+}
+
+.img-zoom:hover {
+    -ms-transform:translate(0, -50%) scale(2); /* IE 9 */
+    -moz-transform:translate(0, -50%) scale(2); /* Firefox */
+    -webkit-transform:translate(0, -50%) scale(2); /* Safari and Chrome */
+    -o-transform:translate(0, -50%) scale(2); /* Opera */
+    transform:translate(0, -50%) scale(2);
+    z-index: 1000;
 }
 
 /**************** Custom Map ****************/

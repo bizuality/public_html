@@ -15,7 +15,7 @@ if($logged) {
 	$facebook_user = $_SESSION['facebook_user'];
 }
 
-if(basename($_SERVER['REQUEST_URI']) == 'analytics.php' or basename($_SERVER['REQUEST_URI']) == 'more_visitor_info.php' or $_SERVER['REQUEST_URI']) == 'twitter.php' or $_SERVER['REQUEST_URI']) == 'facebook.php' or $_SERVER['REQUEST_URI']) == 'instagram.php') {
+if(basename($_SERVER['REQUEST_URI']) == 'analytics.php' or basename($_SERVER['REQUEST_URI']) == 'more_visitor_info.php') {
 	if(!$analytics_sub) {
 		header("Location: /pages/accounts/users_page.php?msg=error&value=7");
 	}
