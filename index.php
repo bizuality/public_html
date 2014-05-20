@@ -19,9 +19,23 @@
 						<i class="popover-icon hoverable spin-on-scroll fa <?php echo $variables['icon_09'] ?> fa-2x" data-trigger="hover" data-placement="bottom" data-content="<?php echo $variables['icon_09_text'] ?>"></i>
 					</h3>
 				</div>
-            	<h3><?php echo $variables['tag_line'] ?></h3>
-            	<a href="#findOutMore" class="btn btn-default btn-lg"><?php echo $variables['scroll_button_text'] ?></a>
+				<div class="hidden-sm">
+            		<h3><?php echo $variables['tag_line'] ?></h3>
+            	</div>
             </div>
+            <div class="vert-text-footer hidden-xs">
+            	<div class="col-xs-3 vert-text-footer-col vert-text-footer-special">
+            		<h3><?php echo $variables['promo_title']; ?></h3>
+            		<h4><a href="#findOutMore"><?php echo $variables['find_out_more_text']; ?></a></h4>
+            	</div>
+            	<div class="col-xs-1 vert-text-footer-col">
+            		<i class="fa fa-chevron-circle-right"></i>
+            	</div>
+            	<div class="col-xs-8 vert-text-footer-col">
+            		<h4><?php echo $variables['promo_text']; ?></h4>
+            	</div>
+            	</div>
+			</div>
         </div>
     </div>
     <!-- /Full Page Image Header Area -->
@@ -30,19 +44,19 @@
     <div id="findOutMore" class="call-to-action">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 text-center hoverable-color">
+                <div class="col-sm-4 text-center hoverable-color">
                 	<h3><i class="service-icon hoverable fa <?php echo $variables['col_01_icon'] ?> fa-2x"></i></h3>
                     <h3><?php echo $variables['col_01_title'] ?></h3>
                     <hr class="short" />
                     <p><?php echo $variables['col_01_text'] ?></p>
                 </div>
-                <div class="col-lg-4 col-md-4 text-center hoverable-color">
+                <div class="col-sm-4 text-center hoverable-color">
                     <h3><i class="service-icon hoverable fa <?php echo $variables['col_02_icon'] ?> fa-2x"></i></h3>
                     <h3><?php echo $variables['col_02_title'] ?></h3>
                     <hr class="short" />
                     <p><?php echo $variables['col_02_text'] ?></p>
                 </div>
-                <div class="col-lg-4 col-md-4 text-center hoverable-color">
+                <div class="col-sm-4 text-center hoverable-color">
                     <h3><i class="service-icon hoverable fa <?php echo $variables['col_03_icon'] ?> fa-2x"></i></h3>
                     <h3><?php echo $variables['col_03_title'] ?></h3>
                     <hr class="short" />
