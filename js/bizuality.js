@@ -177,13 +177,13 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$('.ribbon').animate({width: "70%"}, 1000);
 });
-$(".hoverable-color").mouseover(function(){
+$('.hoverable-color').mouseover(function(){
 	$(this).addClass('color-on-hover');
 });
-$(".hoverable-color").mouseout(function(){
+$('.hoverable-color').mouseout(function(){
 	$(this).removeClass('color-on-hover');
 });
-$(".hoverable-color-fixed").mouseover(function(){
+$('.hoverable-color-fixed').mouseover(function(){
 	$(this).addClass('color-on-hover');
 });
 $(".hoverable-color-fixed").mouseout(function(){
@@ -194,6 +194,22 @@ $('.text').hide().removeClass('text').addClass('text-js');
 $('.thumb').hover(function(){
     $(this).find('.text-js').fadeToggle();
 });
+$(document).ready(function(){
+  $('.vert-text-footer').animate({'margin-bottom': "15px"}, 1250);
+});
+       $(document).ready(function(){
+           $('li img').on('click',function(){
+                var src = $(this).attr('src');
+                var img = '<img src="' + src + '" class="img-responsive"/>';
+                $('#myModal').modal();
+                $('#myModal').on('shown.bs.modal', function(){
+                    $('#myModal .modal-body').html(img);
+                });
+                $('#myModal').on('hidden.bs.modal', function(){
+                    $('#myModal .modal-body').html('');
+                });
+           });  
+        })
 
 /************ Search Bar ************/
 $('#searchButton').click(function(){

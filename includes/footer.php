@@ -8,7 +8,7 @@
             		<h3>
             			<a class="icon-link" href="http://twitter.com/bizuality" target="_blank"><i class="hoverable fa fa-twitter fa-2x" data-trigger="hover"></i></a>
             			<a class="icon-link" href="http://www.facebook.com/bizuality" target="_blank"><i class="hoverable fa fa-facebook fa-2x" data-trigger="hover"></i></a>
-            			<a class="icon-link" href="https://plus.google.com/110158961697676043527" target="_blank"><i class="hoverable fa fa-google-plus fa-2x" data-trigger="hover"></i></a>
+            			<a class="icon-link" href="http://plus.google.com/112554732305145020951" target="_blank"><i class="hoverable fa fa-google-plus fa-2x" data-trigger="hover"></i></a>
             			<a class="icon-link" href="http://www.linkedin.com/company/bizuality" target="_blank"><i class="hoverable fa fa-linkedin fa-2x" data-trigger="hover"></i></a>
             		</h3>
             		<h5>Copyright &copy;, bizuality <?php echo date('Y'); ?>.</h5>
