@@ -26,7 +26,7 @@
             <div class="vert-text-footer hidden-xs">
             	<div class="col-xs-3 vert-text-footer-col vert-text-footer-special">
             		<h3><?php echo $variables['promo_title']; ?></h3>
-            		<h4><a href="#findOutMore"><?php echo $variables['find_out_more_text']; ?></a></h4>
+            		<h4><a class="green-color" href="#findOutMore"><?php echo $variables['find_out_more_text']; ?></a></h4>
             	</div>
             	<div class="col-xs-1 vert-text-footer-col">
             		<i class="fa fa-chevron-circle-right"></i>
