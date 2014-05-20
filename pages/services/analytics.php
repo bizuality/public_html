@@ -35,22 +35,19 @@
             <div class="col-xs-12 text-center">
            	 	<h2><i class="fa fa-tasks"></i></h2>
             	<h2>How It Works</h2>
-            	
-            	<hr class="short green-background">
             </div>
             <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
             	<p>Our analytics software compiles statistics directly from your site. Our analytics package will allow you to hone in on how your customers use your site, allowing you and us to cater to their needs.</p>
             	<p>You will be able to see where in the world your views are coming from, the device and operating system they were using, and even how long their visit lasted.</p>
             </div>
-            <div class="col-xs-10 col-xs-offset-1">
-            	<ul>
+            <div class="col-md-10 col-md-offset-1">
+            	<ul class="img-ul">
             		<li><img class="col-sm-3 col-xs-6 img-circle" src="/img/demo_01.png"></li>
             		<li><img class="col-sm-3 col-xs-6 img-circle" src="/img/demo_02.png"></li>
             		<li><img class="col-sm-3 col-xs-6 img-circle" src="/img/demo_03.png"></li>
             		<li><img class="col-sm-3 col-xs-6 img-circle" src="/img/demo_04.png"></li>
             	</ul>
             </div>
-        
         </div>
         <div class="container">
             <div class="row">
