@@ -24,14 +24,14 @@
             	</div>
             </div>
             <div class="vert-text-footer hidden-xs">
-            	<div class="col-xs-3 vert-text-footer-col vert-text-footer-special">
+            	<div class="col-sm-3 vert-text-footer-col vert-text-footer-special">
             		<h3><?php echo $variables['promo_title']; ?></h3>
             		<h4><a class="green-color" href="#findOutMore"><?php echo $variables['find_out_more_text']; ?></a></h4>
             	</div>
-            	<div class="col-xs-1 vert-text-footer-col">
+            	<div class="col-sm-1 vert-text-footer-col">
             		<i class="fa fa-chevron-circle-right"></i>
             	</div>
-            	<div class="col-xs-8 vert-text-footer-col">
+            	<div class="col-sm-8 vert-text-footer-col">
             		<h4><?php echo $variables['promo_text']; ?></h4>
             	</div>
             	</div>

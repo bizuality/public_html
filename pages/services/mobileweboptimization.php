@@ -14,11 +14,9 @@
             </div>
             <div class="row">
             	<div class="col-md-6 col-sm-6 text-center">
-            		<div class="thumb">
-            			<div class="text">
-            				<p><?php echo $variables['col_01_caption'] ?></p>
-            			</div>
-                    		<img class="img-responsive spin-on-scroll" src="<?php echo $variables['col_01_img'] ?>" alt="">
+            		<div class="img-overlay">
+                		<img class="img-responsive center-block" src="/img/iphone_blank_copy.png" alt="Responsive design demo">
+                		<a class="img-text btn btn-default btn-lg" onclick="openResponsiveDemo();">here</a>
                 	</div>
                 </div>
                 <div class="col-md-6 col-sm-6 text-center hoverable-color">

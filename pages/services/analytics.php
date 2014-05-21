@@ -39,14 +39,12 @@
             <div class="col-md-10 col-md-offset-1 col-xs-12 text-center">
             	<p><?php echo $variables['callout_text']; ?></p>
             </div>
-            <div class="row">
-            	<ul class="thumbnails">
-            		<li><img class="col-sm-3 col-xs-6 img-circle" src="<?php echo $variables['callout_img_01']; ?>"></li>
-            		<li><img class="col-sm-3 col-xs-6 img-circle" src="<?php echo $variables['callout_img_02']; ?>"></li>
-            		<li><img class="col-sm-3 col-xs-6 img-circle" src="<?php echo $variables['callout_img_03']; ?>"></li>
-            		<li><img class="col-sm-3 col-xs-6 img-circle" src="<?php echo $variables['callout_img_04']; ?>"></li>
-            	</ul>
-            </div>
+            <ul class="thumbnails">
+            	<li><img class="col-sm-3 col-xs-6" src="<?php echo $variables['callout_img_01']; ?>"></li>
+            	<li><img class="col-sm-3 col-xs-6" src="<?php echo $variables['callout_img_02']; ?>"></li>
+            	<li><img class="col-sm-3 col-xs-6" src="<?php echo $variables['callout_img_03']; ?>"></li>
+            	<li><img class="col-sm-3 col-xs-6" src="<?php echo $variables['callout_img_04']; ?>"></li>
+            </ul>
         </div>
         <div class="container">
             <div class="row">

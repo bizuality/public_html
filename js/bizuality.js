@@ -198,7 +198,7 @@ $(document).ready(function(){
   $('.vert-text-footer').animate({'margin-bottom': "15px"}, 1250);
 });
 $(document).ready(function(){
-	$('li img').on('click',function(){
+	$('li img').bind('touchstart click',function(){
     	var src = $(this).attr('src');
         var img = '<img src="' + src + '" class="img-responsive"/>';
         $('#myModal').modal();
@@ -210,6 +210,18 @@ $(document).ready(function(){
     	});
 	});  
 });
+
+function openResponsiveDemo() {
+	var currentWidth = $(window).width();
+	var currentHeight = $(window).height();
+	myWindow = window.open("http://www.google.com", "_blank", "resizable=yes", "width=" + currentWidth, "height=" + currentHeight);
+	setInterval(function(){myWindow.resizeBy(-100,-100), 5000});
+}
+
+function resizeWindow(myWindow, width, height) {
+   myWindow.resizeTo(width, height);
+   myWindow.focus();
+}
 
 /************ Search Bar ************/
 $('#searchButton').click(function(){
