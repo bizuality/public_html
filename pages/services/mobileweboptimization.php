@@ -30,6 +30,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 text-center hidden-xs hidden-sm hidden-md">
+                	<h3>See what we look like on some common devices!</h3>
+                	<hr class="short" />
             		<div class="col-sm-6">
             		 	<ul class="thumbnails">
             		 		<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(320, 480)">iPhone 4S</a></li>
