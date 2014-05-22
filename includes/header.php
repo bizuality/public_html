@@ -31,10 +31,12 @@ if(isset($_SESSION['username'])) {
 	<!-- Add custom CSS here -->
 	<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="/css/bizuality.css" rel="stylesheet">
-
+		
 </head>
 <?php flush() ?>
 <body>
+
+<?php include($root . '/includes/header_includes/analytics.php'); ?>
 
 <!--Navigation Bar-->
     <nav class="navbar navbar-fixed-top" role="navigation">

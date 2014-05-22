@@ -7,7 +7,7 @@
             		<h2 class="modal-title text-center">Let's Hear It!</h2>
         		</div>
         		<!-- Modal Body-->
-       			<div class="modal-body hide-on-submit">
+       			<div class="modal-body hide-on-submit text-center">
        				<form id="contactForm" method="post" action="">
             			<div class="input-group text-center">
             				<input class="form-control input-lg" id="first_name" name="first_name" minlength="2" type="text" required placeholder="First Name">
@@ -20,6 +20,7 @@
             				<a id="submitButton" class="btn-custom-form btn btn-lg" type="submit">Submit</a>
             			</div>
           			</form>
+          			<small>By submitting this contact form, you are agreeing to our <a href="/pages/privacy_policy.php">privacy policy</a>.</small>
         		</div>
         		<!-- End of Modal body -->
         		

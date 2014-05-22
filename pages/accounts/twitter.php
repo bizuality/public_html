@@ -75,6 +75,7 @@ if(!empty($twitter_user_competitor_03)) {
             <div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-6 hoverable-color-fixed text-center">
 					<h2>Your Most Recent Tweet</h2>
+					<hr class="short" />
 					<div class="col-lg-10 col-md-10 col-sm-10">
 						<h3 class="text-left"><?php echo $user_timeline[0]['text']; ?></h3>
 					</div>
@@ -85,6 +86,7 @@ if(!empty($twitter_user_competitor_03)) {
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6 hoverable-color-fixed text-center">
 					<h2>Your Most Popular Tweet</h2>
+					<hr class="short" />
 					<div class="col-lg-10 col-md-10 col-sm-10">
 						<h3 class="text-left"><?php echo $twitter->getMostPopularTweet('retweet_count')['text']; ?></h3>
 					</div>
@@ -96,22 +98,30 @@ if(!empty($twitter_user_competitor_03)) {
             </div>
             <hr class="thick" />
             <div class="row">
-				<div class="col-md-12 col-sm-12 text-center">
-					<i class="hoverable fa fa-fire fa-4x"></i>
-					<h2>Hot Tweets</h2>
-					<?php
-						$length = count($searchResults['statuses']);
-						$results = "";
-						for($i = 0; $i < $length; $i++) {
-							$results .= '<div class="col-lg-10 col-md-10 col-sm-10 hoverable-color-fixed"><h3 class="text-left">' . $searchResults['statuses'][$i]['user']['name'] . ':<br>' . $searchResults['statuses'][$i]['text'] . '</h3><hr /></div>';
-							$results .= '<div class="col-lg-2 col-md-2 col-sm-2 hoverable-color-fixed"><h3><i class="hoverable fa fa-retweet"></i> ' . $searchResults['statuses'][$i]['retweet_count'] . '</h3>';
-							$results .= '<h3><i class="hoverable fa fa-star hoverable-color-fixed"></i> ' . $searchResults['statuses'][$i]['favorite_count'] . '</h3><hr /></div>';
-							if($i > 5) {
-								break;
-							}
-						}
-						echo $results;
-					?>
+            	<div class="col-md-6 text-center">
+            		<h2><i class="fa fa-fire"></i></h2>
+            		<h2>Hot Tweets</h2>
+            		<hr class="short" />
+            		<div class="timeline-container">
+						<table class="timeline">
+							<?php
+								foreach($searchResults as $result) {
+									echo '<tr class="timeline-row hoverable-color-fixed">';
+									echo '<td class="timeline-item-title text-left">';
+									echo '<p>' . $searchResults['statuses'][0]['user']['name'] . '</p>';
+									echo '</td>';
+									echo '<td class="timeline-item text-left break">';
+									echo '<p>' . $searchResults['statuses'][0]['text'] . '</p>';
+									echo '</td>';
+									echo '<td class="timeline-item text-right">';
+									echo '<h4><i class="fa fa-retweet"></i>' . number_format($searchResults['statuses'][0]['retweet_count']) . '</h4>';
+									echo '<h4><i class="fa fa-star"></i>' . number_format($searchResults['statuses'][0]['favorite_count']) . '</h4>';
+									echo '</td>';
+									echo '</tr>';
+								}
+							?>
+						</table>
+					</div>
 				</div>
 			</div>
 			<hr class="thick" />

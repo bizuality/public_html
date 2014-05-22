@@ -71,7 +71,6 @@ ul.thumbnails {
 ul.thumbnails li {     
   list-style:none;
   margin-bottom:25px; 
-      
 }
 
 ul li img {
@@ -706,6 +705,35 @@ i.scroll:hover {
   vertical-align: middle;
   width: 100%;
   text-align: center;
+}
+
+.timeline-container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 500px;
+}
+
+.timeline {
+  display: table;
+  width: 100%;
+}
+
+.timeline-row {
+  display: table-row;
+  width: 100%;
+  margin: 10px 0 10px 0;
+}
+
+.timeline-item {
+  display: table-cell;
+  padding: 10px;
+  font-size: .85em;
+}
+
+.timeline-item-title {
+  background-color: #0a5175;
+  color: #fff;
+  padding: 10px;
 }
 
 /**************** Custom Map ****************/

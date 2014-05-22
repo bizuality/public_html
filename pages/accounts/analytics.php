@@ -25,9 +25,7 @@ $sc->getRecentVisitors(5);
         	<h3>or</h3>
             <h1>
             	<a class="icon-link" href="/pages/accounts/twitter.php"><i class="service-icon hoverable fa fa-twitter fa-4x" data-trigger="hover"></i></a>&nbsp;
-            	<!--
 				<a class="icon-link" href="/pages/accounts/facebook.php"><i class="service-icon hoverable fa fa-facebook fa-4x" data-trigger="hover"></i></a>
-				-->
 			</h1>
         </div>
     </div>

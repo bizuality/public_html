@@ -13,13 +13,7 @@
                 </div>
             </div>
             <div class="row">
-            	<div class="col-md-6 col-sm-6 text-center">
-            		<div class="img-overlay">
-                		<img class="img-responsive center-block" src="/img/iphone_blank_copy.png" alt="Responsive design demo">
-                		<a class="img-text btn btn-default btn-lg" onclick="openResponsiveDemo();">here</a>
-                	</div>
-                </div>
-                <div class="col-md-6 col-sm-6 text-center hoverable-color">
+                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 text-center hoverable-color hidden-lg hidden-xl">
                     <div class="service-item">
                         <i class="service-icon hoverable fa <?php echo $variables['col_02_icon'] ?>"></i>
                         <h4><?php echo $variables['col_02_title'] ?></h4>
@@ -27,7 +21,38 @@
                         <p><?php echo $variables['col_02_text'] ?></p>
                     </div>
                 </div>
+                <div class="col-md-6 col-sm-6 text-center hoverable-color hidden-xs hidden-sm hidden-md">
+                    <div class="service-item">
+                        <i class="service-icon hoverable fa <?php echo $variables['col_02_icon'] ?>"></i>
+                        <h4><?php echo $variables['col_02_title'] ?></h4>
+                        <hr class="short"/>
+                        <p><?php echo $variables['col_02_text'] ?></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 text-center hidden-xs hidden-sm hidden-md">
+            		<div class="col-sm-6">
+            		 	<ul class="thumbnails">
+            		 		<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(320, 480)">iPhone 4S</a></li>
+            				<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(320, 568)">iPhone 5S</a></li>
+            				<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(540, 960)">Galaxy S4</a></li>
+            				<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(540, 960)">Galaxy S5</a></li>
+            				<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(768, 1024)">iPad Mini</a></li>
+            				<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(790, 1024)">iPad Air</a></li>	
+            			</ul>
+        			</div>
+        			<div class="col-sm-6">
+            		 	<ul class="thumbnails">
+            		 		<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(800, 1280)">Galaxy Note 10.1</a></li>
+            		 		<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(688, 384)">Surface RT</a></li>
+            				<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(840, 525)">13" Laptop</a></li>
+            				<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(960, 600)">15" Laptop</a></li>
+            				<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(1600, 900)">17" Laptop</a></li>
+            				<li><a class="btn btn-lg btn-custom" onclick="openResponsiveDemo(1920, 1080)">Large Desktop</a></li>
+            			</ul>
+        			</div>
+                </div>
             </div>
+            
             <hr class="thick"/>
             <div class="row">
                 <div class="col-md-3 text-center hoverable-color">

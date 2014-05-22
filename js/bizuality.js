@@ -211,16 +211,13 @@ $(document).ready(function(){
 	});  
 });
 
-function openResponsiveDemo() {
+function openResponsiveDemo(width, height) {
 	var currentWidth = $(window).width();
 	var currentHeight = $(window).height();
-	myWindow = window.open("http://www.google.com", "_blank", "resizable=yes", "width=" + currentWidth, "height=" + currentHeight);
-	setInterval(function(){myWindow.resizeBy(-100,-100), 5000});
-}
-
-function resizeWindow(myWindow, width, height) {
-   myWindow.resizeTo(width, height);
-   myWindow.focus();
+	var centerX = (currentWidth / 2) - (width / 2);
+	var centerY = (currentHeight / 2) - (height / 2);
+	var params = 'width=' + width + ', height=' + height + ', top=' + centerY + ', left=' + centerX; 
+	myWindow = window.open("http://www.bizuality.com", "_blank", params);
 }
 
 /************ Search Bar ************/
