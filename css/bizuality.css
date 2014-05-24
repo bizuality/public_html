@@ -8,6 +8,7 @@ body {
   font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
 }
 
+<<<<<<< HEAD
 .green-color {
   color: #00efa0;
 }
@@ -23,6 +24,12 @@ body {
 .blue-background {
   background-color: #0a5175;
 }
+=======
+h1 > small, h2 > small, h3 > small, h4 > small {
+  color: #0a5175;
+}
+
+>>>>>>> instagram
 p {
   font-size: 1.3em;
 }
@@ -659,6 +666,7 @@ i.scroll:hover {
   margin-top: 5%;
 }
 
+<<<<<<< HEAD
 .vert-text-footer {
   position: absolute;
   display: table;
@@ -734,6 +742,17 @@ i.scroll:hover {
   background-color: #0a5175;
   color: #fff;
   padding: 10px;
+=======
+.img-fade {
+  opacity: 0.4;
+  background-color: #000;
+  filter: alpha(opacity=40); /* IE */
+}
+
+.img-fade:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100); /* IE */
+>>>>>>> instagram
 }
 
 /**************** Custom Map ****************/

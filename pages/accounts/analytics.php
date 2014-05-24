@@ -26,6 +26,11 @@ $sc->getRecentVisitors(5);
             <h1>
             	<a class="icon-link" href="/pages/accounts/twitter.php"><i class="service-icon hoverable fa fa-twitter fa-4x" data-trigger="hover"></i></a>&nbsp;
 				<a class="icon-link" href="/pages/accounts/facebook.php"><i class="service-icon hoverable fa fa-facebook fa-4x" data-trigger="hover"></i></a>
+<<<<<<< HEAD
+=======
+				-->
+				<a class="icon-link" href="/pages/accounts/instagram.php"><i class="service-icon hoverable fa fa-instagram fa-4x" data-trigger="hover"></i></a>&nbsp;
+>>>>>>> instagram
 			</h1>
         </div>
     </div>

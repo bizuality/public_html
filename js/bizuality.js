@@ -279,6 +279,12 @@ $(document).ready(function(){
 		if($_GET['value'] == 11) {
 			$('.error-msg').append('<p>You have not told us the name of your Facebook Page. Tell us about it in the <a href="/pages/accounts/faq.php#question">"help" form.</p>');
 		}
+		if($_GET['value'] == 12) {
+			$('.error-msg').append('<p>You have not told us the name of your Instagram account. Tell us about it in the <a href="/pages/accounts/faq.php#question">"help" form.</p>');
+		}
+		if($_GET['value'] == 13) {
+			$('.error-msg').append('<p>You have not told us the name of your Twitter account. Tell us about it in the <a href="/pages/accounts/faq.php#question">"help" form.</p>');
+		}
 		$('.show-on-error-banner').slideDown('slow');
 	}
 	if($_GET['msg'] == 'success') {
