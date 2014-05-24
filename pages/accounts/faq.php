@@ -44,6 +44,7 @@ require_once($root . '/includes/secure_header.php');
   								<option value="account information">I need help with my account information. </option>
   								<option value="updating competitors">I need to update my competitors.</option>
   								<option value="subscribing to analytics">I want to subscribe to analytics.</option>
+  								<option value="subscribing to analytics">I need to update my social media account names.</option>
 							</select>
   							<textarea id="question" type="text" name="question" placeholder="Tell us more!"></textarea>
   							<button id="signInButton" class="btn-custom-form btn btn-lg center-block" type="submit">Submit</button>

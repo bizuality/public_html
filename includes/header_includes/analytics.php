@@ -22,6 +22,7 @@ alt="web statistics"></a></div></noscript>
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-51145712-1', 'bizuality.com');
+  ga('require', 'displayfeatures');
   ga('send', 'pageview');
 
 </script>

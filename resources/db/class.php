@@ -336,7 +336,12 @@ if(!class_exists('Bizuality')){
 				// Send the email...	
 				$results = mail($to, $subject, $message, $headers);
 				
-				header("Location: $url?msg=success&value=3");
+				if($results) {
+					header("Location: $url?msg=success&value=3");
+				}
+				else {
+					header("Location: $url?msg=error&value=6");
+				}
 			}
 			else {
 				header("Location: $url?msg=error&value=6");	
