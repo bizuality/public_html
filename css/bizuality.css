@@ -666,7 +666,6 @@ i.scroll:hover {
   margin-top: 5%;
 }
 
-<<<<<<< HEAD
 .vert-text-footer {
   position: absolute;
   display: table;
@@ -742,7 +741,7 @@ i.scroll:hover {
   background-color: #0a5175;
   color: #fff;
   padding: 10px;
-=======
+}
 .img-fade {
   opacity: 0.4;
   background-color: #000;
@@ -752,7 +751,6 @@ i.scroll:hover {
 .img-fade:hover {
   opacity: 1.0;
   filter: alpha(opacity=100); /* IE */
->>>>>>> instagram
 }
 
 /**************** Custom Map ****************/
